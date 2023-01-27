@@ -24,7 +24,11 @@ docker run -v ${pwd}/rasa:/app rasa/rasa:3.4.1-full train
 Why?
 
 docker | To start docker
+
 run | Tell docker that it's going to download something and run a command
+
 -v ${pwd}/rasa:/app | Tell docker that the /rasa folder in your current directory should be connected to the /app folder in the container it sets up
+
 rasa/rasa:3.4.1-full | Tell docker to download and run the rasa container (or use an existing download of the rasa container if it already has one)
+
 train | This is the command that gets passed to rasa. It tells it to train the NLU based on what you have in your rasa folder
