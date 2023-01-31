@@ -33,6 +33,15 @@ services:
     volumes:
       - ./rasa:/app
     command: run --enable-api --cors "*"
+    
+  action-server:
+    container_name: rasa-action-server
+    image: rasa/rasa:3.4.1-full
+    ports:
+      - 5055:5055
+    volumes:
+      - ./rasa/actions:/app/actions
+    command: run actions -p 5055 --cors "*"
 
 networks:
   mern-stack-net:
