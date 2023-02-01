@@ -11,3 +11,13 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: query credit hours
+  steps:
+  - intent: query_credit_hours
+  - action: action_credit_hours
+
+- rule: query workload
+  steps:
+  - intent: query_workload
+  - action: action_workload

@@ -9,6 +9,8 @@ intents:
   - mood_unhappy
   - bot_challenge
   - request_action_test
+  - query_credit_hours
+  - query_workload
 
 responses:
   utter_greet:
@@ -32,6 +34,8 @@ responses:
   
 actions:
   - action_hello_world
+  - action_credit_hours
+  - action_workload
 
 session_config:
   session_expiration_time: 60
