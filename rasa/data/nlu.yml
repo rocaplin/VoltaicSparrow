@@ -106,6 +106,14 @@ nlu:
     - what do I have to take?
     - what classes are needed to get a degree?
     - what do I have to take to graduate?
+    
+- intent: difference
+  examples: |
+    - what is the difference?
+    - how are they different?
+    - what changes?
+    - does that matter?
+    - difference?
 
 - intent: engineering
   examples: |
@@ -117,7 +125,7 @@ nlu:
     - I want to go into engineering
     - I am interested in engineering
     
-  - intent: engineering
+  - intent: clas
     examples: |
      - college of liberal arts and science
      - college of liberal arts and sciences 
