@@ -13,7 +13,7 @@ Then you can just go to the root of the project and run "docker-compose up"
 
 It will take a little while to download the containers for the first time, and then a little more time for the node and rasa servers to start up.
 
-Eventually cou can visit localhost:3000 to see the basic chatbot widget. Just click on the message icon to open the chat window and say "Hello".
+Eventually you can visit localhost:3000 to see the basic chatbot widget. Just click on the message icon to open the chat window and say "Hello".
 
 ## To Train The Chatbot
 
