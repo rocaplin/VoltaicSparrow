@@ -36,7 +36,7 @@ responses:
   - text: "Which college are you interested in pursuing computer science in? There are two: the College of Liberal Arts and Sciences and the Herbert Wertheim College of Engineering."
   
   utter_difference:
-  - text: "The difference between the two lies mostly in the courses you will be taking. Additionally, there may be some college requirements that will differ depending on the choice you make."
+  - text: "Some things change when you pursue a computer science degree in one college versus the other. The difference between the two lies mostly in the courses you will be taking. Additionally, there may be some college requirements that will differ depending on the choice you make."
   
   utter_required_courses_eng:
   - text: "There are a number of courses that you will be taking as a computer science student in the College of Engineering. All students are required to take six critical tracking courses: MAC 2311 Analytic Geometry and Calculus 1, MAC 2312 Analytic Geometry and Calculus 2, MAC 2313 Analytic Geometry and Calculus 3, COP3502C Programming Fundamentals 1, PHY 2048 Physics with Calculus 1, and PHY 2049 Physics with Calculus 2. 
