@@ -99,9 +99,9 @@ nlu:
 - intent: required_courses
   examples: |
     - what classes do computer science students take?
-    - what classes are required?
+    - what courses are required?
     - what classes do I have to take?
-    - what classes would I be taking?
+    - what courses would I be taking?
     - what classes are needed?
     - what do I have to take?
     - what classes are needed to get a degree?
