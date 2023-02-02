@@ -106,3 +106,13 @@ nlu:
     - what do I have to take?
     - what classes are needed to get a degree?
     - what do I have to take to graduate?
+
+- intent: engineering
+  examples: |
+    - college of engineering
+    - engineering
+    - I want to go into the college of engineering
+    - herbert wertheim college of engineering
+    - I was interested in the college of engineering
+    - I want to go into engineering
+    - I am interested in engineering
