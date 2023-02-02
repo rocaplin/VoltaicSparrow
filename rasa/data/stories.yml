@@ -38,10 +38,30 @@ stories:
   steps:
   - intent: required_courses
   - action: utter_which_college
+  - intent: difference
+  - action: utter_difference
+  - action: utter_ which_college
   - intent: engineering
   - action: utter_required_courses_eng
   
 - story: required courses path 2
+  steps:
+  - intent: required_courses
+  - action: utter_which_college
+  - intent: engineering
+  - action: utter_required_courses_eng
+  
+- story: required courses path 3
+  steps:
+  - intent: required_courses
+  - action: utter_which_college
+  - intent: difference
+  - action: utter_difference
+  - action: utter_which_college
+  - intent: clas
+  - action: utter_required_courses_clas
+  
+- story: required courses path 4
   steps:
   - intent: required_courses
   - action: utter_which_college
