@@ -36,8 +36,6 @@ stories:
 
 - story: required courses path 1
   steps:
-  - intent: greet
-  - action: utter_greet
   - intent: required_courses
   - action: utter_which_college
   - intent: engineering
@@ -45,8 +43,6 @@ stories:
   
 - story: required courses path 2
   steps:
-  - intent: greet
-  - action: utter_greet
   - intent: required_courses
   - action: utter_which_college
   - intent: clas
