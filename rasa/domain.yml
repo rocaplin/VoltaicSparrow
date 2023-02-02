@@ -44,9 +44,9 @@ responses:
  
  Some additional courses you can expect to be taking include COP 3503C Programming Fundamentals 2 or COP 3504C Advanced Programming Fundamentals for CIS Majors, COT 3100 Applications of Discrete Structures, COP 3530 Data Structures and Algorithm, and COP 4600 Operating Systems. 
   
- If you would like more information on required courses for a computer science degree, please visit https://catalog.ufl.edu/UGRD/colleges-schools/UGLAS/CSC_BS/."
+ If you would like more information on required courses for a computer science degree, please visit https://catalog.ufl.edu/UGRD/colleges-schools/UGLAS/CSC_BS/.
  
- In addition to required courses for the computer science major, there are some courses that must be taken to satisfy the degree requirements for the College of Liberal Arts and Sciences. For more information on these additional requirements, check out https://catalog.ufl.edu/UGRD/colleges-schools/UGLAS/#degreerequirementstext.
+ In addition to required courses for the computer science major, there are some courses that must be taken to satisfy the degree requirements for the College of Liberal Arts and Sciences. For more information on these additional requirements, check out https://catalog.ufl.edu/UGRD/colleges-schools/UGLAS/#degreerequirementstext."
   
 actions:
   - action_hello_world
