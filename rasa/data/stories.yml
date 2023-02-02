@@ -33,3 +33,21 @@ stories:
   steps:
   - intent: request_action_test
   - action: action_hello_world
+
+- story: required courses path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: required_courses
+  - action: utter_which_college
+  - intent: engineering
+  - action: utter_required_courses_eng
+  
+- story: required courses path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: required_courses
+  - action: utter_which_college
+  - intent: clas
+  - action: utter_required_courses_clas
