@@ -8,8 +8,6 @@ services:
    ports:
     -  3000:3000
    container_name: mern-ui
-   networks:
-    -  mern-stack-net
    volumes:
     -  ./ui:/usr/app/src
     -  ./ui/public:/usr/app/public
@@ -21,8 +19,6 @@ services:
     ports:
       - 27017:27017
     container_name: mongo-db
-    networks:
-      - mern-stack-net
     volumes:
       - mongo-data:/data/db
       
@@ -42,11 +38,7 @@ services:
     volumes:
       - ./rasa/actions:/app/actions
     command: run actions -p 5055 --cors "*"
-
-networks:
-  mern-stack-net:
-    driver: bridge
-
+    
 volumes:
   mongo-data:
     driver: local
