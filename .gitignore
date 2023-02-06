@@ -1,0 +1,6 @@
+rasa/.cache/**
+rasa/.config/**
+rasa/.rasa/**
+rasa/.rasa/cache/**
+rasa/models/**
+rasa/results/**
