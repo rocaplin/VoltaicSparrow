@@ -9,10 +9,7 @@ intents:
   - mood_unhappy
   - bot_challenge
   - request_action_test
-
-  # R4a. The chatbot should describe in general terms the University of Florida experience.
-  - ufonline
-  - ufcampus
+  - faq
 
 responses:
   utter_greet:
@@ -34,15 +31,14 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-  # R4a. The chatbot should describe in general terms the University of Florida experience.
-  utter_ufonline:
+  utter_faq/ufonline:
   - text: "Online classes are convenient and economical. UF Online is one of the top programs in the United States and offers many degrees online.
   
 The challenges of online study can include power outages, technical difficulties, and distractions. Proactive and disciplined students will be most successful.
 
 If you would like to find out more about UF Online, visit https://ufonline.ufl.edu."
 
-  utter_ufcampus:
+  utter_faq/ufcampus:
   - text: "Campus classes provide a more traditional college experience. The University of Florida offers a wide variety of degree programs, facilities, and extracurricular opportunities.
 
  The challenges of campus study can include a daily commute, new living arrangements, and distractions. Proactive and disciplined students will be most successful.

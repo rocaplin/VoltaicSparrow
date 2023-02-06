@@ -96,19 +96,24 @@ nlu:
     - Is the action server working
     - Action server test
 
-# R4a. The chatbot should describe in general terms the University of Florida experience.
-- intent: ufonline
+- intent: faq/ufonline
   examples: |
     - can you tell me about online classes?
     - tell me about ufonline
     - what's it like to be an online student?
     - are online classes hard?
+    - how is ufo
+    - What is UFO?
+    - How good is the online program?
+    - Is online better?
 
-- intent: ufcampus
+- intent: faq/ufcampus
   examples: |
     - what are classes like at the university?
     - what is it like to be a student at UF?
     - what is it like to be a residential student?
-    - what is the University of Florida like?
+    - What is the University of Florida like?
     - tell me about being a campus student
     - tell me about campus classes
+    - How is campus?
+    - are campus classes better

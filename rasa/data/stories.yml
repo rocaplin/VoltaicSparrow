@@ -33,14 +33,3 @@ stories:
   steps:
   - intent: request_action_test
   - action: action_hello_world
-
-# R4a. The chatbot should describe in general terms the University of Florida experience.
-- story: ufonline path
-  steps:
-  - intent: ufonline
-  - action: utter_ufonline
-
-- story: ufcampus path
-  steps:
-  - intent: ufcampus
-  - action: utter_ufcampus
