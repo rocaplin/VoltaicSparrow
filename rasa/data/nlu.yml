@@ -95,7 +95,7 @@ nlu:
     - Test the action server
     - Is the action server working
     - Action server test
-
+    
 - intent: required_courses
   examples: |
     - what classes do computer science students take?
@@ -106,7 +106,7 @@ nlu:
     - what do I have to take?
     - what classes are needed to get a degree?
     - what do I have to take to graduate?
-    
+
 - intent: difference
   examples: |
     - what is the difference?
@@ -124,19 +124,14 @@ nlu:
     - I was interested in the college of engineering
     - I want to go into engineering
     - I am interested in engineering
-    
-  - intent: clas
-    examples: |
-     - college of liberal arts and science
-     - college of liberal arts and sciences 
-     - college of liberal arts
-     - clas
-     - not engineering
-     - I want to go into the college of liberal arts and science
-     - I want to go into the college of liberal arts and sciences
-     - college of liberal arts and science
-     - college of liberal arts and sciences
-     - I was interested in the college of liberal arts and sciences
-     - I was interested in the college of liberal arts and science
-     - I do not want to go into engineering
-     - I am not interested in engineering
+
+- intent: clas
+  examples: |
+    - college of liberal arts and sciences
+    - clas
+    - not engineering
+    - I want to go into the college of liberal arts and sciences
+    - college of liberal arts and sciences
+    - I was interested in the college of liberal arts and sciences
+    - I do not want to go into engineering
+    - I am not interested in engineering
