@@ -9,9 +9,11 @@ intents:
   - mood_unhappy
   - bot_challenge
   - request_action_test
-  - required_courses_eng
-  - required_courses_clas
-
+  - required_courses
+  - difference
+  - engineering
+  - clas
+  
 responses:
   utter_greet:
   - text: "Hey! How are you?"
