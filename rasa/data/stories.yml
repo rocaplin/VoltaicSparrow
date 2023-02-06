@@ -34,7 +34,7 @@ stories:
   - intent: request_action_test
   - action: action_hello_world
 
-- story: required courses path 1
+- story: courses path 1
   steps:
   - intent: required_courses
   - action: utter_which_college
@@ -44,14 +44,14 @@ stories:
   - intent: engineering
   - action: utter_required_courses_eng
   
-- story: required courses path 2
+- story: courses path 2
   steps:
   - intent: required_courses
   - action: utter_which_college
   - intent: engineering
   - action: utter_required_courses_eng
   
-- story: required courses path 3
+- story: courses path 3
   steps:
   - intent: required_courses
   - action: utter_which_college
@@ -61,7 +61,7 @@ stories:
   - intent: clas
   - action: utter_required_courses_clas
   
-- story: required courses path 4
+- story: courses path 4
   steps:
   - intent: required_courses
   - action: utter_which_college
