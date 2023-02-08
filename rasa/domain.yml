@@ -9,7 +9,11 @@ intents:
   - mood_unhappy
   - bot_challenge
   - request_action_test
-
+  - required_courses
+  - difference
+  - engineering
+  - clas
+  
 responses:
   utter_greet:
   - text: "Hey! How are you?"
@@ -29,6 +33,28 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+  
+  utter_which_college:
+  - text: "Which college are you interested in pursuing computer science in? There are two: the College of Liberal Arts and Sciences and the Herbert Wertheim College of Engineering."
+  
+  utter_difference:
+  - text: "Some things change when you pursue a computer science degree in one college versus the other. The difference between the two lies mostly in the courses you will be taking. Additionally, there may be some college requirements that will differ depending on the choice you make."
+  
+  utter_required_courses_eng:
+  - text: "There are a number of courses that you will be taking as a computer science student in the College of Engineering. All students are required to take six critical tracking courses: MAC 2311 Analytic Geometry and Calculus 1, MAC 2312 Analytic Geometry and Calculus 2, MAC 2313 Analytic Geometry and Calculus 3, COP3502C Programming Fundamentals 1, PHY 2048 Physics with Calculus 1, and PHY 2049 Physics with Calculus 2. 
+ 
+ Some additional courses you can expect to be taking include COP 3503C Programming Fundamentals 2, COT 3100 Applications of Discrete Structures, COP 3530 Data Structures and Algorithm, COP 4600 Operating Systems, and COP 4020 Programming Language Concepts. 
+  
+ For more information on required courses, please visit https://catalog.ufl.edu/UGRD/colleges-schools/UGENG/CPS_BSCS/."
+  
+  utter_required_courses_clas:
+  - text: "There are a number of courses that you will be taking as a computer science student in the College of Liberal Arts and Sciences including MAC 1147 Precalculus Algebra and Trigonometry and/or MAC 2311 Analytic Geometry and Calculus 1, MAC 2312 Analytic Geometry and Calculus 2, MAC 2313 Analytic Geometry and Calculus 3, COP3502C Programming Fundamentals 1 or COP 3504C Advanced Programming Fundamentals for CIS Majors, PHY 2053 Physics 1 or PHY 2048 Physics with Calculus 1, and PHY 2054 Physics 2 or PHY 2049 Physics with Calculus 2. 
+ 
+ Some additional courses you can expect to be taking include COP 3503C Programming Fundamentals 2 or COP 3504C Advanced Programming Fundamentals for CIS Majors, COT 3100 Applications of Discrete Structures, COP 3530 Data Structures and Algorithm, and COP 4600 Operating Systems. 
+  
+ If you would like more information on required courses for a computer science degree, please visit https://catalog.ufl.edu/UGRD/colleges-schools/UGLAS/CSC_BS/.
+ 
+ In addition to required courses for the computer science major, there are some courses that must be taken to satisfy the degree requirements for the College of Liberal Arts and Sciences. For more information on these additional requirements, check out https://catalog.ufl.edu/UGRD/colleges-schools/UGLAS/#degreerequirementstext."
   
 actions:
   - action_hello_world
