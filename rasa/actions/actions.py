@@ -24,28 +24,28 @@ class ActionHelloWorld(Action):
 
          return []
 
-class ActionCreditHours(Action):
+# class ActionCreditHours(Action):
 
-    def name(self) -> Text:
-        return "action_credit_hours"
+#     def name(self) -> Text:
+#         return "action_credit_hours"
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text="A Computer Science Degree at UF requires a minimum of 120 total credit hours.")
+#         dispatcher.utter_message(text="A Computer Science Degree at UF requires a minimum of 120 total credit hours.")
 
-        return []
+#         return []
 
-class ActionWorkload(Action):
+# class ActionWorkload(Action):
     
-    def name(self) -> Text:
-        return "action_workload"
+#     def name(self) -> Text:
+#         return "action_workload"
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text="Each credit hour is defined as one hour of in-person instruction and a minimum of two hours of out-of-class work per week. A 15-credit semester would consist of 15 hours of in-person instruction, and 30 hours of out-of-class work per week.")
+#         dispatcher.utter_message(text="Each credit hour is defined as one hour of in-person instruction and a minimum of two hours of out-of-class work per week. A 15-credit semester would consist of 15 hours of in-person instruction, and 30 hours of out-of-class work per week.")
 
-        return []
+#         return []

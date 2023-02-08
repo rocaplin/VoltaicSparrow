@@ -96,12 +96,13 @@ nlu:
     - Is the action server working
     - Action server test
 
-- intent: query_credit_hours
+- intent: faq/credit_hours
   examples: |
     - How many credit hours are required for Computer Science students?
     - What is the number of credits needed for a Computer Science degree?
-
-- intent: query_workload
+    - How many classes do I have to take?
+    
+- intent: faq/workload_per_hour
   examples: |
     - What is the workload like for Computer Science students?
     - How much work a week for a Computer Science student?

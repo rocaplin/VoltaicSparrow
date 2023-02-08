@@ -9,8 +9,9 @@ intents:
   - mood_unhappy
   - bot_challenge
   - request_action_test
-  - query_credit_hours
-  - query_workload
+  # - query_credit_hours
+  # - query_workload
+  - faq
 
 responses:
   utter_greet:
@@ -31,11 +32,17 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_faq/credit_hours:
+  - text: "A Computer Science Degree at UF requires a minimum of 120 total credit hours. For a full-time student, this constitutes 12-18 credit hours per semester"
+
+  utter_faq/workload_per_hour:
+  - text: "Each credit hour is defined as one hour of in-person instruction and a minimum of two hours of out-of-class work per week. A 15-credit semester would consist of 15 hours of in-person instruction, and 30 hours of out-of-class work per week."
   
 actions:
   - action_hello_world
-  - action_credit_hours
-  - action_workload
+  # - action_credit_hours
+  # - action_workload
 
 session_config:
   session_expiration_time: 60
