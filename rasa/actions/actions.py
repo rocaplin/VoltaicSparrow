@@ -39,3 +39,34 @@ class ActionHelloWorld(Action):
          dispatcher.utter_message(text="Hello From The Action Server! You have said 'hello' to the DB " + str(count["count"]) + " time(s)!")
 
          return []
+         
+class ActionTestClassSuggest(Action):
+
+     def name(self) -> Text:
+         return "action_test_class_suggest"
+
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+         client = MongoClient('mongo-db',27017)
+         db = client.test_database
+         classes = db.test_classes
+         
+         subject = None
+         
+         for entity in tracker.latest_message['entities']:
+            if entity["entity"] == 'subject':
+                subject = entity['value']
+         
+
+         suggested_class = classes.find_one({"keyword": subject})
+         
+         
+         if not suggested_class:
+            dispatcher.utter_message(text="I can't think of a good class for that")
+        
+         else:
+            dispatcher.utter_message(text="You should take "+suggested_class["name"])
+
+         return []

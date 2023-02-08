@@ -95,3 +95,10 @@ nlu:
     - Test the action server
     - Is the action server working
     - Action server test
+    
+- intent: request_test_class_suggestion
+  examples: |
+    - Recommend me a class about [circuits]{"entity": "subject"}
+    - What is a good class about [AI]{"entity": "subject"}
+    - I'm interested in [malware]{"entity": "subject"}
+    - Is there a class about [AI]{"entity": "subject"}

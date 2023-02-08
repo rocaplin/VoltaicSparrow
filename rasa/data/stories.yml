@@ -33,3 +33,8 @@ stories:
   steps:
   - intent: request_action_test
   - action: action_hello_world
+  
+- story: action recommend test path
+  steps:
+  - intent: request_test_class_suggestion
+  - action: action_test_class_suggest
