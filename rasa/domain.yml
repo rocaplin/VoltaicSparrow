@@ -13,7 +13,8 @@ intents:
   - difference
   - engineering
   - clas
-  
+  - faq
+
 responses:
   utter_greet:
   - text: "Hey! How are you?"
@@ -33,6 +34,20 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_faq/ufonline:
+  - text: "Online classes are convenient and economical. UF Online is one of the top programs in the United States and offers many degrees online.
+  
+The challenges of online study can include power outages, technical difficulties, and distractions. Proactive and disciplined students will be most successful.
+
+If you would like to find out more about UF Online, visit https://ufonline.ufl.edu."
+
+  utter_faq/ufcampus:
+  - text: "Campus classes provide a more traditional college experience. The University of Florida offers a wide variety of degree programs, facilities, and extracurricular opportunities.
+
+ The challenges of campus study can include a daily commute, new living arrangements, and distractions. Proactive and disciplined students will be most successful.
+
+ If you would like to find out more about UF, visit https://ufl.edu."
   
   utter_which_college:
   - text: "Which college are you interested in pursuing computer science in? There are two: the College of Liberal Arts and Sciences and the Herbert Wertheim College of Engineering."
