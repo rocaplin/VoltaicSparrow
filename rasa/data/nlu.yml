@@ -1,159 +1,166 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-    
-- intent: request_action_test
-  examples: |
-    - Test the action server
-    - Is the action server working
-    - Action server test
-    
-- intent: required_courses
-  examples: |
-    - what classes do computer science students take?
-    - what courses are required?
-    - what classes do I have to take?
-    - what courses would I be taking?
-    - what classes are needed?
-    - what do I have to take?
-    - what classes are needed to get a degree?
-    - what do I have to take to graduate?
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
 
-- intent: difference
-  examples: |
-    - what is the difference?
-    - how are they different?
-    - what changes?
-    - does that matter?
-    - difference?
+  - intent: request_action_test
+    examples: |
+      - Test the action server
+      - Is the action server working
+      - Action server test
 
-- intent: engineering
-  examples: |
-    - college of engineering
-    - engineering
-    - I want to go into the college of engineering
-    - herbert wertheim college of engineering
-    - I was interested in the college of engineering
-    - I want to go into engineering
-    - I am interested in engineering
+  - intent: required_courses
+    examples: |
+      - what classes do computer science students take?
+      - what courses are required?
+      - what classes do I have to take?
+      - what courses would I be taking?
+      - what classes are needed?
+      - what do I have to take?
+      - what classes are needed to get a degree?
+      - what do I have to take to graduate?
 
-- intent: clas
-  examples: |
-    - college of liberal arts and sciences
-    - clas
-    - not engineering
-    - I want to go into the college of liberal arts and sciences
-    - college of liberal arts and sciences
-    - I was interested in the college of liberal arts and sciences
-    - I do not want to go into engineering
-    - I am not interested in engineering
+  - intent: difference
+    examples: |
+      - what is the difference?
+      - how are they different?
+      - what changes?
+      - does that matter?
+      - difference?
 
-- intent: faq/ufonline
-  examples: |
-    - can you tell me about online classes?
-    - tell me about ufonline
-    - what's it like to be an online student?
-    - are online classes hard?
-    - how is ufo
-    - What is UFO?
-    - How good is the online program?
-    - Is online better?
+  - intent: engineering
+    examples: |
+      - college of engineering
+      - engineering
+      - I want to go into the college of engineering
+      - herbert wertheim college of engineering
+      - I was interested in the college of engineering
+      - I want to go into engineering
+      - I am interested in engineering
 
-- intent: faq/ufcampus
-  examples: |
-    - what are classes like at the university?
-    - what is it like to be a student at UF?
-    - what is it like to be a residential student?
-    - What is the University of Florida like?
-    - tell me about being a campus student
-    - tell me about campus classes
-    - How is campus?
-    - are campus classes better
+  - intent: clas
+    examples: |
+      - college of liberal arts and sciences
+      - clas
+      - not engineering
+      - I want to go into the college of liberal arts and sciences
+      - college of liberal arts and sciences
+      - I was interested in the college of liberal arts and sciences
+      - I do not want to go into engineering
+      - I am not interested in engineering
+
+  - intent: faq/ufonline
+    examples: |
+      - can you tell me about online classes?
+      - tell me about ufonline
+      - what's it like to be an online student?
+      - are online classes hard?
+      - how is ufo
+      - What is UFO?
+      - How good is the online program?
+      - Is online better?
+
+  - intent: faq/ufcampus
+    examples: |
+      - what are classes like at the university?
+      - what is it like to be a student at UF?
+      - what is it like to be a residential student?
+      - What is the University of Florida like?
+      - tell me about being a campus student
+      - tell me about campus classes
+      - How is campus?
+      - are campus classes better
+
+  - intent: faq/course_workload
+    examples: |
+      - What is the workload like for Computer Science students?
+      - How much work a week does a Computer Science student have?
+      - How much work does a Computer Science student do in a week?
+      - What does a weekly workload look like for a Computer Science degree?
