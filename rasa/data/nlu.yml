@@ -122,3 +122,65 @@ nlu:
     - Is Computer Science hard?
     - How much homework will I have?
     - How much homework will I have as a Computer Science student?
+    
+- intent: required_courses
+  examples: |
+    - what classes do computer science students take?
+    - what courses are required?
+    - what classes do I have to take?
+    - what courses would I be taking?
+    - what classes are needed?
+    - what do I have to take?
+    - what classes are needed to get a degree?
+    - what do I have to take to graduate?
+
+- intent: difference
+  examples: |
+    - what is the difference?
+    - how are they different?
+    - what changes?
+    - does that matter?
+    - difference?
+
+- intent: engineering
+  examples: |
+    - college of engineering
+    - engineering
+    - I want to go into the college of engineering
+    - herbert wertheim college of engineering
+    - I was interested in the college of engineering
+    - I want to go into engineering
+    - I am interested in engineering
+
+- intent: clas
+  examples: |
+    - college of liberal arts and sciences
+    - clas
+    - not engineering
+    - I want to go into the college of liberal arts and sciences
+    - college of liberal arts and sciences
+    - I was interested in the college of liberal arts and sciences
+    - I do not want to go into engineering
+    - I am not interested in engineering
+
+- intent: faq/ufonline
+  examples: |
+    - can you tell me about online classes?
+    - tell me about ufonline
+    - what's it like to be an online student?
+    - are online classes hard?
+    - how is ufo
+    - What is UFO?
+    - How good is the online program?
+    - Is online better?
+
+- intent: faq/ufcampus
+  examples: |
+    - what are classes like at the university?
+    - what is it like to be a student at UF?
+    - what is it like to be a residential student?
+    - What is the University of Florida like?
+    - tell me about being a campus student
+    - tell me about campus classes
+    - How is campus?
+    - are campus classes better

@@ -89,3 +89,31 @@ stories:
       are you a bot?
     intent: bot_challenge
   - action: utter_iamabot
+
+- story: ask about online classes 1
+  steps:
+  - user: |
+      What are online classes like?
+    intent: faq/ufonline
+  - action: utter_faq/ufonline
+
+- story: ask about online classes 2
+  steps:
+  - user: |
+      tell me about ufonline
+    intent: faq/ufonline
+  - action: utter_faq/ufonline
+
+- story: ask about campus classes 1
+  steps:
+  - user: |
+      Are campus classes better?
+    intent: faq/ufcampus
+  - action: utter_faq/ufcampus
+
+- story: ask about campus classes 2
+  steps:
+  - user: |
+      how are campus classes?
+    intent: faq/ufcampus
+  - action: utter_faq/ufcampus
