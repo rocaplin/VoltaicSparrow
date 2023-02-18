@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lora&family=Roboto:wght@700&display=swap');
+
+:root {
+    min-height: 100vh;
+    width:100%;
+    margin: 0px;
+    background: repeating-linear-gradient(var(--grey-100), var(--grey-200), var(--grey-100));
+    /* Color Palette */
+    /* Primary -- Burnt Orange */
+    --primary-400: #A14409;
+    --primary-500: #BC581A;
+    --primary-600: #D76118;
+
+    /* Secondary -- USAFA Blue */
+    --secondary-400: #003D73;
+    --secondary-500: #00529B;
+    --secondary-600: #006BCB;
+
+    /* Tertiary -- Yellow Green */
+    --tertiary-400: #7EAA17;
+    --tertiary-500: #95C623;
+    --tertiary-600: #A9DF2D;
+
+    /* Greyscale */
+    --grey-100: #090C02;
+    --grey-200: #30332A;
+    --grey-300: #555751;
+    --grey-400: #757771;
+    --grey-500: #949691;
+    --grey-600: #BABBB8;
+    --grey-700: #DFE0DF;
+    --grey-800: #FFFFFF;
+
+}
+
+/* Margins, Default Fonts, Hero Image */
+
+body {
+    margin: 0.5rem;
+    background: var(--grey-200);
+
+    /* typographic font */
+    font-family: 'Lora', serif;
+    font-size: 1.0rem;
+    font-weight: 400;
+    color: var(--grey-700);
+}
+
+#hero {
+    background: #000;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: var(--grey-800);
+}
+
+#main-content {
+    padding: 0rem 0.25rem;
+}
+
+.content-style-1, .content-style-2 {
+    padding: 0.75rem 0rem;
+}
+
+.content-style-1, .content-style-1 h3 {
+    color: var(--grey-700);
+}
+
+.content-style-2, .content-style-2 h3 {
+    color: var(--grey-200);
+    background: var(--grey-700);
+}
+
+.text-content {
+    padding: 0rem 0.25rem;
+}
+
+.image-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer, #footer h3 {
+    background-color: var(--grey-100);
+    color: var(--grey-500);
+    text-align: center;
+}
+
+#footer-content {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+
+/* Mobile */
+
+/*  Mobile Font Sizes
+    H1 - 36px - 2.250rem
+    H2 - 27px - 1.688rem
+    H3 - 21px - 1.312rem
+    P  - 16px
+*/
+h1 {
+    font-size: 2.250rem;
+    margin: 0rem;
+    padding: 0.953rem 0rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.688rem;
+    margin: 0.422rem 0rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.312rem;
+}
+
+#mobile-hero {
+    display: block;
+    width: 100%;
+}
+
+#desktop-hero {
+    display: none;
+}
+
+@media (max-width: 22.5rem) {
+    body {
+        margin: 0;
+    }
+}
+
+/* Tablet */
+
+/*  Tablet Font Sizes
+    H1 - 47px - 2.938rem
+    H2 - 36px - 2.250rem
+    h3 - 27px - 1.688rem
+    P  - 16px
+*/
+
+/* Desktop */
+@media (min-width: 59.125rem) {
+    body {
+        margin: 0.75rem 0.75rem;
+    }
+
+    /*  Desktop Font Sizes
+        H1 - 61px - 3.812rem
+        H2 - 47px - 2.938rem
+        H3 - 36px - 2.250rem
+        P  - 16px
+    */
+    h1 {
+        font-size: 3.812rem;
+        margin: 0rem;
+        padding: 0.953rem 0rem;
+        text-align: left;
+    }
+    
+    h2 {
+        font-size: 2.938rem;
+    }
+    
+    h3 {
+        font-size: 2.250rem;
+        margin: 0.5rem 0rem 1.5rem;
+    }
+
+    #mobile-hero {
+        display: none;
+    }
+
+    #desktop-hero {
+        display: block;
+        width: 66%;
+    }
+
+    #hero-top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 8.33%;
+    }
+
+    .content-style-1 .content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .content-style-2 .content {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .content > * {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 76.5rem) {
+    body {
+        margin: 0.75rem 3.75rem;
+    }    
+}
+
+@media (min-width: 90.0rem) {
+    body {
+        margin: 0.75rem 6.75rem;
+    }    
+}
+
+@media (min-width: 112.5rem) {
+    body {
+        margin: 0.75rem 8.75rem;
+    }
+}
+
+@media (min-width: 123.75rem) {
+    body {
+        max-width: 106.25rem;
+        margin: 0.75rem auto;
+    }
+}
