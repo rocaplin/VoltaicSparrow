@@ -14,11 +14,6 @@ intents:
   - engineering
   - clas
   - faq
-  - required_courses
-  - difference
-  - engineering
-  - clas
-  - faq
 
 responses:
   utter_greet:

@@ -4,3 +4,4 @@ rasa/.rasa/**
 rasa/.rasa/cache/**
 rasa/models/**
 rasa/results/**
+.vs/**
