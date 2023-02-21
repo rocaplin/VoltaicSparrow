@@ -95,6 +95,33 @@ nlu:
     - Test the action server
     - Is the action server working
     - Action server test
+
+- intent: faq/credit_hours
+  examples: |
+    - How many credit hours are required for Computer Science students?
+    - What is the number of credits needed for a Computer Science degree?
+    - How many classes do I have to take?
+    - What is the typical amount of credits per class? 
+
+- intent: faq/excess_hours
+  examples: |
+    - What are excess hours?
+    - Can I take more than 120 credits?
+    - What's the maximum amount of credits I can take?
+    - What happens if I go over the credit hour limit?
+    - Do I have to pay extra if I go over the credit limit?
+    
+- intent: faq/workload_per_hour
+  examples: |
+    - How do credit hours work?
+    - What is the workload like for Computer Science students?
+    - How much work a week for a Computer Science student?
+    - What does a weekly workload look like for a Computer Science degree?
+    - How many classes do I need to take each semester?
+    - Is Computer Science a lot of work?
+    - Is Computer Science hard?
+    - How much homework will I have?
+    - How much homework will I have as a Computer Science student?
     
 - intent: required_courses
   examples: |
