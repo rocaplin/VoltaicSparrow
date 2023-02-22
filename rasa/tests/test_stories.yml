@@ -131,3 +131,17 @@ stories:
       can you define computer science
     intent: faq/csdefinition
   - action: utter_faq/csdefinition
+
+- story: computer science history 1
+  steps:
+  - user: |
+      where did computer science come from
+    intent: faq/cshistory
+  - action: utter_faq/cshistory
+
+- story: computer science history 2
+  steps:
+  - user: |
+      How did Computer Science develop?
+    intent: faq/cshistory
+  - action: utter_faq/cshistory

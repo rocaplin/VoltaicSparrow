@@ -193,3 +193,13 @@ nlu:
     - How do I define Computer Science?
     - what is computer science's definition?
     - tell me what computer science means
+
+- intent: faq/cshistory
+  examples: |
+    - What is the origin of Computer Science?
+    - Who invented computer science?
+    - How did Computer science come into being?
+    - Tell me about the history of computer science.
+    - how was computer science invented
+    - Where did computer science come from?
+    - how did computer science start

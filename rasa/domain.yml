@@ -87,11 +87,22 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
  - theory - what can be computed and how
 
  - application - use of computational methods in different fields
- 
+
  - systems - the tools we use to carry out computations
 
  The term Computer Science was coined after the advent of the modern computer and the impact it had on the way we carry out computations. As the technology has continued to evolve so too have the wide variety of topics associated with Computer science. It seems the rapid growth of topics associated with the term has contributed to varying definitions of Computer science."
-  
+
+  utter_faq/cshistory:
+  - text: "The foundation of Computer science predates modern computers. Ancient peoples used machines like the abacus and algorithms like the Sieve of Eratosthenes to perform calculations.
+
+During the Enlightenment mechanical calculators began to appear in Europe and Leibniz documented logical operations within a binary number system.
+
+During the Industrial Revolution Charles Babbage designed increasingly complicated calculators culminating in his Analytical Engine, the first general-purpose computer, in 1837. In 1843 Ada Lovelace wrote what is considered the first published algorithm for a computer as a supplement to an article on Babbage's Analytical Engine.
+
+Babbage had difficulty implementing his designs due to financial issues and manufacturing limitations of the time. It wasn't until the 1930s and 40s that the first general purpose computers were built in the United States and Europe.
+
+The first coursework in what would later become Computer science started to be offered by universities in the 1940s and 1950s, with the term Computer science emerging to describe these different offerings sometime in the 1950s."
+
 actions:
   - action_hello_world
 
