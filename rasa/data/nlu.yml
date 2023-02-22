@@ -184,3 +184,12 @@ nlu:
     - tell me about campus classes
     - How is campus?
     - are campus classes better
+
+- intent: faq/csdefinition
+  examples: |
+    - what is computer science?
+    - What does Computer Science mean?
+    - Could you define Computer science?
+    - How do I define Computer Science?
+    - what is computer science's definition?
+    - tell me what computer science means

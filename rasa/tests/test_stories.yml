@@ -117,3 +117,17 @@ stories:
       how are campus classes?
     intent: faq/ufcampus
   - action: utter_faq/ufcampus
+
+- story: computer science definition 1
+  steps:
+  - user: |
+      What is Computer Science anyway?
+    intent: faq/csdefinition
+  - action: utter_faq/csdefinition
+
+- story: computer science definition 2
+  steps:
+  - user: |
+      can you define computer science
+    intent: faq/csdefinition
+  - action: utter_faq/csdefinition

@@ -80,6 +80,17 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
 
   utter_faq/workload_per_hour:
   - text: "Each credit hour is defined as one hour of in-person instruction and a minimum of two hours of out-of-class work per week. A 15-credit semester would consist of 15 hours of in-person instruction, and 30 hours of out-of-class work per week."
+
+  utter_faq/csdefinition:
+  - text: "There is no agreed upon definition of Computer Science. One way to look at it is as the study of computation. Specifically:
+
+ - theory - what can be computed and how
+
+ - application - use of computational methods in different fields
+ 
+ - systems - the tools we use to carry out computations
+
+ The term Computer Science was coined after the advent of the modern computer and the impact it had on the way we carry out computations. As the technology has continued to evolve so too have the wide variety of topics associated with Computer science. It seems the rapid growth of topics associated with the term has contributed to varying definitions of Computer science."
   
 actions:
   - action_hello_world
