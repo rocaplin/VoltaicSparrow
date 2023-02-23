@@ -132,6 +132,29 @@ stories:
     intent: faq/csdefinition
   - action: utter_faq/csdefinition
 
+- story: etymology of computer science 1
+  steps:
+  - user: |
+      Where did the term Computer Science come from?
+    intent: csetymology
+  - action: utter_modern_computers
+  - action: utter_csetymology
+
+- story: etymology of computer science 2
+  steps:
+  - user: |
+      why is it called computer science
+    intent: csetymology
+  - action: utter_modern_computers
+  - action: utter_csetymology
+
+- story: modern computers 1
+  steps:
+  - user: |
+      when were the first modern computers built?
+    intent: modern_computers
+  - action: utter_modern_computers
+
 - story: computer science history 1
   steps:
   - user: |
@@ -145,3 +168,52 @@ stories:
       How did Computer Science develop?
     intent: faq/cshistory
   - action: utter_faq/cshistory
+
+- story: leibniz 1
+  steps:
+  - user: |
+      who founded computer science?
+    intent: faq/leibniz
+  - action: utter_faq/leibniz
+
+- story: leibniz 2
+  steps:
+  - user: |
+      Who was Gottfried Wilhelm von Leibniz?
+    intent: faq/leibniz
+  - action: utter_faq/leibniz
+
+- story: babbage 1
+  steps:
+  - user: |
+      Who was Charles Babbage?
+    intent: faq/babbage
+  - action: utter_faq/babbage
+
+- story: babbage 2
+  steps:
+  - user: |
+      Who designed the first general purpose computer?
+    intent: faq/babbage
+  - action: utter_faq/babbage
+
+- story: babbage 3
+  steps:
+  - user: |
+      who is babbage
+    intent: faq/babbage
+  - action: utter_faq/babbage
+
+- story: lovelace 1
+  steps:
+  - user: |
+      Who was Ada Lovelace?
+    intent: faq/lovelace
+  - action: utter_faq/lovelace
+
+- story: lovelace 2
+  steps:
+  - user: |
+      Who was the first programmer?
+    intent: faq/lovelace
+  - action: utter_faq/lovelace

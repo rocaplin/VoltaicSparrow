@@ -67,3 +67,14 @@ stories:
   - action: utter_which_college
   - intent: clas
   - action: utter_required_courses_clas
+
+- story: modern/ general-purpose computers
+  steps:
+  - intent: modern_computers
+  - action: utter_modern_computers
+
+- story: cs etymology
+  steps:
+  - intent: csetymology
+  - action: utter_modern_computers
+  - action: utter_csetymology

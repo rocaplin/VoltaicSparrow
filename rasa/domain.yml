@@ -14,6 +14,8 @@ intents:
   - engineering
   - clas
   - faq
+  - csetymology
+  - modern_computers
 
 responses:
   utter_greet:
@@ -82,26 +84,62 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
   - text: "Each credit hour is defined as one hour of in-person instruction and a minimum of two hours of out-of-class work per week. A 15-credit semester would consist of 15 hours of in-person instruction, and 30 hours of out-of-class work per week."
 
   utter_faq/csdefinition:
-  - text: "There is no agreed upon definition of Computer Science. One way to look at it is as the study of computation. Specifically:
+  - text: "While there is no official definition of Computer Science one way to view it is as the study of computation. This includes the study of:
 
- - theory - what can be computed and how
+ - what can and cannot be solved through computation.
 
- - application - use of computational methods in different fields
+ - computational methods and their application.
 
- - systems - the tools we use to carry out computations
+ - the tools we use to perform computations."
 
- The term Computer Science was coined after the advent of the modern computer and the impact it had on the way we carry out computations. As the technology has continued to evolve so too have the wide variety of topics associated with Computer science. It seems the rapid growth of topics associated with the term has contributed to varying definitions of Computer science."
+  utter_modern_computers:
+  - text: "The first general purpose computers began to be built in the United States and Europe during the late 1930s. The term Computer Science was coined in the 1950s to describe related coursework being offered by universities."
+
+  utter_csetymology:
+  - text: "The development of modern computers took place over a period of centuries drawing from a number of fields in Mathematics, Science, and Engineering, and as a result the topics addressed by these courses were just as broad. While the academic field of Computer Science is relatively young it has expanded rapidly and had far reaching societal impacts.
+
+It is likely that for all of these reasons, there are a variety of perspectives on what constitutes Computer Science, and how it should be defined."
 
   utter_faq/cshistory:
-  - text: "The foundation of Computer science predates modern computers. Ancient peoples used machines like the abacus and algorithms like the Sieve of Eratosthenes to perform calculations.
+  - text: "The foundation of Computer science predates modern computers. Ancient peoples used machines like the abacus and algorithms like the Sieve of Eratosthenes to perform calculations."
+    buttons:
+    - title: "What happened next?"
+      payload: "/faq/leibniz"
 
-During the Enlightenment mechanical calculators began to appear in Europe and Leibniz documented logical operations within a binary number system.
+  utter_faq/leibniz:
+  - text: "During the Enlightenment mechanical calculators began to appear in Europe. The famous mathematician Leibniz created one such calculator in 1873. He is sometimes credited as the founder of computer science for documenting the use of logical operations in a binary number system.
 
-During the Industrial Revolution Charles Babbage designed increasingly complicated calculators culminating in his Analytical Engine, the first general-purpose computer, in 1837. In 1843 Ada Lovelace wrote what is considered the first published algorithm for a computer as a supplement to an article on Babbage's Analytical Engine.
+https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz"
+    buttons:
+    - title: "what happened next?"
+      payload: "/faq/babbage"
 
-Babbage had difficulty implementing his designs due to financial issues and manufacturing limitations of the time. It wasn't until the 1930s and 40s that the first general purpose computers were built in the United States and Europe.
+  utter_faq/babbage:
+  - text: "During the Industrial Revolution Charles Babbage designed increasingly complicated calculators culminating in his Analytical Engine, the first general-purpose computer, in 1837. Due to financial and manufacturing difficulties the Analytical Engine was never built.
 
-The first coursework in what would later become Computer science started to be offered by universities in the 1940s and 1950s, with the term Computer science emerging to describe these different offerings sometime in the 1950s."
+https://en.wikipedia.org/wiki/Charles_Babbage"
+    buttons:
+    - title: "What happened next?"
+      payload: "/faq/lovelace"
+
+  utter_faq/lovelace:
+  - text: "In 1843, Ada Lovelace wrote what is considered the first published algorithm for a computer as a supplement to an article on Babbage's Analytical Engine.
+
+https://en.wikipedia.org/wiki/Ada_Lovelace"
+    buttons:
+    - title: "What happened next?"
+      payload: "/modern_computers"
+
+#  utter_faq/cshistory:
+#  - text: "The foundation of Computer science predates modern computers. Ancient peoples used machines like the abacus and algorithms like the Sieve of Eratosthenes to perform calculations.
+#
+#During the Enlightenment mechanical calculators began to appear in Europe and Leibniz documented logical operations within a binary number system.
+#
+#During the Industrial Revolution Charles Babbage designed increasingly complicated calculators culminating in his Analytical Engine, the first general-purpose computer, in 1837. In 1843 Ada Lovelace wrote what is considered the first published algorithm for a computer as a supplement to an article on Babbage's Analytical Engine.
+#
+#Babbage had difficulty implementing his designs due to financial issues and manufacturing limitations of the time. It wasn't until the 1930s and 40s that the first general purpose computers were built in the United States and Europe.
+#
+#The first coursework in what would later become Computer science started to be offered by universities in the 1940s and 1950s, with the term Computer science emerging to describe these different offerings sometime in the 1950s."
 
 actions:
   - action_hello_world

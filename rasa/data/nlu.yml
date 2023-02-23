@@ -194,6 +194,20 @@ nlu:
     - what is computer science's definition?
     - tell me what computer science means
 
+- intent: modern_computers
+  examples: |
+    - When were the first modern computers built?
+    - When did the first general purpose computer get built?
+
+- intent: csetymology
+  examples: |
+    - Where did the term Computer Science come from?
+    - why is it called computer science?
+    - How come it was called Computer Science?
+    - why did they name it computer science?
+    - Why is there no official definition?
+    - why no official definition
+
 - intent: faq/cshistory
   examples: |
     - What is the origin of Computer Science?
@@ -203,3 +217,33 @@ nlu:
     - how was computer science invented
     - Where did computer science come from?
     - how did computer science start
+
+- intent: faq/leibniz
+  examples: |
+    - Who was Leibniz?
+    - What did Leibniz do?
+    - who is the founder of computer science?
+    - Tell me the founder of computer science.
+    - Tell me about Gottfried Leibniz.
+    - Gottfried Wilhelm Leibniz
+    - gottfried wilhelm von leibniz
+
+- intent: faq/babbage
+  examples: |
+    - Who was Charles Babbage?
+    - What did Babbage do?
+    - Who designed the first computer?
+    - who designed the first general purpose computer
+    - Tell me about Charles Babbage.
+    - charles babbage
+    - babbage
+
+- intent: faq/lovelace
+  examples: |
+    - Who was Ada Lovelace?
+    - What did Lovelace do?
+    - Who was the first programmer?
+    - who was the first computer programmer
+    - Tell me about Ada Lovelace.
+    - ada lovelace
+    - lovelace
