@@ -6,7 +6,7 @@ services:
       context: ./ui
       dockerfile: Dockerfile.dev
    ports:
-    -  3000:3000
+    -  80:3000
    container_name: mern-ui
    volumes:
     -  ./ui:/usr/app/src
