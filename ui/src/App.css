@@ -1,0 +1,8 @@
+.App {
+    text-align: center;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 1em;
+    background-color: black;
+  }
