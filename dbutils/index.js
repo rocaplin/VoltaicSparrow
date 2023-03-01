@@ -11,6 +11,42 @@ const client = new MongoClient(uri);
 async function run() {
   try {
     const database = client.db('chompsci');
+
+	
+	/* Topic insert */
+	const topics = database.collection('topics');
+	await topics.deleteMany({});
+
+	var comp_topics = []
+
+	var rawTopicData = fs.readFileSync("./compsci-topicsdata.csv","utf-8");
+
+	var parsedTopicData = parse(rawTopicData,{ delimiter: ",", from_line: 2 });
+
+	parsedTopicData.forEach(parsedTopic => {
+		comp_topics.push(
+			{
+				topic: parsedTopic[0],
+				description: parsedTopic[1],
+				keywords: parsedTopic[2],
+				related_courses: parsedTopic[3]
+			});
+	});
+
+	const res = await topics.insertMany(comp_topics);
+
+	console.log("Insert Complete. Test query results for Discrete mathematics:");
+
+	const search = { topic: 'Discrete mathematics' };
+    const topic = await topics.findOne(search);
+    console.log(topic);
+	
+	var dbCourseCount = await topics.estimatedDocumentCount();
+	
+	console.log("Data base current course count: "+dbCourseCount);
+	
+	
+	/* Course insert */
     const courses = database.collection('courses');
     await courses.deleteMany({});
 

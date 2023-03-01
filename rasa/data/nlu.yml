@@ -95,3 +95,63 @@ nlu:
     - Test the action server
     - Is the action server working
     - Action server test
+
+- intent: request_topics
+  examples: |
+    - Can you tell me about [data structures]{"entity": "topic"}
+    - What is [AI]{"entity": "topic"}
+    - I'd like to learn about [computer vision]{"entity": "topic"}
+    - Tell me about [Artificial intelligence]{"entity": "topic"}
+
+- lookup: topic
+  examples: | 
+    - Coding theory
+    - Game theory
+    - Discrete mathematics
+    - Graph theory
+    - Mathematical logic
+    - Number theory
+    - Algorithms
+    - Data structures
+    - Artificial intelligence
+    - Automated reasoning
+    - Computer vision
+    - Soft computing
+    - Natural language processing
+    - Robotics
+    - Networking
+    - Computer security
+    - Cryptography
+    - Computer architecture
+    - Operating systems
+    - Computer graphics
+    - Image processing
+    - Information visualization
+    - Parallel computing
+    - Concurrency
+    - Distributed computing
+    - Relational databases
+    - Structured storage
+    - Data mining
+    - Compiler theory
+    - Programming language pragmatics
+    - Programming language theory
+    - Formal semantics
+    - Type theory
+    - Computational science
+    - Numerical analysis
+    - Symbolic computation
+    - Computational physics
+    - Computational chemistry
+    - Bioinformatics and Computational biology
+    - Computational neuroscience
+    - Formal methods
+    - Software engineering
+    - Algorithm design
+    - Computer programming
+    - Human-computer interaction
+    - Reverse engineering
+    - Automata theory
+    - Computability theory
+    - Computational complexity theory
+    - Quantum computing theory
