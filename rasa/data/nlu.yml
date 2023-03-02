@@ -247,3 +247,30 @@ nlu:
     - Tell me about Ada Lovelace.
     - ada lovelace
     - lovelace
+
+- intent: common_cscareers
+  examples: |
+    - what can I do with a degree in computer science?
+    - What is a CS degree good for?
+    - what jobs are available for cs majors?
+    - which careers are a good fit for CompSci majors?
+    - tell me about cs careers
+    - What career options are there in Computer Science?
+    - tell me about job opportunities in comp sci
+    - What positions is CS good for?
+    - tell me about work available to cs majors
+    - Tell me about jobs in Computer Science.
+
+- intent: other_cscareers
+  examples: |
+    - What other jobs are there?
+    - Are there other careers in Computer Science?
+    - Is there anything else?
+    - What are some other opportunities?
+    - Tell me about other jobs.
+    - tell me about other careers in cs
+    - Can CompSci majors do anything else?
+    - are there other jobs in computer science?
+    - anything else comp sci majors can do?
+
+ 

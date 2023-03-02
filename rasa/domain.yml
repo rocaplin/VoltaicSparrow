@@ -16,6 +16,8 @@ intents:
   - faq
   - csetymology
   - modern_computers
+  - common_cscareers
+  - other_cscareers
 
 responses:
   utter_greet:
@@ -129,6 +131,23 @@ https://en.wikipedia.org/wiki/Ada_Lovelace"
     buttons:
     - title: "What happened next?"
       payload: "/modern_computers"
+
+  utter_common_cscareers:
+  - text: "Employeers in a variety of industries hire Computer Science graduates for jobs the U.S. Bureau of Labor Statistics classifies as Computer Occupations.
+
+As of May 2021, BLS data shows that 70% of those employed within Computer Occupations work as Software Developers, Support Specialists, Systems Analysts, Network/ Systems Administrators, and QA Analysts.
+
+Other common positions include Network Architects, Security Analysts, Database Administrators, Web Developers and Designers, and Research Scientists.
+
+https://www.bls.gov/oes/current/oes_nat.htm"
+    buttons:
+    - title: "Are there other career options?"
+      payload: "/other_cscareers"
+
+  utter_other_cscareers:
+  - text: "Computer Science degrees cover a variety of topics potentially preparing students to pursue careers in related fields such as Hardware Design, Data Science, Digital Media, or Business.
+
+Earing a college degree demonstrates your ability to achieve and learn, traits helpful in many positions. Your major is only one indicator of fit. Personal experience, interests, and skills are also important and it is not uncommon for graduates to work outside their fields of study."
 
 actions:
   - action_hello_world

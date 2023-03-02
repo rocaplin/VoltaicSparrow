@@ -217,3 +217,32 @@ stories:
       Who was the first programmer?
     intent: faq/lovelace
   - action: utter_faq/lovelace
+
+- story: common cs careers 1
+  steps:
+  - user: |
+      What kind of job can I get with a Comp Sci degree?
+    intent: common_cscareers
+  - action: utter_common_cscareers
+
+- story: common cs careers 2
+  steps:
+  - user: |
+      what do CS majors end up doing?
+    intent: common_cscareers
+  - action: utter_common_cscareers
+  - user: |
+      what other types of jobs are there?
+    intent: other_cscareers
+  - action: utter_other_cscareers
+
+- story: other cs careers 3
+  steps:
+  - user: |
+      What can I do with a computer science degree?
+    intent: common_cscareers
+  - action: utter_common_cscareers
+  - user: |
+      What else?
+    intent: other_cscareers
+  - action: utter_other_cscareers

@@ -78,3 +78,15 @@ stories:
   - intent: csetymology
   - action: utter_modern_computers
   - action: utter_csetymology
+
+- story: cs career 1
+  steps:
+  - intent: common_cscareers
+  - action: utter_common_cscareers
+
+- story: cs career 2
+  steps:
+  - intent: common_cscareers
+  - action: utter_common_cscareers
+  - intent: other_cscareers
+  - action: utter_other_cscareers
