@@ -1,3 +1,4 @@
+import "./chat-window.styles.css";
 import {useState, useEffect} from "react";
 
 import ChatLog from "../chat-log/chat-log.component"
@@ -25,9 +26,12 @@ const ChatWindow = ({socket}) => {
     // quick_replies: [
     //     content_type: 'text'
     //     title: 'string'
-    //     payload: '/
+    //     payload: '/nlu/intent'
     //   ]
-    // image?
+    // attachment: {
+    //   payload: {src: "image url"},
+    //   type: "image"
+    // }
     // custom defined data
     // -> Additional processing includes detecting URLs in text 
     // responses so that anchor tags can be constructed.
@@ -39,6 +43,10 @@ const ChatWindow = ({socket}) => {
         for (let key in res) {
             if (key == "text") {
                 appendChat({text: res[key]}, true);
+            } else if (key == "quick_replies") {
+                appendChat({quick_replies: res[key]}, true);
+            } else if (key == "attachment") {
+                appendChat({attachment: res[key]}, true);
             } else {
                 // Other response types...
                 // Unsupported response type:
@@ -56,19 +64,19 @@ const ChatWindow = ({socket}) => {
         });
       }, [socket]);
 
-    // Send requests to Rasa websocket channel.
-    const sendRequest = async () => {
+    // Send requests to Rasa websocket channel then add to chatLog.
+    const sendRequest = async (req) => {
         // Rasa is expecting "message" key for texts apparently.
         // Rasa doesn't respond if "text" is used as key.
         // For now I will use uniform format on frontend for easier 
         // display.
-        await socket.emit("user_uttered", {message: currentRequest});
-        appendChat({text: currentRequest}, false);
+       await socket.emit("user_uttered", {message: req});
+       appendChat({text: req}, false);
     };
 
     return(
         <div className="chat-window">
-            <ChatLog log={chatLog}/>
+            <ChatLog log={chatLog} sendHandler={sendRequest}/>
             <div className="chat-input">
                 <input
                     type="text"
@@ -78,11 +86,17 @@ const ChatWindow = ({socket}) => {
                     }}
                     onKeyDown={(event) => {
                         if (event.key == "Enter") {
-                            sendRequest();
+                            sendRequest(currentRequest);
+                            // Need to clear input field...
+                            setCurrentRequest("");
                         }
                     }}
                 />
-                <button onClick={sendRequest}>Send</button>
+                <button onClick={() => {
+                    sendRequest(currentRequest);
+                    // Need to clear input field...
+                    setCurrentRequest("");
+                }}>Send</button>
             </div>
         </div>
     );

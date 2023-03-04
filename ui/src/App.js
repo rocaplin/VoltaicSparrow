@@ -1,6 +1,5 @@
 import './App.css';
 import io from "socket.io-client";
-// import {useEffect} from "react";
 
 import ChatWindow from "./components/chat-window/chat-window.component"
 
@@ -18,7 +17,6 @@ socket.on('connect_error', (error) => {
 function App() {
   return (
     <div className="App">
-      <h2>Chat Widget Prototype</h2>
       <ChatWindow socket={socket}/>
       <div className="chat-button">
       </div>

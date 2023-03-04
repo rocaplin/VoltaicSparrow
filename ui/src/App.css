@@ -3,6 +3,8 @@
     position: fixed;
     right: 0;
     bottom: 0;
-    margin: 1rem;
+    margin: 0.5rem;
+    width: 359px;
+    height: 595px;
     background-color: black;
   }

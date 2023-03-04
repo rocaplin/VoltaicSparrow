@@ -1,0 +1,10 @@
+.chat-log {
+    overflow-y: scroll;
+    height: 531px;
+    padding: 4px;
+}
+
+.chat-image {
+    object-fit: contain;
+    object-position: center;
+}
