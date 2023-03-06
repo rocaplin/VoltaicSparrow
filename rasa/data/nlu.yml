@@ -184,3 +184,54 @@ nlu:
     - tell me about campus classes
     - How is campus?
     - are campus classes better
+    
+ - intent: adjacent_fields
+  examples: |
+    - how does computer science compare to  other fields?
+    - what is the difference between computer science and other fields?
+    - computer science versus other majors
+    - compare computer science and other fields
+    
+ - intent: electrical
+  examples: |
+    - electrical engineering
+    - electrical
+    - electrical engineer
+    - ee
+    
+ - intent: comp_eng
+  examples: |
+    - computer engineering
+    - comp engineering
+    - comp engineer
+    - comp eng
+    - computer engineer
+    - ce
+    
+ - intent: software
+  examples: |
+    - software engineering
+    - software
+    - software engineer
+    - se
+    
+ - intent: info_tech
+  examples: |
+    - information technology
+    - info tech
+    - it
+    - information tech
+    - info technology
+    - technology
+    
+ - intent: info_sys
+  examples: |
+    - information systems
+    - computer information systems
+    - info sys
+    - is
+    - cis
+    - information sys
+    - info systems
+    - systems
+    
