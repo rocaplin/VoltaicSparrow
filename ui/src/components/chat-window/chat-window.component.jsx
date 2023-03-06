@@ -1,11 +1,10 @@
 import "./chat-window.styles.css";
 import {useState, useEffect} from "react";
 
-import ChatLog from "../chat-log/chat-log.component"
+import ChatLog from "../chat-log/chat-log.component";
+import ChatInput from "../chat-input/chat-input.component";
 
 const ChatWindow = ({socket}) => {
-    // State
-    const [currentRequest, setCurrentRequest] = useState("");
     const [chatLog, setChatLog] = useState([]);
 
     // Add metadata then append message to chatLog.
@@ -19,9 +18,9 @@ const ChatWindow = ({socket}) => {
         });
     };
 
-    // Process responses from Rasa websocket channel. Iterates 
-    // over JSON from Rasa, preparing and adding each response
-    // within to the chatLog. Rasa supports 4 response types:
+    // Listen for responses from Rasa websocket channel.
+    // Iterates over JSON from Rasa, appends each response
+    // within to chatLog. Rasa supports 4 response types:
     // text: 'string'
     // quick_replies: [
     //     content_type: 'text'
@@ -33,43 +32,36 @@ const ChatWindow = ({socket}) => {
     //   type: "image"
     // }
     // custom defined data
-    // -> Additional processing includes detecting URLs in text 
-    // responses so that anchor tags can be constructed.
-    const processResponse = (res) => {
-        // NOTE: If a property is defined twice in a JS object, the 
-        // second instance is treated as a reassignment. I initially 
-        // assumed Rasa might return duplicate types via JSON but this 
-        // seems unlikely. Worth looking at sample data to confirm.
-        for (let key in res) {
-            if (key == "text") {
-                appendChat({text: res[key]}, true);
-            } else if (key == "quick_replies") {
-                appendChat({quick_replies: res[key]}, true);
-            } else if (key == "attachment") {
-                appendChat({attachment: res[key]}, true);
-            } else {
-                // Other response types...
-                // Unsupported response type:
-                console.log("Unhandled Response Type:")
-                console.log(`{${key}: ${res[key]}}`);
-                console.log(res);
-            }
-        };
-    };
 
-    // Listen for responses from Rasa websocket channel.
+    // NOTE: If a property is defined twice in a JS object, the 
+    // second instance is treated as a reassignment. I initially 
+    // assumed Rasa might return duplicate types via JSON but this 
+    // seems unlikely. Worth looking at sample data to confirm.
     useEffect(() => {
         socket.on("bot_uttered", (res) => {
-          processResponse(res);
+            for (let key in res) {
+                if (key === "text") {
+                    appendChat({text: res[key]}, true);
+                } else if (key === "quick_replies") {
+                    appendChat({quick_replies: res[key]}, true);
+                } else if (key === "attachment") {
+                    appendChat({attachment: res[key]}, true);
+                } else {
+                    // Unsupported response type:
+                    console.log("Unhandled Response Type:")
+                    console.log(`{${key}: ${res[key]}}`);
+                    console.log(res);
+                }
+            };
         });
       }, [socket]);
 
     // Send requests to Rasa websocket channel then add to chatLog.
     const sendRequest = async (req) => {
-        // Rasa is expecting "message" key for texts apparently.
+        // Rasa expects "message" key for incoming texts.
         // Rasa doesn't respond if "text" is used as key.
-        // For now I will use uniform format on frontend for easier 
-        // display.
+        // I will use "text" for both user requests and Rasa 
+        // text responses on the frontend for now.
        await socket.emit("user_uttered", {message: req});
        appendChat({text: req}, false);
     };
@@ -77,28 +69,8 @@ const ChatWindow = ({socket}) => {
     return(
         <div className="chat-window">
             <ChatLog log={chatLog} sendHandler={sendRequest}/>
-            <div className="chat-input">
-                <input
-                    type="text"
-                    placeholder="Ask Chomp a question..."
-                    onChange={(event) => {
-                        setCurrentRequest(event.target.value);
-                    }}
-                    onKeyDown={(event) => {
-                        if (event.key == "Enter") {
-                            sendRequest(currentRequest);
-                            // Need to clear input field...
-                            setCurrentRequest("");
-                        }
-                    }}
-                />
-                <button onClick={() => {
-                    sendRequest(currentRequest);
-                    // Need to clear input field...
-                    setCurrentRequest("");
-                }}>Send</button>
-            </div>
-        </div>
+            <ChatInput sendHandler={sendRequest}/>
+        </div>            
     );
 };
 

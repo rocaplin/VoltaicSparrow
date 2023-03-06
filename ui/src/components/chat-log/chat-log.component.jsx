@@ -1,8 +1,13 @@
 import "./chat-log.styles.css";
+import ScrollToBottom from "react-scroll-to-bottom";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+
+import ChatLink from "../chat-link/chat-link.component";
 
 const ChatLog = ({log, sendHandler}) => {
     return (
-        <div className="chat-log">
+        <ScrollToBottom className="chat-log">
             {
                 // Loop over log and construct elements based on entry type.
                 // NOTE: Rasa responses seem to have a lot of nesting. This 
@@ -16,16 +21,22 @@ const ChatLog = ({log, sendHandler}) => {
                 // display possibilities.
                 log.map((elem) => {
                     let key = Object.keys(elem)[0];
-                    if (key == "text") {
+                    if (key === "text") {
                         return (
                             <div
                                 className={`chat-text is-bot-${elem.isBot}`}
                                 key={`${elem.time}:${Math.random()}`}
                             >
-                                <p>{elem.text}</p>
+                                <ReactMarkdown 
+                                    children={elem.text}
+                                    remarkPlugins={[remarkGfm]}
+                                    components={{
+                                        a: ChatLink
+                                    }}
+                                    />
                             </div>
                         );
-                    } else if (key == "quick_replies") {
+                    } else if (key === "quick_replies") {
                         return (
                             <div
                                 className={`quick-reply-container is-bot-${elem.isBot}`}
@@ -50,7 +61,7 @@ const ChatLog = ({log, sendHandler}) => {
                             }
                             </div>
                         );
-                    } else if (key == "attachment") {
+                    } else if (key === "attachment") {
                         // NOTE: There doesn't seem to be a way to send alt text from RASA. 
                         // If we end up using images in responses we will need to consider 
                         // accessibility.
@@ -69,7 +80,7 @@ const ChatLog = ({log, sendHandler}) => {
                     }
                 })
             }
-        </div>
+        </ScrollToBottom>
     );
 };
 
