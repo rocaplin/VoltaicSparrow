@@ -95,3 +95,53 @@ nlu:
     - Test the action server
     - Is the action server working
     - Action server test
+
+# - intent: request_jobs
+#   examples: |
+#     - Tell me about jobs in computer science
+#     - Computer science jobs
+#     - Computer science careers
+#     - Jobs in computer science
+#     - What jobs are there in computer science?
+#     - Computer Programmer jobs
+#     - Mathematician jobs
+#     - Graphic Designer jobs
+#     - Security Analyst jobs
+#     - Data Scientists jobs
+#     - Hardware Engineer jobs
+#     - Database Administrator jobs
+#     - Software Engineer jobs
+#     - Network Administrator jobs
+#     - Video Game Developer jobs
+#     - Web Developer jobs
+#     - Web Designer jobs
+#     - IT Architect jobs
+#     - Systems Analyst jobs
+#     - Software Developer jobs
+
+- intent: request_jobs
+  examples: |
+    - [Computer Programmer]{"entity": "job"} jobs
+    - Jobs as a [Computer Programmer]{"entity": "job"}
+    - Careers as a [Computer Programmer]{"entity": "job"}
+    - [Computer Programmer]{"entity": "job"} careers
+    - What jobs are there as a [Computer Programmer]{"entity": "job"}
+    - What careers are there as a [Computer Programmer]{"entity": "job"}
+
+- lookup: job
+  examples: |
+    - Computer Programmer
+    - Mathematician
+    - Graphic Designer
+    - Security Analyst
+    - Data Scientists
+    - Hardware Engineer
+    - Database Administrator
+    - Software Engineer
+    - Network Administrator
+    - Video Game Developer
+    - Web Developer
+    - Web Designer
+    - IT Architect
+    - Systems Analyst
+    - Software Developer

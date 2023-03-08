@@ -11,6 +11,41 @@ const client = new MongoClient(uri);
 async function run() {
   try {
     const database = client.db('chompsci');
+
+	/* Job insert */
+	const job_list = database.collection('job_list');
+	await job_list.deleteMany({});
+
+	var list_jobs = []
+
+	var rawJobData = fs.readFileSync("./scope-compsci-topics-data.csv","utf-8");
+
+	var parsedJobData = parse(rawJobData,{ delimiter: ",", from_line: 2 });
+
+	parsedJobData.forEach(parsedJob => {
+		list_jobs.push(
+			{
+				job: parsedJob[0],
+				description: parsedJob[1],
+				related_courses: parsedJob[2],
+				keywords: parsedJob[3]
+			});
+	});
+
+	await job_list.insertMany(list_jobs);
+
+	console.log("Insert Complete. Test query results for Computer Programmer: ");
+
+	const search_query = { job: 'Computer Programmer' };
+    const found_job = await job_list.findOne(search_query);
+    console.log(found_job);
+
+	var dbJobListCount = await job_list.estimatedDocumentCount();
+
+	console.log("Data base current job_list count: " + dbJobListCount);
+
+
+	/* Course insert */
     const courses = database.collection('courses');
     await courses.deleteMany({});
 

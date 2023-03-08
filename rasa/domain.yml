@@ -9,6 +9,11 @@ intents:
   - mood_unhappy
   - bot_challenge
   - request_action_test
+  - request_jobs:
+      use_entities: true
+
+entities:
+  - job
 
 responses:
   utter_greet:
@@ -32,6 +37,7 @@ responses:
   
 actions:
   - action_hello_world
+  - action_request_jobs
 
 session_config:
   session_expiration_time: 60
