@@ -89,3 +89,10 @@ stories:
       are you a bot?
     intent: bot_challenge
   - action: utter_iamabot
+
+- story: request topic 1
+  steps:
+  - user: |
+      Can you tell me about [concurrency]{"entity": "concurrency"}
+    intent: request_topics
+  - action: action_request_topics

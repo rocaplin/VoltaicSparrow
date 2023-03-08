@@ -66,8 +66,8 @@ class ActionRequestTopics(Action):
         # requested_topic = None
         # if topic in self.data:
             
-        requested_topic = topics.find_one({"topic": topic})
-            
+        requested_topic = topics.find_one({"lower_topic": topic.lower()})
+            #https://stackoverflow.com/questions/6266555/querying-mongodb-via-pymongo-in-case-insensitive-efficiently
 
         if not requested_topic:
             if not topic:
@@ -75,8 +75,8 @@ class ActionRequestTopics(Action):
             else:
                 str = ""
                 str += topic
-                dispatcher.utter_message(text=("I'm not well-trained on "+str))
+                dispatcher.utter_message(text=("I'm not well-trained on " + str))
         else:
-            dispatcher.utter_message(text=requested_topic["description"])
+            dispatcher.utter_message(text=("Here is what I know about " + topic + ": \n" + requested_topic["description"]))
 
         return []

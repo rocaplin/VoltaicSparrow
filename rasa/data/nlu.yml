@@ -98,11 +98,25 @@ nlu:
 
 - intent: request_topics
   examples: |
+    - Can you tell me about [Concurrency]{"entity": "topic"}
     - Can you tell me about [data structures]{"entity": "topic"}
+    - Can you tell me about [coding theory]{"entity": "topic"}
+    - Can you tell me about [Natural language processing]{"entity": "topic"}
+    - Can you tell me about [programming language theory]{"entity": "topic"}
     - What is [AI]{"entity": "topic"}
+    - What is [discrete mathematics]{"entity": "topic"}
+    - What is [Programming language pragmatics]{"entity": "topic"}
+    - What is [quantum computing theory]{"entity": "topic"}
+    - What are [algorithms]{"entity": "topic"}
+    - What are [Data structures]{"entity": "topic"}
+    - What are [Programming language pragmatics]{"entity": "topic"}
     - I'd like to learn about [computer vision]{"entity": "topic"}
     - Tell me about [Artificial intelligence]{"entity": "topic"}
+    - [Quantum computing theory]{"entity": "topic"}
 
+# - synonym: Artificial intelligence
+#   examples: |
+#     - AI
 - lookup: topic
   examples: | 
     - Coding theory
@@ -154,4 +168,54 @@ nlu:
     - Automata theory
     - Computability theory
     - Computational complexity theory
-    - Quantum computing theory
+    - Quantum computing theory 
+    - coding theory
+    - game theory
+    - discrete mathematics
+    - graph theory
+    - mathematical logic
+    - number theory
+    - algorithms
+    - data structures
+    - artificial intelligence
+    - automated reasoning
+    - computer vision
+    - soft computing
+    - natural language processing
+    - robotics
+    - networking
+    - computer security
+    - cryptography
+    - computer architecture
+    - operating systems
+    - computer graphics
+    - image processing
+    - information visualization
+    - parallel computing
+    - concurrency
+    - distributed computing
+    - relational databases
+    - structured storage
+    - data mining
+    - compiler theory
+    - programming language pragmatics
+    - programming language theory
+    - formal semantics
+    - type theory
+    - computational science
+    - numerical analysis
+    - symbolic computation
+    - computational physics
+    - computational chemistry
+    - bioinformatics and computational biology
+    - computational neuroscience
+    - formal methods
+    - software engineering
+    - algorithm design
+    - computer programming
+    - human-computer interaction
+    - reverse engineering
+    - automata theory
+    - computability theory
+    - computational complexity theory
+    - quantum computing theory

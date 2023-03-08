@@ -27,9 +27,10 @@ async function run() {
 		comp_topics.push(
 			{
 				topic: parsedTopic[0],
-				description: parsedTopic[1],
-				keywords: parsedTopic[2],
-				related_courses: parsedTopic[3]
+				lower_topic: parsedTopic[1],
+				description: parsedTopic[2],
+				keywords: parsedTopic[3],
+				related_courses: parsedTopic[4]
 			});
 	});
 
