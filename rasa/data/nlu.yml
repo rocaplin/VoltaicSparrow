@@ -280,15 +280,28 @@ nlu:
     - Can you tell me about [coding theory]{"entity": "topic"}
     - Can you tell me about [Natural language processing]{"entity": "topic"}
     - Can you tell me about [programming language theory]{"entity": "topic"}
+    - Can you tell me about [game theory]{"entity": "topic"}
     - What is [AI]{"entity": "topic"}
+    - What is [Game theory]{"entity": "topic"}
     - What is [discrete mathematics]{"entity": "topic"}
     - What is [Programming language pragmatics]{"entity": "topic"}
     - What is [quantum computing theory]{"entity": "topic"}
+    - What is [Mathematical logic]{"entity": "topic"}
     - What are [algorithms]{"entity": "topic"}
     - What are [Data structures]{"entity": "topic"}
+    - What are [operating systems]{"entity": "topic"}
     - What are [Programming language pragmatics]{"entity": "topic"}
+    - I'd like to learn about [Cryptography]{"entity": "topic"}
     - I'd like to learn about [computer vision]{"entity": "topic"}
+    - I'd like to learn about [computer security]{"entity": "topic"}
+    - I'd like to learn about [Programming language theory]{"entity": "topic"}
+    - Tell me about [Networking]{"entity": "topic"}
     - Tell me about [Artificial intelligence]{"entity": "topic"}
+    - Tell me about [Computer architecture]{"entity": "topic"}
+    - Tell me about [Software engineering]{"entity": "topic"}
+    - Tell me about [Human-computer interaction]{"entity": "topic"}
+    - [Robotics]{"entity": "topic"}
+    - [Image processing]{"entity": "topic"}
     - [Quantum computing theory]{"entity": "topic"}
 
 # - synonym: Artificial intelligence

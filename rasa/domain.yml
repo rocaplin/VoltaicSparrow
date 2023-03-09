@@ -9,7 +9,8 @@ intents:
   - mood_unhappy
   - bot_challenge
   - request_action_test
-  - request_topics
+  - request_topics:
+      use_entities: true
   - required_courses
   - difference
   - engineering
