@@ -1,4 +1,9 @@
+.chat-window {
+    /* interface font */
+    font-family: 'Interface', sans-serif;
+}
+
 .chat-input {
-    height: 64px;
-    padding: 4px;
+height: 64px;
+padding: 4px;
 }

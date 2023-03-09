@@ -5,6 +5,7 @@ import ChatLog from "../chat-log/chat-log.component";
 import ChatInput from "../chat-input/chat-input.component";
 
 const ChatWindow = ({socket}) => {
+    // State
     const [chatLog, setChatLog] = useState([]);
 
     // Add metadata then append message to chatLog.
@@ -20,7 +21,7 @@ const ChatWindow = ({socket}) => {
 
     // Listen for responses from Rasa websocket channel.
     // Iterates over JSON from Rasa, appends each response
-    // within to chatLog. Rasa supports 4 response types:
+    // within to the chatLog. Rasa supports 4 response types:
     // text: 'string'
     // quick_replies: [
     //     content_type: 'text'
@@ -32,6 +33,8 @@ const ChatWindow = ({socket}) => {
     //   type: "image"
     // }
     // custom defined data
+    // -> Additional processing includes detecting URLs in text 
+    // responses so that anchor tags can be constructed.
 
     // NOTE: If a property is defined twice in a JS object, the 
     // second instance is treated as a reassignment. I initially 
@@ -58,12 +61,12 @@ const ChatWindow = ({socket}) => {
 
     // Send requests to Rasa websocket channel then add to chatLog.
     const sendRequest = async (req) => {
-        // Rasa expects "message" key for incoming texts.
+        // Rasa is expecting "message" key for texts apparently.
         // Rasa doesn't respond if "text" is used as key.
-        // I will use "text" for both user requests and Rasa 
-        // text responses on the frontend for now.
+        // For now I will use uniform format on frontend for easier 
+        // display.
        await socket.emit("user_uttered", {message: req});
-       appendChat({text: req}, false);
+       appendChat({message: req}, false);
     };
 
     return(
