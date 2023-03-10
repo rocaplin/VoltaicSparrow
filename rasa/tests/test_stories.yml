@@ -118,7 +118,7 @@ stories:
     intent: faq/ufcampus
   - action: utter_faq/ufcampus
   
-  - story: ask about adjacent fields 1
+- story: ask about adjacent fields 1
   steps:
   - user: |
       how does computer science compare to other fields?
@@ -143,7 +143,7 @@ stories:
     intent: deny
   - action: utter_happy
   
-  - story: ask about adjacent fields 2
+- story: ask about adjacent fields 2
   steps:
   - user: |
       comp sci versus other fields
@@ -159,7 +159,7 @@ stories:
     intent: deny
   - action: utter_happy
   
-  - story: ask about adjacent fields 3
+- story: ask about adjacent fields 3
   steps:
   - user: |
       what is the difference between computer science and other majors?
@@ -184,7 +184,7 @@ stories:
     intent: deny
   - action: utter_happy
   
-  - story: ask about adjacent fields 4
+- story: ask about adjacent fields 4
   steps:
   - user: |
       what is the difference between computer science and other fields?
@@ -200,7 +200,7 @@ stories:
     intent: deny
   - action: utter_happy
   
-  - story: ask about adjacent fields 5
+- story: ask about adjacent fields 5
   steps:
   - user: |
       how is computer science compared to different fields?
@@ -225,7 +225,7 @@ stories:
     intent: deny
   - action: utter_happy
   
-  - story: ask about adjacent fields 6
+- story: ask about adjacent fields 6
   steps:
   - user: |
       how is computer science different?
@@ -241,7 +241,7 @@ stories:
     intent: deny
   - action: utter_happy
   
-  - story: ask about adjacent fields 7
+- story: ask about adjacent fields 7
   steps:
   - user: |
       what makes computer science different?
@@ -266,7 +266,7 @@ stories:
     intent: deny
   - action: utter_happy
   
-  - story: ask about adjacent fields 8
+- story: ask about adjacent fields 8
   steps:
   - user: |
       compare computer science
@@ -282,7 +282,7 @@ stories:
     intent: deny
   - action: utter_happy
   
-  - story: ask about adjacent fields 9
+- story: ask about adjacent fields 9
   steps:
   - user: |
       why computer science over other fields?
@@ -307,7 +307,7 @@ stories:
     intent: deny
   - action: utter_happy
   
-  - story: ask about adjacent fields 10
+- story: ask about adjacent fields 10
   steps:
   - user: |
       how do I choose between computer science and other majors?
