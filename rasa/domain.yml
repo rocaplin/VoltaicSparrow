@@ -108,7 +108,7 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
   The courses for computer science and software engineering often overlap and can include Introduction to Programming, Data Structures, Discrete Structures, and Operating Systems."
   
   utter_information_technology:
-  -text: "Information Technology is often referred to as "the business side of computer science" and focuses more on meeting the technological needs of organizations. Unike computer science, information technology emphasizes using computers, databases, networks, servers, and software to process, store, transmit, retrieve, and protect data.
+  - text: "Information Technology is often referred to as 'the business side of computer science' and focuses more on meeting the technological needs of organizations. Unike computer science, information technology emphasizes using computers, databases, networks, servers, and software to process, store, transmit, retrieve, and protect data.
   While computer scientists use theoretical skills to develop and improve computer programs, information technology specialists install, implement, and maintain the programs in addition to applying them to businesses and other professional organizations.
   The courseload for an information technology degree includes classes in which students learn to identify, create, and configure complex computing platforms and systems to solve problems.
   Those who enjoy discovering technological solutions to problems and working with others should consider a degree in information technology."
