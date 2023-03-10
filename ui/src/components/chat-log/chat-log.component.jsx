@@ -9,20 +9,10 @@ import avatar from "../../images/avatar.png";
 import ChatLink from "../chat-link/chat-link.component";
 
 const ChatLog = ({log, sendHandler}) => {
-    //console.log(log);
     return (
         <ScrollToBottom className="chat-log">
             {
                 // Loop over log and construct elements based on entry type.
-                // NOTE: Rasa responses seem to have a lot of nesting. This 
-                // is probably to make it easy to add future response types to 
-                // RASA easily. Could present a performance issue for us though 
-                // as it leads to nested loops. If it becomes a problem we might 
-                // be able to do more processing on receipt as opposed to during 
-                // render since receipt would only run once for each new response.
-                // The trade off is that the stored data would not reflect what 
-                // was originally received from Rasa as well, which may limit some 
-                // display possibilities.
                 log.map((elem) => {
                     let key = Object.keys(elem)[0];
                     if (key === "message") {

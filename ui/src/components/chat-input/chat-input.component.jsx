@@ -4,7 +4,6 @@ import {useState} from "react";
 import sendIcon from "../../images/send-icon.svg";
 
 const ChatInput = ({sendHandler}) => {
-    // State
     const [currentRequest, setCurrentRequest] = useState("");
 
     return(

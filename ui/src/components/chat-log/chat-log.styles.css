@@ -12,8 +12,6 @@
     overflow: auto;
 }
 
-/*Running into an overflow issue with user messages...
-they need to wrap instead of overflow.*/
 .chat-log-entry.is-bot-false {
     flex-direction: column;
     align-items: flex-end;

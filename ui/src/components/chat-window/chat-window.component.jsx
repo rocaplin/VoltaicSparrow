@@ -5,7 +5,6 @@ import ChatLog from "../chat-log/chat-log.component";
 import ChatInput from "../chat-input/chat-input.component";
 
 const ChatWindow = ({socket}) => {
-    // State
     const [chatLog, setChatLog] = useState([]);
 
     // Add metadata then append message to chatLog.
@@ -22,24 +21,21 @@ const ChatWindow = ({socket}) => {
     // Listen for responses from Rasa websocket channel.
     // Iterates over JSON from Rasa, appends each response
     // within to the chatLog. Rasa supports 4 response types:
+    //
     // text: 'string'
+    //
     // quick_replies: [
     //     content_type: 'text'
     //     title: 'string'
     //     payload: '/nlu/intent'
     //   ]
+    //
     // attachment: {
     //   payload: {src: "image url"},
     //   type: "image"
     // }
-    // custom defined data
-    // -> Additional processing includes detecting URLs in text 
-    // responses so that anchor tags can be constructed.
-
-    // NOTE: If a property is defined twice in a JS object, the 
-    // second instance is treated as a reassignment. I initially 
-    // assumed Rasa might return duplicate types via JSON but this 
-    // seems unlikely. Worth looking at sample data to confirm.
+    //
+    // custom defined data:
     useEffect(() => {
         socket.on("bot_uttered", (res) => {
             for (let key in res) {
@@ -50,6 +46,8 @@ const ChatWindow = ({socket}) => {
                 } else if (key === "attachment") {
                     appendChat({attachment: res[key]}, true);
                 } else {
+                    // NOTE: May want to make console output dependent on 
+                    // a debug flag.
                     // Unsupported response type:
                     console.log("Unhandled Response Type:")
                     console.log(`{${key}: ${res[key]}}`);
@@ -61,12 +59,11 @@ const ChatWindow = ({socket}) => {
 
     // Send requests to Rasa websocket channel then add to chatLog.
     const sendRequest = async (req) => {
-        // Rasa is expecting "message" key for texts apparently.
-        // Rasa doesn't respond if "text" is used as key.
-        // For now I will use uniform format on frontend for easier 
-        // display.
-       await socket.emit("user_uttered", {message: req});
-       appendChat({message: req}, false);
+        // Rasa is expecting "message" key for texts, it will not 
+        // respond if "text" is used as key.
+        let message = {message: req};
+       await socket.emit("user_uttered", message);
+       appendChat(message, false);
     };
 
     return(
