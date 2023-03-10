@@ -185,21 +185,21 @@ nlu:
     - How is campus?
     - are campus classes better
     
- - intent: adjacent_fields
+- intent: adjacent_fields
   examples: |
     - how does computer science compare to  other fields?
     - what is the difference between computer science and other fields?
     - computer science versus other majors
     - compare computer science and other fields
     
- - intent: electrical
+- intent: electrical
   examples: |
     - electrical engineering
     - electrical
     - electrical engineer
     - ee
     
- - intent: comp_eng
+- intent: comp_eng
   examples: |
     - computer engineering
     - comp engineering
@@ -208,14 +208,14 @@ nlu:
     - computer engineer
     - ce
     
- - intent: software
+- intent: software
   examples: |
     - software engineering
     - software
     - software engineer
     - se
     
- - intent: info_tech
+- intent: info_tech
   examples: |
     - information technology
     - info tech
@@ -224,7 +224,7 @@ nlu:
     - info technology
     - technology
     
- - intent: info_sys
+- intent: info_sys
   examples: |
     - information systems
     - computer information systems
