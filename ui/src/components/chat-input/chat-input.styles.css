@@ -1,5 +1,5 @@
 .chat-input {
-    width: 359px;
+    max-width: 359px;
     height: 60px;
     padding: 0;
     display: flex;
@@ -12,6 +12,7 @@
     padding: 0.25rem;
     color: var(--grey-100);
     font-size: 1.0rem;
+    max-width: 95%;
 }
 
 .send-button-container {

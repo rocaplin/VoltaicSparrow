@@ -1,6 +1,6 @@
 // https://github.com/remarkjs/react-markdown#appendix-b-components
 
-const ChatLink = ({href}) => {
+const TextLink = ({href}) => {
     return (
         <span className="chat-link">
             <a href={href} target="_blank" rel="noreferrer">
@@ -10,4 +10,4 @@ const ChatLink = ({href}) => {
     );
 };
 
-export default ChatLink;
+export default TextLink;
