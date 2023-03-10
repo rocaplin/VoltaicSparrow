@@ -68,7 +68,7 @@ stories:
   - intent: clas
   - action: utter_required_courses_clas
   
-  - story: adjacent fields path 1
+- story: adjacent fields path 1
   steps:
   - intent: adjacent_fields
   - action: utter_ask_major_differences
@@ -88,7 +88,7 @@ stories:
   - intent: deny
   - action: utter_happy
 
-  - story: adjacent fields path 3
+- story: adjacent fields path 3
   steps:
   - intent: adjacent_fields
   - action: utter_ask_major_differences
@@ -108,7 +108,7 @@ stories:
   - intent: deny
   - action: utter_happy
 
-  - story: adjacent fields path 5
+- story: adjacent fields path 5
   steps:
   - intent: adjacent_fields
   - action: utter_ask_major_differences
@@ -128,7 +128,7 @@ stories:
   - intent: deny
   - action: utter_happy
 
-  - story: adjacent fields path 7
+- story: adjacent fields path 7
   steps:
   - intent: adjacent_fields
   - action: utter_ask_major_differences
@@ -138,7 +138,7 @@ stories:
   - intent: affirm
   - action: utter_ask_major_differences
  
- - story: adjacent fields path 8
+- story: adjacent fields path 8
   steps:
   - intent: adjacent_fields
   - action: utter_ask_major_differences
@@ -148,7 +148,7 @@ stories:
   - intent: deny
   - action: utter_happy
  
-  - story: adjacent fields path 9
+- story: adjacent fields path 9
   steps:
   - intent: adjacent_fields
   - action: utter_ask_major_differences
