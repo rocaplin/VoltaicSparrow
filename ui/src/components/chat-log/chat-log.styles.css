@@ -1,5 +1,6 @@
 .chat-log {
-    height: 531px;
+    /*height: 531px;*/
+    height: calc(100% - 68px);
     padding: 4px;
     background-color: var(--grey-800);
 }
