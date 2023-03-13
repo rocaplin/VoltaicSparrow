@@ -295,18 +295,22 @@ nlu:
     - I'd like to learn about [computer vision]{"entity": "topic"}
     - I'd like to learn about [computer security]{"entity": "topic"}
     - I'd like to learn about [Programming language theory]{"entity": "topic"}
+    - I'd like to learn about [computational complexity theory]{"entity": "topic"}
     - Tell me about [Networking]{"entity": "topic"}
     - Tell me about [Artificial intelligence]{"entity": "topic"}
     - Tell me about [Computer architecture]{"entity": "topic"}
     - Tell me about [Software engineering]{"entity": "topic"}
     - Tell me about [Human-computer interaction]{"entity": "topic"}
+    - Tell me about [Bioinformatics and computational biology]{"entity": "topic"}
     - [Robotics]{"entity": "topic"}
     - [Image processing]{"entity": "topic"}
     - [Quantum computing theory]{"entity": "topic"}
+    - [Computational neuroscience]{"entity": "topic"}
 
-# - synonym: Artificial intelligence
-#   examples: |
-#     - AI
+- synonym: Artificial intelligence
+  examples: |
+    - AI
+    
 - lookup: topic
   examples: | 
     - Coding theory
