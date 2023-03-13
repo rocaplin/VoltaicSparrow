@@ -77,6 +77,11 @@ class ActionRequestTopics(Action):
                 str += topic
                 dispatcher.utter_message(text=("I'm not well-trained on " + str))
         else:
-            dispatcher.utter_message(text=("Here is what I know about " + topic + ": \n" + requested_topic["description"]))
+            if not requested_topic["related_courses"]:
+                dispatcher.utter_message(text=("Here is what I know about " + topic + ": \n" + requested_topic["description"]))
+                dispatcher.utter_message(text=("It doesn't seem like there are any classes on this..."))
+            else:
+                dispatcher.utter_message(text=("Here is what I know about " + topic + ": \n" + requested_topic["description"]))
+                dispatcher.utter_message(text=("You can learn more about it in these classes: " + requested_topic["related_courses"]))
 
         return []
