@@ -247,9 +247,44 @@ stories:
     intent: other_cscareers
   - action: utter_other_cscareers
 
-- story: request topic 1
+- story: request topic 1-1
   steps:
   - user: |
       Can you tell me about [concurrency]{"entity": "concurrency"}
+    intent: request_topics
+  - action: action_request_topics
+
+- story: request topic 1-2
+  steps:
+  - user: |
+      Can you tell me about [artifical intelligence]{"entity": "artificial intelligence"}
+    intent: request_topics
+  - action: action_request_topics
+
+- story: request topic 1-3
+  steps:
+  - user: |
+      Can you tell me about [Natural language processing]{"entity": "Natural language processing"}
+    intent: request_topics
+  - action: action_request_topics
+
+- story: request topic 2-1
+  steps:
+  - user: |
+      What is [networking]{"entity": "networking"}
+    intent: request_topics
+  - action: action_request_topics
+
+- story: request topic 2-2
+  steps:
+  - user: |
+      What is [Soft computing]{"entity": "Soft computing"}
+    intent: request_topics
+  - action: action_request_topics
+
+- story: request topic 2-3
+  steps:
+  - user: |
+      What is [computational complexity theory]{"entity": "computational complexity theory"}
     intent: request_topics
   - action: action_request_topics
