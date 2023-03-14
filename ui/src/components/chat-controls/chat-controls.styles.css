@@ -1,0 +1,30 @@
+#call-to-action-text {
+    position: relative;
+    top: 35px;
+    color: var(--primary-600);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+
+#chat-button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chat-button {
+    padding: 10px 12px 11px;
+    border-width: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#chat-open-button {
+    background-color: var(--primary-500);
+}
+
+#chat-close-button {
+    background-color: var(--secondary-500);
+}
