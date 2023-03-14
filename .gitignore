@@ -4,7 +4,4 @@ rasa/.rasa/**
 rasa/.rasa/cache/**
 rasa/models/**
 rasa/results/**
-rasa/actions/__pycache__/
 .vs/**
-dbutils/node_modules
-dbutils/package-lock.json

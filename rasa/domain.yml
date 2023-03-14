@@ -8,6 +8,15 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - required_courses
+  - difference
+  - engineering
+  - clas
+  - faq
+  - csetymology
+  - modern_computers
+  - common_cscareers
+  - other_cscareers
   - request_action_test
   - request_jobs:
       use_entities: true
@@ -34,7 +43,117 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_faq/ufonline:
+  - text: "Online classes are convenient and economical. UF Online is one of the top programs in the United States and offers many degrees online.
   
+The challenges of online study can include power outages, technical difficulties, and distractions. Proactive and disciplined students will be most successful.
+
+If you would like to find out more about UF Online, visit https://ufonline.ufl.edu."
+
+  utter_faq/ufcampus:
+  - text: "Campus classes provide a more traditional college experience. The University of Florida offers a wide variety of degree programs, facilities, and extracurricular opportunities.
+
+ The challenges of campus study can include a daily commute, new living arrangements, and distractions. Proactive and disciplined students will be most successful.
+
+ If you would like to find out more about UF, visit https://ufl.edu."
+  
+  utter_which_college:
+  - text: "Which college are you interested in pursuing computer science in? There are two: the College of Liberal Arts and Sciences and the Herbert Wertheim College of Engineering."
+  
+  utter_difference:
+  - text: "Some things change when you pursue a computer science degree in one college versus the other. The difference between the two lies mostly in the courses you will be taking. Additionally, there may be some college requirements that will differ depending on the choice you make."
+  
+  utter_required_courses_eng:
+  - text: "There are a number of courses that you will be taking as a computer science student in the College of Engineering. All students are required to take six critical tracking courses: MAC 2311 Analytic Geometry and Calculus 1, MAC 2312 Analytic Geometry and Calculus 2, MAC 2313 Analytic Geometry and Calculus 3, COP3502C Programming Fundamentals 1, PHY 2048 Physics with Calculus 1, and PHY 2049 Physics with Calculus 2. 
+ 
+ Some additional courses you can expect to be taking include COP 3503C Programming Fundamentals 2, COT 3100 Applications of Discrete Structures, COP 3530 Data Structures and Algorithm, COP 4600 Operating Systems, and COP 4020 Programming Language Concepts. 
+  
+ For more information on required courses, please visit https://catalog.ufl.edu/UGRD/colleges-schools/UGENG/CPS_BSCS/."
+  
+  utter_required_courses_clas:
+  - text: "There are a number of courses that you will be taking as a computer science student in the College of Liberal Arts and Sciences including MAC 1147 Precalculus Algebra and Trigonometry and/or MAC 2311 Analytic Geometry and Calculus 1, MAC 2312 Analytic Geometry and Calculus 2, MAC 2313 Analytic Geometry and Calculus 3, COP3502C Programming Fundamentals 1 or COP 3504C Advanced Programming Fundamentals for CIS Majors, PHY 2053 Physics 1 or PHY 2048 Physics with Calculus 1, and PHY 2054 Physics 2 or PHY 2049 Physics with Calculus 2. 
+ 
+ Some additional courses you can expect to be taking include COP 3503C Programming Fundamentals 2 or COP 3504C Advanced Programming Fundamentals for CIS Majors, COT 3100 Applications of Discrete Structures, COP 3530 Data Structures and Algorithm, and COP 4600 Operating Systems. 
+  
+ If you would like more information on required courses for a computer science degree, please visit https://catalog.ufl.edu/UGRD/colleges-schools/UGLAS/CSC_BS/.
+ 
+ In addition to required courses for the computer science major, there are some courses that must be taken to satisfy the degree requirements for the College of Liberal Arts and Sciences. For more information on these additional requirements, check out https://catalog.ufl.edu/UGRD/colleges-schools/UGLAS/#degreerequirementstext."
+  
+
+  utter_faq/credit_hours:
+  - text: "A Computer Science Degree at UF requires a minimum of 120 total credit hours. For a full-time student, this constitutes 12-18 credit hours per semester. This is usually 4-6 classes per semester, depending on individual course credits."
+
+  utter_faq/excess_hours:
+  - text: "Computer Science has a credit limit of 120 hours for both the College of Liberal Arts and Sciences and the College of Engineering. For more information, refer to this page: https://registrar.ufl.edu/courses/excess-hours."
+
+  utter_faq/workload_per_hour:
+  - text: "Each credit hour is defined as one hour of in-person instruction and a minimum of two hours of out-of-class work per week. A 15-credit semester would consist of 15 hours of in-person instruction, and 30 hours of out-of-class work per week."
+
+  utter_faq/csdefinition:
+  - text: "While there is no official definition of Computer Science one way to view it is as the study of computation. This includes the study of:
+
+ - what can and cannot be solved through computation.
+
+ - computational methods and their application.
+
+ - the tools we use to perform computations."
+
+  utter_modern_computers:
+  - text: "The first general purpose computers began to be built in the United States and Europe during the late 1930s. The term Computer Science was coined in the 1950s to describe related coursework being offered by universities."
+
+  utter_csetymology:
+  - text: "The development of modern computers took place over a period of centuries drawing from a number of fields in Mathematics, Science, and Engineering, and as a result the topics addressed by these courses were just as broad. While the academic field of Computer Science is relatively young it has expanded rapidly and had far reaching societal impacts.
+
+It is likely that for all of these reasons, there are a variety of perspectives on what constitutes Computer Science, and how it should be defined."
+
+  utter_faq/cshistory:
+  - text: "The foundation of Computer science predates modern computers. Ancient peoples used machines like the abacus and algorithms like the Sieve of Eratosthenes to perform calculations."
+    buttons:
+    - title: "What happened next?"
+      payload: "/faq/leibniz"
+
+  utter_faq/leibniz:
+  - text: "During the Enlightenment mechanical calculators began to appear in Europe. The famous mathematician Leibniz created one such calculator in 1873. He is sometimes credited as the founder of computer science for documenting the use of logical operations in a binary number system.
+
+https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz"
+    buttons:
+    - title: "what happened next?"
+      payload: "/faq/babbage"
+
+  utter_faq/babbage:
+  - text: "During the Industrial Revolution Charles Babbage designed increasingly complicated calculators culminating in his Analytical Engine, the first general-purpose computer, in 1837. Due to financial and manufacturing difficulties the Analytical Engine was never built.
+
+https://en.wikipedia.org/wiki/Charles_Babbage"
+    buttons:
+    - title: "What happened next?"
+      payload: "/faq/lovelace"
+
+  utter_faq/lovelace:
+  - text: "In 1843, Ada Lovelace wrote what is considered the first published algorithm for a computer as a supplement to an article on Babbage's Analytical Engine.
+
+https://en.wikipedia.org/wiki/Ada_Lovelace"
+    buttons:
+    - title: "What happened next?"
+      payload: "/modern_computers"
+
+  utter_common_cscareers:
+  - text: "Employeers in a variety of industries hire Computer Science graduates for jobs the U.S. Bureau of Labor Statistics classifies as Computer Occupations.
+
+As of May 2021, BLS data shows that 70% of those employed within Computer Occupations work as Software Developers, Support Specialists, Systems Analysts, Network/ Systems Administrators, and QA Analysts.
+
+Other common positions include Network Architects, Security Analysts, Database Administrators, Web Developers and Designers, and Research Scientists.
+
+https://www.bls.gov/oes/current/oes_nat.htm"
+    buttons:
+    - title: "Are there other career options?"
+      payload: "/other_cscareers"
+
+  utter_other_cscareers:
+  - text: "Computer Science degrees cover a variety of topics potentially preparing students to pursue careers in related fields such as Hardware Design, Data Science, Digital Media, or Business.
+
+Earing a college degree demonstrates your ability to achieve and learn, traits helpful in many positions. Your major is only one indicator of fit. Personal experience, interests, and skills are also important and it is not uncommon for graduates to work outside their fields of study."
+
 actions:
   - action_hello_world
   - action_request_jobs

@@ -38,3 +38,60 @@ stories:
   steps:
   - intent: request_jobs
   - action: action_request_jobs
+  
+- story: courses path 1
+  steps:
+  - intent: required_courses
+  - action: utter_which_college
+  - intent: difference
+  - action: utter_difference
+  - action: utter_which_college
+  - intent: engineering
+  - action: utter_required_courses_eng
+  
+- story: courses path 2
+  steps:
+  - intent: required_courses
+  - action: utter_which_college
+  - intent: engineering
+  - action: utter_required_courses_eng
+  
+- story: courses path 3
+  steps:
+  - intent: required_courses
+  - action: utter_which_college
+  - intent: difference
+  - action: utter_difference
+  - action: utter_which_college
+  - intent: clas
+  - action: utter_required_courses_clas
+  
+- story: courses path 4
+  steps:
+  - intent: required_courses
+  - action: utter_which_college
+  - intent: clas
+  - action: utter_required_courses_clas
+
+- story: modern/ general-purpose computers
+  steps:
+  - intent: modern_computers
+  - action: utter_modern_computers
+
+- story: cs etymology
+  steps:
+  - intent: csetymology
+  - action: utter_modern_computers
+  - action: utter_csetymology
+
+- story: cs career 1
+  steps:
+  - intent: common_cscareers
+  - action: utter_common_cscareers
+
+- story: cs career 2
+  steps:
+  - intent: common_cscareers
+  - action: utter_common_cscareers
+  - intent: other_cscareers
+  - action: utter_other_cscareers
