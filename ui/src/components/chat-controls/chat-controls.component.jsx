@@ -24,7 +24,7 @@ const ChatControls = ({chatOpen, chatOpenHandler}) => {
 
     // Open/ Close Button render
     const chatButton = (isChatOpen) => {
-        if (!chatOpen) {
+        if (!isChatOpen) {
             return (
                 <div id="chat-button-container">
                 <button
