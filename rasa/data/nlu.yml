@@ -234,4 +234,91 @@ nlu:
     - information sys
     - info systems
     - systems
-    
+
+- intent: faq/csdefinition
+  examples: |
+    - what is computer science?
+    - What does Computer Science mean?
+    - Could you define Computer science?
+    - How do I define Computer Science?
+    - what is computer science's definition?
+    - tell me what computer science means
+
+- intent: modern_computers
+  examples: |
+    - When were the first modern computers built?
+    - When did the first general purpose computer get built?
+
+- intent: csetymology
+  examples: |
+    - Where did the term Computer Science come from?
+    - why is it called computer science?
+    - How come it was called Computer Science?
+    - why did they name it computer science?
+    - Why is there no official definition?
+    - why no official definition
+
+- intent: faq/cshistory
+  examples: |
+    - What is the origin of Computer Science?
+    - Who invented computer science?
+    - How did Computer science come into being?
+    - Tell me about the history of computer science.
+    - how was computer science invented
+    - Where did computer science come from?
+    - how did computer science start
+
+- intent: faq/leibniz
+  examples: |
+    - Who was Leibniz?
+    - What did Leibniz do?
+    - who is the founder of computer science?
+    - Tell me the founder of computer science.
+    - Tell me about Gottfried Leibniz.
+    - Gottfried Wilhelm Leibniz
+    - gottfried wilhelm von leibniz
+
+- intent: faq/babbage
+  examples: |
+    - Who was Charles Babbage?
+    - What did Babbage do?
+    - Who designed the first computer?
+    - who designed the first general purpose computer
+    - Tell me about Charles Babbage.
+    - charles babbage
+    - babbage
+
+- intent: faq/lovelace
+  examples: |
+    - Who was Ada Lovelace?
+    - What did Lovelace do?
+    - Who was the first programmer?
+    - who was the first computer programmer
+    - Tell me about Ada Lovelace.
+    - ada lovelace
+    - lovelace
+
+- intent: common_cscareers
+  examples: |
+    - what can I do with a degree in computer science?
+    - What is a CS degree good for?
+    - what jobs are available for cs majors?
+    - which careers are a good fit for CompSci majors?
+    - tell me about cs careers
+    - What career options are there in Computer Science?
+    - tell me about job opportunities in comp sci
+    - What positions is CS good for?
+    - tell me about work available to cs majors
+    - Tell me about jobs in Computer Science.
+
+- intent: other_cscareers
+  examples: |
+    - What other jobs are there?
+    - Are there other careers in Computer Science?
+    - Is there anything else?
+    - What are some other opportunities?
+    - Tell me about other jobs.
+    - tell me about other careers in cs
+    - Can CompSci majors do anything else?
+    - are there other jobs in computer science?
+    - anything else comp sci majors can do?

@@ -20,6 +20,10 @@ intents:
   - software
   - info_tech
   - info_sys
+  - csetymology
+  - modern_computers
+  - common_cscareers
+  - other_cscareers
 
 responses:
   utter_greet:
@@ -117,7 +121,71 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
   - text: "Computer Information Systems, or just Information Systems, focuses on applying technology and systems to help businesses run. It can be viewed as a more commercial approach to computer science. 
   Courses for a degree in information systems may combine business courses, such as Managerial Communication, with coding courses. 
   A degree in information systems is commonly less intensive than a computer science degree and does not delve into programming as deeply as computer science does."
-  
+
+  utter_faq/csdefinition:
+  - text: "While there is no official definition of Computer Science one way to view it is as the study of computation. This includes the study of:
+
+ - what can and cannot be solved through computation.
+
+ - computational methods and their application.
+
+ - the tools we use to perform computations."
+
+  utter_modern_computers:
+  - text: "The first general purpose computers began to be built in the United States and Europe during the late 1930s. The term Computer Science was coined in the 1950s to describe related coursework being offered by universities."
+
+  utter_csetymology:
+  - text: "The development of modern computers took place over a period of centuries drawing from a number of fields in Mathematics, Science, and Engineering, and as a result the topics addressed by these courses were just as broad. While the academic field of Computer Science is relatively young it has expanded rapidly and had far reaching societal impacts.
+
+It is likely that for all of these reasons, there are a variety of perspectives on what constitutes Computer Science, and how it should be defined."
+
+  utter_faq/cshistory:
+  - text: "The foundation of Computer science predates modern computers. Ancient peoples used machines like the abacus and algorithms like the Sieve of Eratosthenes to perform calculations."
+    buttons:
+    - title: "What happened next?"
+      payload: "/faq/leibniz"
+
+  utter_faq/leibniz:
+  - text: "During the Enlightenment mechanical calculators began to appear in Europe. The famous mathematician Leibniz created one such calculator in 1873. He is sometimes credited as the founder of computer science for documenting the use of logical operations in a binary number system.
+
+https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz"
+    buttons:
+    - title: "what happened next?"
+      payload: "/faq/babbage"
+
+  utter_faq/babbage:
+  - text: "During the Industrial Revolution Charles Babbage designed increasingly complicated calculators culminating in his Analytical Engine, the first general-purpose computer, in 1837. Due to financial and manufacturing difficulties the Analytical Engine was never built.
+
+https://en.wikipedia.org/wiki/Charles_Babbage"
+    buttons:
+    - title: "What happened next?"
+      payload: "/faq/lovelace"
+
+  utter_faq/lovelace:
+  - text: "In 1843, Ada Lovelace wrote what is considered the first published algorithm for a computer as a supplement to an article on Babbage's Analytical Engine.
+
+https://en.wikipedia.org/wiki/Ada_Lovelace"
+    buttons:
+    - title: "What happened next?"
+      payload: "/modern_computers"
+
+  utter_common_cscareers:
+  - text: "Employeers in a variety of industries hire Computer Science graduates for jobs the U.S. Bureau of Labor Statistics classifies as Computer Occupations.
+
+As of May 2021, BLS data shows that 70% of those employed within Computer Occupations work as Software Developers, Support Specialists, Systems Analysts, Network/ Systems Administrators, and QA Analysts.
+
+Other common positions include Network Architects, Security Analysts, Database Administrators, Web Developers and Designers, and Research Scientists.
+
+https://www.bls.gov/oes/current/oes_nat.htm"
+    buttons:
+    - title: "Are there other career options?"
+      payload: "/other_cscareers"
+
+  utter_other_cscareers:
+  - text: "Computer Science degrees cover a variety of topics potentially preparing students to pursue careers in related fields such as Hardware Design, Data Science, Digital Media, or Business.
+
+Earing a college degree demonstrates your ability to achieve and learn, traits helpful in many positions. Your major is only one indicator of fit. Personal experience, interests, and skills are also important and it is not uncommon for graduates to work outside their fields of study."
+
 actions:
   - action_hello_world
 
