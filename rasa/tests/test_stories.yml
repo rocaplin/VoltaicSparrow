@@ -89,3 +89,38 @@ stories:
       are you a bot?
     intent: bot_challenge
   - action: utter_iamabot
+
+- story: request jobs 1
+  steps:
+  - user: |
+      What careers are there as a [database administrator]{"entity": "job"}
+    intent: request_jobs
+  - action: action_request_jobs
+
+- story: request jobs 2
+  steps:
+  - user: |
+      What careers are there as a [Mathematician]{"entity": "job"}
+    intent: request_jobs
+  - action: action_request_jobs
+
+- story: request jobs 3
+  steps:
+  - user: |
+      What careers are there as a [video game developer]{"entity": "job"}
+    intent: request_jobs
+  - action: action_request_jobs
+
+- story: request jobs 4
+  steps:
+  - user: |
+      [Video Game Developer]{"entity": "job"}
+    intent: request_jobs
+  - action: action_request_jobs
+
+- story: request jobs 5
+  steps:
+  - user: |
+      [it architect]{"entity": "job"}
+    intent: request_jobs
+  - action: action_request_jobs

@@ -37,6 +37,4 @@ stories:
 - story: action request jobs
   steps:
   - intent: request_jobs
-    entities:
-      - job: "Computer Programmer"
   - action: action_request_jobs

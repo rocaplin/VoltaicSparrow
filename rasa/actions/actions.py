@@ -55,25 +55,24 @@ class ActionRequestJobs(Action):
         db = client.chompsci
         job_list = db.job_list
 
-        job_name = None
+        job = None
 
         for entity in tracker.latest_message['entities']:
             if entity["entity"] == 'job':
-                job_name = entity['value']
-                dispatcher.utter_message(text=requested_job["description"])
+                job = entity['value']
 
 
-        requested_job = job_list.find_one({"job": job_name})
-
+        requested_job = job_list.find_one({"job_lower": job.lower()})
 
         if not requested_job:
-            if not job_name:
+            if not job:
                 dispatcher.utter_message(text="I'm not well-trained on that topic...")
             else:
                 str = ""
-                str += job_name
+                str += job
                 dispatcher.utter_message(text=("I'm not well-trained on " + str))
         else:
-            dispatcher.utter_message(text=requested_job["description"])
+            dispatcher.utter_message(text=("Here is what I know about careers as a " + job + ": \n" + requested_job["description"]))
+            dispatcher.utter_message(text=("You can learn more about it in these classes: " + requested_job["related_courses"]))
 
         return []

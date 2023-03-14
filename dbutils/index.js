@@ -18,7 +18,7 @@ async function run() {
 
 	var list_jobs = []
 
-	var rawJobData = fs.readFileSync("./scope-compsci-topics-data.csv","utf-8");
+	var rawJobData = fs.readFileSync("./CS-Jobs.csv","utf-8");
 
 	var parsedJobData = parse(rawJobData,{ delimiter: ",", from_line: 2 });
 
@@ -26,13 +26,14 @@ async function run() {
 		list_jobs.push(
 			{
 				job: parsedJob[0],
-				description: parsedJob[1],
-				related_courses: parsedJob[2],
-				keywords: parsedJob[3]
+				job_lower: parsedJob[1],
+				description: parsedJob[2],
+				related_courses: parsedJob[3],
+				keywords: parsedJob[4]
 			});
 	});
 
-	await job_list.insertMany(list_jobs);
+	const res = await job_list.insertMany(list_jobs);
 
 	console.log("Insert Complete. Test query results for Computer Programmer: ");
 

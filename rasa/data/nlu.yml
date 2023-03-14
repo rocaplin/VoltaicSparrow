@@ -96,37 +96,24 @@ nlu:
     - Is the action server working
     - Action server test
 
-# - intent: request_jobs
-#   examples: |
-#     - Tell me about jobs in computer science
-#     - Computer science jobs
-#     - Computer science careers
-#     - Jobs in computer science
-#     - What jobs are there in computer science?
-#     - Computer Programmer jobs
-#     - Mathematician jobs
-#     - Graphic Designer jobs
-#     - Security Analyst jobs
-#     - Data Scientists jobs
-#     - Hardware Engineer jobs
-#     - Database Administrator jobs
-#     - Software Engineer jobs
-#     - Network Administrator jobs
-#     - Video Game Developer jobs
-#     - Web Developer jobs
-#     - Web Designer jobs
-#     - IT Architect jobs
-#     - Systems Analyst jobs
-#     - Software Developer jobs
-
 - intent: request_jobs
   examples: |
     - [Computer Programmer]{"entity": "job"} jobs
-    - Jobs as a [Computer Programmer]{"entity": "job"}
-    - Careers as a [Computer Programmer]{"entity": "job"}
-    - [Computer Programmer]{"entity": "job"} careers
-    - What jobs are there as a [Computer Programmer]{"entity": "job"}
+    - [it architect]{"entity": "job"} jobs
+    - [video game developer]{"entity": "job"} jobs
+    - [Security Analyst{"entity": "job"} careers
+    - [Web Designer]{"entity": "job"} careers
+    - [web developer]{"entity": "job"} careers
+    - Jobs as a [Video Game Developer]{"entity": "job"}
+    - Jobs as a [graphic designer]{"entity": "job"}
+    - Jobs as a [mathematician]{"entity": "job"}
+    - Careers as a [Systems Analyst]{"entity": "job"}
+    - Careers as a [software engineer]{"entity": "job"}
+    - What jobs are there as a [computer programmer]{"entity": "job"}
     - What careers are there as a [Computer Programmer]{"entity": "job"}
+    - What careers are there as a [database administrator]{"entity": "job"}
+    - [Network Administrator]{"entity": "job"}
+    - [Video Game Developer]{"entity": "job"}
 
 - lookup: job
   examples: |
@@ -134,7 +121,7 @@ nlu:
     - Mathematician
     - Graphic Designer
     - Security Analyst
-    - Data Scientists
+    - Data Scientist
     - Hardware Engineer
     - Database Administrator
     - Software Engineer
@@ -145,3 +132,18 @@ nlu:
     - IT Architect
     - Systems Analyst
     - Software Developer
+    - computer programmer
+    - mathematician
+    - graphic designer
+    - security analyst
+    - data scientist
+    - hardware engineer
+    - database administrator
+    - software engineer
+    - network administrator
+    - video game developer
+    - web developer
+    - web designer
+    - it architect
+    - systems analyst
+    - software developer
