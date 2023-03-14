@@ -117,6 +117,211 @@ stories:
       how are campus classes?
     intent: faq/ufcampus
   - action: utter_faq/ufcampus
+  
+- story: ask about adjacent fields 1
+  steps:
+  - user: |
+      how does computer science compare to other fields?
+    intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - user: |
+      Electrical eng
+    intent: electrical
+  - action: utter_electrical_engineering
+  - action: utter_ask_again
+  - user: |
+      yes
+    intent: affirm
+  - action: utter_ask_major_differences
+  - user: |
+      comp eng
+    intent: comp_eng
+  - action: utter_computer_engineering
+  - action: utter_ask_again
+  - user: |
+      nah
+    intent: deny
+  - action: utter_happy
+  
+- story: ask about adjacent fields 2
+  steps:
+  - user: |
+      comp sci versus other fields
+    intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - user: |
+      EE
+    intent: electrical
+  - action: utter_electrical_engineering
+  - action: utter_ask_again
+  - user: |
+      no
+    intent: deny
+  - action: utter_happy
+  
+- story: ask about adjacent fields 3
+  steps:
+  - user: |
+      what is the difference between computer science and other majors?
+    intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - user: |
+      comp eng
+    intent: comp_eng
+  - action: utter_computer_engineering
+  - action: utter_ask_again
+  - user: |
+      yeh
+    intent: affirm
+  - action: utter_ask_major_differences
+  - user: |
+      EE
+    intent: electrical
+  - action: utter_electrical_engineering
+  - action: utter_ask_again
+  - user: |
+      nope
+    intent: deny
+  - action: utter_happy
+  
+- story: ask about adjacent fields 4
+  steps:
+  - user: |
+      what is the difference between computer science and other fields?
+    intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - user: |
+      CE
+    intent: comp_eng
+  - action: utter_computer_engineering
+  - action: utter_ask_again
+  - user: |
+      naur
+    intent: deny
+  - action: utter_happy
+  
+- story: ask about adjacent fields 5
+  steps:
+  - user: |
+      how is computer science compared to different fields?
+    intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - user: |
+      software eng
+    intent: software
+  - action: utter_software_engineering
+  - action: utter_ask_again
+  - user: |
+      yea
+    intent: affirm
+  - action: utter_ask_major_differences
+  - user: |
+      Electrical engineer
+    intent: electrical
+  - action: utter_electrical_engineering
+  - action: utter_ask_again
+  - user: |
+      not at all
+    intent: deny
+  - action: utter_happy
+  
+- story: ask about adjacent fields 6
+  steps:
+  - user: |
+      how is computer science different?
+    intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - user: |
+      SE
+    intent: software
+  - action: utter_software_engineering
+  - action: utter_ask_again
+  - user: |
+      negative
+    intent: deny
+  - action: utter_happy
+  
+- story: ask about adjacent fields 7
+  steps:
+  - user: |
+      what makes computer science different?
+    intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - user: |
+      Information technology
+    intent: info_tech
+  - action: utter_information_technology
+  - action: utter_ask_again
+  - user: |
+      yes
+    intent: affirm
+  - action: utter_ask_major_differences
+  - user: |
+      SE
+    intent: software
+  - action: utter_software_engineering
+  - action: utter_ask_again
+  - user: |
+      no
+    intent: deny
+  - action: utter_happy
+  
+- story: ask about adjacent fields 8
+  steps:
+  - user: |
+      compare computer science
+    intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - user: |
+      IT
+    intent: info_tech
+  - action: utter_information_technology
+  - action: utter_ask_again
+  - user: |
+      nae
+    intent: deny
+  - action: utter_happy
+  
+- story: ask about adjacent fields 9
+  steps:
+  - user: |
+      why computer science over other fields?
+    intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - user: |
+      info systems
+    intent: info_sys
+  - action: utter_information_systems
+  - action: utter_ask_again
+  - user: |
+      yuh
+    intent: affirm
+  - action: utter_ask_major_differences
+  - user: |
+      Info tech
+    intent: info_tech
+  - action: utter_information_technology
+  - action: utter_ask_again
+  - user: |
+      no way
+    intent: deny
+  - action: utter_happy
+  
+- story: ask about adjacent fields 10
+  steps:
+  - user: |
+      how do I choose between computer science and other majors?
+    intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - user: |
+      IS
+    intent: info_sys
+  - action: utter_information_systems
+  - action: utter_ask_again
+  - user: |
+      naw
+    intent: deny
+  - action: utter_happy
 
 - story: computer science definition 1
   steps:

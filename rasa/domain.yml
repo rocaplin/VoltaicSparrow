@@ -14,6 +14,12 @@ intents:
   - engineering
   - clas
   - faq
+  - adjacent_fields
+  - electrical
+  - comp_eng
+  - software
+  - info_tech
+  - info_sys
   - csetymology
   - modern_computers
   - common_cscareers
@@ -84,6 +90,37 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
 
   utter_faq/workload_per_hour:
   - text: "Each credit hour is defined as one hour of in-person instruction and a minimum of two hours of out-of-class work per week. A 15-credit semester would consist of 15 hours of in-person instruction, and 30 hours of out-of-class work per week."
+  
+  utter_ask_major_differences:
+  - text: "Which major/adjacent field would you like to know about in comparison to Computer Science? You can say Electrical Engineering, Computer Engineering, Information Systems, Software Engineering, and Information Technology."
+  
+  utter_ask_again:
+  - text: "Would you like to know about another major/adjacent field? You can say Electrical Engineering, Computer Engineering, Information Systems, Software Engineering, and Information Technology."
+  
+  utter_electrical_engineering: 
+  - text: "While there are many differences between Computer Science and Electrical Engineering, one of the most distinct ones is that electrical engineers focus on physical products and work with electricity, electrical currents. and electrical components to create solutions while computer scientists focus on nontangible concepts and use logic, computation, and coding to create solutions. 
+  In terms of schoolwork, an electrical engineering degree may require more diverse courses be taken. Degrees in electrical engineering may include courses that focus on technical concepts involving digital systems and electric circuits. These courses are usually application-based in manufacturing, navigation systems, communication, health care, etc. 
+  Electrical engineers may also be required to take courses that computer scientists take."
+  
+  utter_computer_engineering:
+  - text: "Though Computer Science and Computer Engineering sound similar, the two actually specialize in two separate aspects of computer technology. With computer engineering, more priority is given to computer design and development. Computer science, on the other hand, focuses more on computing theory and data analysis. 
+  Courses in computer engineering involve learning to develop prototypes and test components such as microchips, circuits, conductors, and processors.
+  For those with interests in or career goals involving building computers, designing interfaces, or delving into hardware, computer engineering may be a more appealing area of study."
+  
+  utter_software_engineering:
+  - text: "Software engineering is a subset of computer science that focuses on developing software from beginning to end. Software engineering is a more hands-on subsection that includes working with different programming languages to write, revise, and test new software programs.
+  The courses for computer science and software engineering often overlap and can include Introduction to Programming, Data Structures, Discrete Structures, and Operating Systems."
+  
+  utter_information_technology:
+  - text: "Information Technology is often referred to as 'the business side of computer science' and focuses more on meeting the technological needs of organizations. Unike computer science, information technology emphasizes using computers, databases, networks, servers, and software to process, store, transmit, retrieve, and protect data.
+  While computer scientists use theoretical skills to develop and improve computer programs, information technology specialists install, implement, and maintain the programs in addition to applying them to businesses and other professional organizations.
+  The courseload for an information technology degree includes classes in which students learn to identify, create, and configure complex computing platforms and systems to solve problems.
+  Those who enjoy discovering technological solutions to problems and working with others should consider a degree in information technology."
+  
+  utter_information_systems:
+  - text: "Computer Information Systems, or just Information Systems, focuses on applying technology and systems to help businesses run. It can be viewed as a more commercial approach to computer science. 
+  Courses for a degree in information systems may combine business courses, such as Managerial Communication, with coding courses. 
+  A degree in information systems is commonly less intensive than a computer science degree and does not delve into programming as deeply as computer science does."
 
   utter_faq/csdefinition:
   - text: "While there is no official definition of Computer Science one way to view it is as the study of computation. This includes the study of:
