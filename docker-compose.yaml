@@ -6,10 +6,14 @@ services:
       context: ./ui
       dockerfile: Dockerfile.dev
    ports:
-    -  80:3000
+    -  80:80
+   # React port needs to match container port. Otherwise it tries to 
+   # connect to internal port from browser.
+   environment:
+    - PORT=80
    container_name: mern-ui
    volumes:
-    -  ./ui:/usr/app/src
+    -  ./ui/src:/usr/app/src
     -  ./ui/public:/usr/app/public
    stdin_open: true
    tty: true
