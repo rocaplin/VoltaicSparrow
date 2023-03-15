@@ -8,7 +8,6 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - request_action_test
   - required_courses
   - difference
   - engineering
@@ -24,6 +23,12 @@ intents:
   - modern_computers
   - common_cscareers
   - other_cscareers
+  - request_action_test
+  - request_jobs:
+      use_entities: true
+
+entities:
+  - job
 
 responses:
   utter_greet:
@@ -188,6 +193,7 @@ Earing a college degree demonstrates your ability to achieve and learn, traits h
 
 actions:
   - action_hello_world
+  - action_request_jobs
 
 session_config:
   session_expiration_time: 60

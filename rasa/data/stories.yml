@@ -34,6 +34,11 @@ stories:
   - intent: request_action_test
   - action: action_hello_world
 
+- story: action request jobs
+  steps:
+  - intent: request_jobs
+  - action: action_request_jobs
+  
 - story: courses path 1
   steps:
   - intent: required_courses
