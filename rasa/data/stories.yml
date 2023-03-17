@@ -34,6 +34,11 @@ stories:
   - intent: request_action_test
   - action: action_hello_world
 
+- story: action request jobs
+  steps:
+  - intent: request_jobs
+  - action: action_request_jobs
+  
 - story: courses path 1
   steps:
   - intent: required_courses
@@ -67,6 +72,106 @@ stories:
   - action: utter_which_college
   - intent: clas
   - action: utter_required_courses_clas
+  
+- story: adjacent fields path 1
+  steps:
+  - intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - intent: electrical
+  - action: utter_electrical_engineering
+  - action: utter_ask_again
+  - intent: affirm
+  - action: utter_ask_major_differences
+
+- story: adjacent fields path 2
+  steps:
+  - intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - intent: electrical
+  - action: utter_electrical_engineering
+  - action: utter_ask_again
+  - intent: deny
+  - action: utter_happy
+
+- story: adjacent fields path 3
+  steps:
+  - intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - intent: comp_eng
+  - action: utter_computer_engineering
+  - action: utter_ask_again
+  - intent: affirm
+  - action: utter_ask_major_differences
+
+- story: adjacent fields path 4
+  steps:
+  - intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - intent: comp_eng
+  - action: utter_computer_engineering
+  - action: utter_ask_again
+  - intent: deny
+  - action: utter_happy
+
+- story: adjacent fields path 5
+  steps:
+  - intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - intent: software
+  - action: utter_software_engineering
+  - action: utter_ask_again
+  - intent: affirm
+  - action: utter_ask_major_differences
+
+- story: adjacent fields path 6
+  steps:
+  - intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - intent: software
+  - action: utter_software_engineering
+  - action: utter_ask_again
+  - intent: deny
+  - action: utter_happy
+
+- story: adjacent fields path 7
+  steps:
+  - intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - intent: info_tech
+  - action: utter_information_technology
+  - action: utter_ask_again
+  - intent: affirm
+  - action: utter_ask_major_differences
+ 
+- story: adjacent fields path 8
+  steps:
+  - intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - intent: info_tech
+  - action: utter_information_technology
+  - action: utter_ask_again
+  - intent: deny
+  - action: utter_happy
+ 
+- story: adjacent fields path 9
+  steps:
+  - intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - intent: info_sys
+  - action: utter_information_systems
+  - action: utter_ask_again
+  - intent: affirm
+  - action: utter_ask_major_differences
+
+- story: adjacent fields path 10
+  steps:
+  - intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - intent: info_sys
+  - action: utter_information_systems
+  - action: utter_ask_again
+  - intent: deny
+  - action: utter_happy
 
 - story: modern/ general-purpose computers
   steps:

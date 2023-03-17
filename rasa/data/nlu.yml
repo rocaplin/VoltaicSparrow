@@ -96,6 +96,58 @@ nlu:
     - Is the action server working
     - Action server test
 
+- intent: request_jobs
+  examples: |
+    - [Computer Programmer]{"entity": "job"} jobs
+    - [it architect]{"entity": "job"} jobs
+    - [video game developer]{"entity": "job"} jobs
+    - [Security Analyst{"entity": "job"} careers
+    - [Web Designer]{"entity": "job"} careers
+    - [web developer]{"entity": "job"} careers
+    - Jobs as a [Video Game Developer]{"entity": "job"}
+    - Jobs as a [graphic designer]{"entity": "job"}
+    - Jobs as a [mathematician]{"entity": "job"}
+    - Careers as a [Systems Analyst]{"entity": "job"}
+    - Careers as a [software engineer]{"entity": "job"}
+    - What jobs are there as a [computer programmer]{"entity": "job"}
+    - What careers are there as a [Computer Programmer]{"entity": "job"}
+    - What careers are there as a [database administrator]{"entity": "job"}
+    - [Network Administrator]{"entity": "job"}
+    - [Video Game Developer]{"entity": "job"}
+
+- lookup: job
+  examples: |
+    - Computer Programmer
+    - Mathematician
+    - Graphic Designer
+    - Security Analyst
+    - Data Scientist
+    - Hardware Engineer
+    - Database Administrator
+    - Software Engineer
+    - Network Administrator
+    - Video Game Developer
+    - Web Developer
+    - Web Designer
+    - IT Architect
+    - Systems Analyst
+    - Software Developer
+    - computer programmer
+    - mathematician
+    - graphic designer
+    - security analyst
+    - data scientist
+    - hardware engineer
+    - database administrator
+    - software engineer
+    - network administrator
+    - video game developer
+    - web developer
+    - web designer
+    - it architect
+    - systems analyst
+    - software developer
+    
 - intent: faq/credit_hours
   examples: |
     - How many credit hours are required for Computer Science students?
@@ -184,6 +236,56 @@ nlu:
     - tell me about campus classes
     - How is campus?
     - are campus classes better
+    
+- intent: adjacent_fields
+  examples: |
+    - how does computer science compare to  other fields?
+    - what is the difference between computer science and other fields?
+    - computer science versus other majors
+    - compare computer science and other fields
+    
+- intent: electrical
+  examples: |
+    - electrical engineering
+    - electrical
+    - electrical engineer
+    - ee
+    
+- intent: comp_eng
+  examples: |
+    - computer engineering
+    - comp engineering
+    - comp engineer
+    - comp eng
+    - computer engineer
+    - ce
+    
+- intent: software
+  examples: |
+    - software engineering
+    - software
+    - software engineer
+    - se
+    
+- intent: info_tech
+  examples: |
+    - information technology
+    - info tech
+    - it
+    - information tech
+    - info technology
+    - technology
+    
+- intent: info_sys
+  examples: |
+    - information systems
+    - computer information systems
+    - info sys
+    - is
+    - cis
+    - information sys
+    - info systems
+    - systems
 
 - intent: faq/csdefinition
   examples: |
