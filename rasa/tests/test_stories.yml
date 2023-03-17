@@ -288,3 +288,24 @@ stories:
       What is [computational complexity theory]{"entity": "topic"}
     intent: request_topics
   - action: action_request_topics
+
+- story: request topic 3-1
+  steps:
+  - user: |
+      What are [algorithms]{"entity": "topic"}
+    intent: request_topics
+  - action: action_request_topics
+
+- story: request topic 3-2
+  steps:
+  - user: |
+      What are [Data Structures]{"entity": "topic"}
+    intent: request_topics
+  - action: action_request_topics
+
+- story: request topic 3-3
+  steps:
+  - user: |
+      What are [programming language pragmatics]{"entity": "topic"}
+    intent: request_topics
+  - action: action_request_topics

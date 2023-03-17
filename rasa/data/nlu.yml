@@ -307,6 +307,11 @@ nlu:
     - [Quantum computing theory]{"entity": "topic"}
     - [Computational neuroscience]{"entity": "topic"}
 
+- intent: request_class_by_topic
+  examples: |
+    - USER REQUEST [Coding theory]{"entity": "topic"}
+    - CLASS REQUEST [Concurrency]{"entity": "topic"}
+
 - synonym: Artificial intelligence
   examples: |
     - AI

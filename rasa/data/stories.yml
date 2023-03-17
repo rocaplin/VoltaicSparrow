@@ -95,3 +95,10 @@ stories:
   steps:
   - intent: request_topics
   - action: action_request_topics
+
+- story: action request class by topic
+  steps:
+  - intent: request_topics
+  - action: action_request_topics
+  - intent: request_class_by_topic
+  - action: action_request_class_by_topic

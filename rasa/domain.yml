@@ -11,6 +11,8 @@ intents:
   - request_action_test
   - request_topics:
       use_entities: true
+  - request_class_by_topic:
+      use_entities: true
   - required_courses
   - difference
   - engineering
@@ -157,6 +159,7 @@ Earing a college degree demonstrates your ability to achieve and learn, traits h
 actions:
   - action_hello_world
   - action_request_topics
+  - action_request_class_by_topic
 
 session_config:
   session_expiration_time: 60
