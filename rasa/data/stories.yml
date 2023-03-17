@@ -102,3 +102,10 @@ stories:
   - action: action_request_topics
   - intent: request_class_by_topic
   - action: action_request_class_by_topic
+
+- story: action request job by topic
+  steps:
+  - intent: request_topics
+  - action: action_request_topics
+  - intent: request_job_by_topic
+  - action: action_request_job_by_topic

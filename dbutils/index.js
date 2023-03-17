@@ -30,7 +30,8 @@ async function run() {
 				lower_topic: parsedTopic[1],
 				description: parsedTopic[2],
 				keywords: parsedTopic[3],
-				related_courses: parsedTopic[4]
+				related_courses: parsedTopic[4],
+				related_careers: parsedTopic[5]
 			});
 	});
 

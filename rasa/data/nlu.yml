@@ -312,6 +312,11 @@ nlu:
     - USER REQUEST [Coding theory]{"entity": "topic"}
     - CLASS REQUEST [Concurrency]{"entity": "topic"}
 
+- intent: request_job_by_topic
+  examples: |
+    - USER JOB REQUEST [Algorithms]{"entity": "topic"}
+    - JOB REQUEST [Data structures]{"entity": "topic"}
+
 - synonym: Artificial intelligence
   examples: |
     - AI
