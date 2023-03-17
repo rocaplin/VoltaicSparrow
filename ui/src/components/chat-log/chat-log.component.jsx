@@ -23,6 +23,7 @@ const ChatLog = ({log, sendHandler}) => {
                             <div
                                 className={`chat-log-entry is-bot-${elem.isBot}`}
                                 key={`message-${elem.time}:${Math.random()}`}
+                                data-testid="message"
                             >
                                 <LogMessage message={elem}/>
                             </div>
@@ -32,6 +33,7 @@ const ChatLog = ({log, sendHandler}) => {
                             <div
                                 className={`chat-log-entry is-bot-${elem.isBot}`}
                                 key={`text-${elem.time}:${Math.random()}`}
+                                data-testid="text"
                             >
                                 <div className="avatar-container">
                                     <img src={avatar} alt=""/>
@@ -44,6 +46,7 @@ const ChatLog = ({log, sendHandler}) => {
                             <div
                                 className={`chat-log-entry`}
                                 key={`quick-reply-${elem.time}:${Math.random()}`}
+                                data-testid="quick_replies"
                             >
                                 <LogButton buttons={elem} sendHandler={sendHandler}/>
                             </div>
@@ -56,6 +59,7 @@ const ChatLog = ({log, sendHandler}) => {
                             <div
                                 className={`chat-log-entry`}
                                 key={`image-${elem.time}:${Math.random()}`}
+                                data-testid="attachment"
                             >
                                 <LogAttachment attachment={elem}/>
                             </div>

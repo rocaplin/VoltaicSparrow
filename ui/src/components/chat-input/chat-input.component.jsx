@@ -7,7 +7,7 @@ const ChatInput = ({sendHandler}) => {
     const [currentRequest, setCurrentRequest] = useState("");
 
     return(
-        <div className="chat-input">
+        <div className="chat-input" data-testid="chat-input">
                 <textarea
                     type="text"
                     value={currentRequest}
