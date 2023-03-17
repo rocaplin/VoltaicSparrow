@@ -3,7 +3,7 @@ import ChatInput from "./chat-input.component";
 
 const sendHandlerMock = () => {};
 
-test('that chat input area rendors properly', () => {
+test('that chat input area renders properly', () => {
     render(<ChatInput
                 sendHandler={sendHandlerMock}
             />

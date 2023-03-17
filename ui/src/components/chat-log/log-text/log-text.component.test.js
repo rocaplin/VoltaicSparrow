@@ -5,7 +5,7 @@ const textMock = {
     text: "This is a test."
 };
 
-test('that "text" responses rendor properly.', () => {
+test('that "text" responses render properly.', () => {
     render(<LogText
                 text={textMock}
             />

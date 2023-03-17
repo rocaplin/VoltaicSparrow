@@ -5,7 +5,7 @@ const mockMessage = {
     message: "This is a test."
 };
 
-test('that user messages are rendored.', () => {
+test('that user messages are rendered.', () => {
     render(<LogMessage
                 message={mockMessage}
             />

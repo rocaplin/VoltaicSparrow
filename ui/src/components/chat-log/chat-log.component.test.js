@@ -66,7 +66,7 @@ const chatLogMock = [
     }
 ];
 
-test('chat log correctly identifies and rendors log entries', () => {
+test('chat log correctly identifies and renders log entries', () => {
     render(<ChatLog
                 log={chatLogMock}
                 sendHandler={sendMock}

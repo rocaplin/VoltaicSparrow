@@ -10,7 +10,7 @@ const setChatOpenMock = (value) => {
     chatOpenMock = value;
 };
 
-test('that chat conrols rendor properly when the widget is closed', () => {
+test('that chat controls render properly when the widget is closed', () => {
     render(<ChatControls
                 chatOpen={chatOpenMock}
                 chatOpenHandler={setChatOpenMock}
@@ -31,7 +31,7 @@ test('that chat conrols rendor properly when the widget is closed', () => {
 
 
 
-test('that chat controls rendor properly when the widget is open', () => {
+test('that chat controls render properly when the widget is open', () => {
     setChatOpenMock(true);
     render(<ChatControls
             chatOpen={chatOpenMock}

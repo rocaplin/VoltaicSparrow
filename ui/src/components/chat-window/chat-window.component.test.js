@@ -9,7 +9,7 @@ const socketMock = {
     }
 };
 
-test('chat window rendors', () => {
+test('chat window renders', () => {
     render(<ChatWindow socket={socketMock}/>);
 
     // ChatLog is displayed.

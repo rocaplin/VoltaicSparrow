@@ -10,7 +10,7 @@ const mockAttachment = {
     }    
 };
 
-test('that attachment payloads from Rasa are rendored', () => {
+test('that attachment payloads from Rasa are rendered', () => {
     render(<LogAttachment
                 attachment={mockAttachment}
             />
