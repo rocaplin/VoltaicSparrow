@@ -374,3 +374,154 @@ nlu:
     - Can CompSci majors do anything else?
     - are there other jobs in computer science?
     - anything else comp sci majors can do?
+
+- intent: request_topics
+  examples: |
+    - Can you tell me about [Concurrency]{"entity": "topic"}
+    - Can you tell me about [data structures]{"entity": "topic"}
+    - Can you tell me about [coding theory]{"entity": "topic"}
+    - Can you tell me about [Natural language processing]{"entity": "topic"}
+    - Can you tell me about [programming language theory]{"entity": "topic"}
+    - Can you tell me about [game theory]{"entity": "topic"}
+    - What is [AI]{"entity": "topic"}
+    - What is [Game theory]{"entity": "topic"}
+    - What is [discrete mathematics]{"entity": "topic"}
+    - What is [Programming language pragmatics]{"entity": "topic"}
+    - What is [quantum computing theory]{"entity": "topic"}
+    - What is [Mathematical logic]{"entity": "topic"}
+    - What are [algorithms]{"entity": "topic"}
+    - What are [Data structures]{"entity": "topic"}
+    - What are [operating systems]{"entity": "topic"}
+    - What are [Programming language pragmatics]{"entity": "topic"}
+    - I'd like to learn about [Cryptography]{"entity": "topic"}
+    - I'd like to learn about [computer vision]{"entity": "topic"}
+    - I'd like to learn about [computer security]{"entity": "topic"}
+    - I'd like to learn about [Programming language theory]{"entity": "topic"}
+    - I'd like to learn about [computational complexity theory]{"entity": "topic"}
+    - Tell me about [Networking]{"entity": "topic"}
+    - Tell me about [Artificial intelligence]{"entity": "topic"}
+    - Tell me about [Computer architecture]{"entity": "topic"}
+    - Tell me about [Software engineering]{"entity": "topic"}
+    - Tell me about [Human-computer interaction]{"entity": "topic"}
+    - Tell me about [Bioinformatics and computational biology]{"entity": "topic"}
+    - [Robotics]{"entity": "topic"}
+    - [Image processing]{"entity": "topic"}
+    - [Quantum computing theory]{"entity": "topic"}
+    - [Computational neuroscience]{"entity": "topic"}
+
+- intent: request_class_by_topic
+  examples: |
+    - USER REQUEST [Coding theory]{"entity": "topic"}
+    - CLASS REQUEST [Concurrency]{"entity": "topic"}
+
+- intent: request_job_by_topic
+  examples: |
+    - USER JOB REQUEST [Algorithms]{"entity": "topic"}
+    - JOB REQUEST [Data structures]{"entity": "topic"}
+
+- synonym: Artificial intelligence
+  examples: |
+    - AI
+    
+- lookup: topic
+  examples: | 
+    - Coding theory
+    - Game theory
+    - Discrete mathematics
+    - Graph theory
+    - Mathematical logic
+    - Number theory
+    - Algorithms
+    - Data structures
+    - Artificial intelligence
+    - Automated reasoning
+    - Computer vision
+    - Soft computing
+    - Natural language processing
+    - Robotics
+    - Networking
+    - Computer security
+    - Cryptography
+    - Computer architecture
+    - Operating systems
+    - Computer graphics
+    - Image processing
+    - Information visualization
+    - Parallel computing
+    - Concurrency
+    - Distributed computing
+    - Relational databases
+    - Structured storage
+    - Data mining
+    - Compiler theory
+    - Programming language pragmatics
+    - Programming language theory
+    - Formal semantics
+    - Type theory
+    - Computational science
+    - Numerical analysis
+    - Symbolic computation
+    - Computational physics
+    - Computational chemistry
+    - Bioinformatics and Computational biology
+    - Computational neuroscience
+    - Formal methods
+    - Software engineering
+    - Algorithm design
+    - Computer programming
+    - Human-computer interaction
+    - Reverse engineering
+    - Automata theory
+    - Computability theory
+    - Computational complexity theory
+    - Quantum computing theory 
+    - coding theory
+    - game theory
+    - discrete mathematics
+    - graph theory
+    - mathematical logic
+    - number theory
+    - algorithms
+    - data structures
+    - artificial intelligence
+    - automated reasoning
+    - computer vision
+    - soft computing
+    - natural language processing
+    - robotics
+    - networking
+    - computer security
+    - cryptography
+    - computer architecture
+    - operating systems
+    - computer graphics
+    - image processing
+    - information visualization
+    - parallel computing
+    - concurrency
+    - distributed computing
+    - relational databases
+    - structured storage
+    - data mining
+    - compiler theory
+    - programming language pragmatics
+    - programming language theory
+    - formal semantics
+    - type theory
+    - computational science
+    - numerical analysis
+    - symbolic computation
+    - computational physics
+    - computational chemistry
+    - bioinformatics and computational biology
+    - computational neuroscience
+    - formal methods
+    - software engineering
+    - algorithm design
+    - computer programming
+    - human-computer interaction
+    - reverse engineering
+    - automata theory
+    - computability theory
+    - computational complexity theory
+    - quantum computing theory

@@ -11,7 +11,41 @@ const client = new MongoClient(uri);
 async function run() {
   try {
     const database = client.db('chompsci');
+	
+	/* Topic insert */
+	const topics = database.collection('topics');
+	await topics.deleteMany({});
 
+	var comp_topics = []
+
+	var rawTopicData = fs.readFileSync("./compsci-topicsdata.csv","utf-8");
+
+	var parsedTopicData = parse(rawTopicData,{ delimiter: ",", from_line: 2 });
+
+	parsedTopicData.forEach(parsedTopic => {
+		comp_topics.push(
+			{
+				topic: parsedTopic[0],
+				lower_topic: parsedTopic[1],
+				description: parsedTopic[2],
+				keywords: parsedTopic[3],
+				related_courses: parsedTopic[4],
+				related_careers: parsedTopic[5]
+			});
+	});
+
+	const res1 = await topics.insertMany(comp_topics);
+
+	console.log("Insert Complete. Test query results for Discrete mathematics:");
+
+	const search = { topic: 'Discrete mathematics' };
+    const topic = await topics.findOne(search);
+    console.log(topic);
+	
+	var dbCourseCount = await topics.estimatedDocumentCount();
+	
+	console.log("Data base current course count: "+dbCourseCount);
+	
 	/* Job insert */
 	const job_list = database.collection('job_list');
 	await job_list.deleteMany({});
@@ -44,7 +78,6 @@ async function run() {
 	var dbJobListCount = await job_list.estimatedDocumentCount();
 
 	console.log("Data base current job_list count: " + dbJobListCount);
-
 
 	/* Course insert */
     const courses = database.collection('courses');

@@ -46,7 +46,7 @@ REM dockercmd %1=command
 SETLOCAL
 	echo.
 	echo [rasa-dev] running %~1 ...
-	docker run -it -v %cd%/rasa:/app --name rasa-dev rasa/rasa:3.4.1-full %~1
+	docker run -it -v "%cd%"/rasa:/app --name rasa-dev rasa/rasa:3.4.1-full %~1
 	echo.
 	echo [rasa-dev] removing container...
 	docker rm rasa-dev
