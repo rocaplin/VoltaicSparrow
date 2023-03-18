@@ -5,6 +5,12 @@
 - desktop-hero.jpg and mobile-hero.jpg derived from:
    [olena-kamenetska-kQ3JTemZo1E-unsplash.jpg](https://unsplash.com/photos/kQ3JTemZo1E)
    
+   nodes.jpg derived from:
+   https://unsplash.com/photos/xuTJZ7uD7PI
+   
+   programming.jpg derived from:
+   https://unsplash.com/photos/vpOeXr5wmR4
+   
    Free commercial and non-commercial use via the [Unsplash License](https://unsplash.com/license)
 
 - chat-open-icon.svg, chat-close-icon.svg, send-icon.svg
