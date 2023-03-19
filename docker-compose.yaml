@@ -25,6 +25,8 @@ services:
     container_name: mongo-db
     volumes:
       - mongo-data:/data/db
+      - ./db:/seeddata
+      - ./db/initdb.sh:/docker-entrypoint-initdb.d/initdb.sh:ro
       
   rasa:
     image: rasa/rasa:3.4.1-full
