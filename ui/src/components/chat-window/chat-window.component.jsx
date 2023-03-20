@@ -20,22 +20,12 @@ const ChatWindow = ({socket}) => {
 
     // Listen for responses from Rasa websocket channel.
     // Iterates over JSON from Rasa, appends each response
-    // within to the chatLog. Rasa supports 4 response types:
+    // within to the chatLog. Rasa supports 3 defined response 
+    // types in addition to custom data:
     //
     // text: 'string'
-    //
-    // quick_replies: [
-    //     content_type: 'text'
-    //     title: 'string'
-    //     payload: '/nlu/intent'
-    //   ]
-    //
-    // attachment: {
-    //   payload: {src: "image url"},
-    //   type: "image"
-    // }
-    //
-    // custom defined data:
+    // quick_replies: an array of objects
+    // attachment: an object
     useEffect(() => {
         socket.on("bot_uttered", (res) => {
             for (let key in res) {
