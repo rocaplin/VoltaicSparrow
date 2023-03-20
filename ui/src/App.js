@@ -6,7 +6,7 @@ import ChatWindow from "./components/chat-window/chat-window.component";
 import ChatControls from "./components/chat-controls/chat-controls.component";
 
 // Connect to Rasa via Socket.Io.
-const socket = io.connect(`${window.location.protocol}//${window.location.hostname}:5005`, {path: "/socket.io", forceNew: true, reconnectionAttempts: 3, timeout: 2000, upgrades:["websocket"], pingTimeout:20000, ingInterval:25000});
+const socket = io(`${window.location.protocol}//${window.location.hostname}:5005`);
 
 socket.on('connect', function() {
   console.log("Connected to Rasa.");

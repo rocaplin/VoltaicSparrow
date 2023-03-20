@@ -4,7 +4,7 @@
 <body>
 	<div id="rasa-chat-widget">
 	<script type="text/javascript">
-		var rasaUrl = "http://"+window.location.hostname+":5005";
+		var rasaUrl = window.location.protocol+"//"+window.location.hostname+":5005";
 		document.getElementById("rasa-chat-widget").setAttribute("data-websocket-url",rasaUrl);
 	</script>
 	<script src="javascripts/rasa-widget.js" type"application/javascript></script>
