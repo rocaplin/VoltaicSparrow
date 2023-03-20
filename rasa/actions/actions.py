@@ -94,36 +94,30 @@ class ActionRequestJobs(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        client = MongoClient('mongo-db',27017)
+        client = MongoClient('mongo-db', 27017)
 
-        db = client["chompsci"]
-        topics = db.topics
+        db = client.chompsci
+        job_list = db.job_list
 
-        topic = None
+        job = None
 
         for entity in tracker.latest_message['entities']:
-            if entity["entity"] == 'topic':
-                topic = entity['value']
-        
+            if entity["entity"] == 'job':
+                job = entity['value']
 
-        # requested_topic = None
-        # if topic in self.data:
-            
-        requested_topic = topics.find_one({"lower_topic": topic.lower()})
-            #https://stackoverflow.com/questions/6266555/querying-mongodb-via-pymongo-in-case-insensitive-efficiently
 
-        if not requested_topic:
-            if not topic:
+        requested_job = job_list.find_one({"job_lower": job.lower()})
+
+        if not requested_job:
+            if not job:
                 dispatcher.utter_message(text="I'm not well-trained on that topic...")
             else:
                 str = ""
-                str += topic
+                str += job
                 dispatcher.utter_message(text=("I'm not well-trained on " + str))
         else:
-            if not requested_topic["related_courses"]:
-                dispatcher.utter_message(text=("It doesn't seem like there are any classes on this..."))
-            else:
-                dispatcher.utter_message(text=("You can learn more about " + topic.lower() + " in these classes: " + requested_topic["related_courses"]))
+            dispatcher.utter_message(text=("Here is what I know about careers as a " + job + ": \n" + requested_job["description"]))
+            dispatcher.utter_message(text=("You can learn more about it in these classes: " + requested_job["related_courses"]))
 
         return []
 
