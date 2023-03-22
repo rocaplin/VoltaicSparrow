@@ -16,6 +16,11 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - hola
+    - what's up
+    - greetings
+    - how goes it?
+    -howdy    
 
 - intent: goodbye
   examples: |
@@ -29,6 +34,13 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - adieu
+    - adios
+    - so long
+    - cheerio
+    - sayonara
+    - have a good one
+    - ciao
 
 - intent: affirm
   examples: |
@@ -38,6 +50,25 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - yuh
+    - yep
+    - yup
+    - yus
+    - yea
+    - yeah
+    - alright
+    - very well
+    - by all means
+    - sure
+    - certainly
+    - absolutely
+    - affirmative
+    - aye
+    - ok
+    - okay
+    - surely
+    - OK
+    - thanks
 
 - intent: deny
   examples: |
@@ -48,6 +79,17 @@ nlu:
     - don't like that
     - no way
     - not really
+    - naur
+    - nope
+    - negative
+    - of course not
+    - nah
+    - nay
+    - by no means
+    - not at all
+    - not really
+    - no thanks
+    - naw
 
 - intent: mood_great
   examples: |
@@ -151,8 +193,11 @@ nlu:
 - intent: faq/credit_hours
   examples: |
     - How many credit hours are required for Computer Science students?
+    - How many credits do I need?
+    - How many credits would I have to take?
     - What is the number of credits needed for a Computer Science degree?
     - How many classes do I have to take?
+    - How many classes are needed for computer science?
     - What is the typical amount of credits per class? 
 
 - intent: faq/excess_hours
@@ -170,6 +215,7 @@ nlu:
     - How much work a week for a Computer Science student?
     - What does a weekly workload look like for a Computer Science degree?
     - How many classes do I need to take each semester?
+    - How many classes per semester?
     - Is Computer Science a lot of work?
     - Is Computer Science hard?
     - How much homework will I have?
@@ -193,6 +239,7 @@ nlu:
     - what changes?
     - does that matter?
     - difference?
+    - are they different?
 
 - intent: engineering
   examples: |
@@ -225,6 +272,10 @@ nlu:
     - What is UFO?
     - How good is the online program?
     - Is online better?
+    - is online different?
+    - what are online classes like?
+    - how is school online?
+    - how is online different than on campus?
 
 - intent: faq/ufcampus
   examples: |
@@ -236,6 +287,8 @@ nlu:
     - tell me about campus classes
     - How is campus?
     - are campus classes better
+    - what's it like on campus?
+    - what are campus classes like compared to online ones?
     
 - intent: adjacent_fields
   examples: |
@@ -243,6 +296,7 @@ nlu:
     - what is the difference between computer science and other fields?
     - computer science versus other majors
     - compare computer science and other fields
+    - tell me about how computer science is different from other majors
     
 - intent: electrical
   examples: |
@@ -250,6 +304,7 @@ nlu:
     - electrical
     - electrical engineer
     - ee
+    - electric
     
 - intent: comp_eng
   examples: |
@@ -309,6 +364,9 @@ nlu:
     - why did they name it computer science?
     - Why is there no official definition?
     - why no official definition
+    - how did it get its name
+    - why was it called comp sci
+    - why was it called computer science
 
 - intent: faq/cshistory
   examples: |
@@ -319,6 +377,7 @@ nlu:
     - how was computer science invented
     - Where did computer science come from?
     - how did computer science start
+    - who made computer science
 
 - intent: faq/leibniz
   examples: |
@@ -362,6 +421,8 @@ nlu:
     - What positions is CS good for?
     - tell me about work available to cs majors
     - Tell me about jobs in Computer Science.
+    - what is computer science good for?
+    - where can I go with computer science?
 
 - intent: other_cscareers
   examples: |
@@ -374,6 +435,10 @@ nlu:
     - Can CompSci majors do anything else?
     - are there other jobs in computer science?
     - anything else comp sci majors can do?
+    - anything else?
+    - is that it?
+    - what else is there?
+    - are there more careers?
 
 - intent: request_topics
   examples: |
