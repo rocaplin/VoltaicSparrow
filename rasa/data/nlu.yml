@@ -375,6 +375,29 @@ nlu:
     - are there other jobs in computer science?
     - anything else comp sci majors can do?
 
+- intent: common_cstopics
+  examples: |
+    - What can I learn about in CS?
+    - What do I learn about in Computer Science?
+    - What will I learn about in cs?
+    - What do they teach you in CS?
+    - which topics do they teach in cs?
+    - What do they teach in CS?
+    - What is taught in cs?
+    - What are some topics involved in Computer science?
+    - What is studied in CS?
+    - What do CS majors learn?
+    - What do computer science majors learn about?
+    - What topics do computer science majors learn about?
+    - What do computer science majors learn?
+    - CS topics?
+    - Computer Science topics?
+    - Tell me about cs topics
+    - Tell me about topics in computer science
+    - which topics are taught in computer science
+    - which topics are covered in computer science?
+
+
 - intent: request_topics
   examples: |
     - Can you tell me about [Concurrency]{"entity": "topic"}

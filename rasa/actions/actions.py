@@ -65,23 +65,26 @@ class ActionRequestTopics(Action):
         # requested_topic = None
         # if topic in self.data:
             
-        requested_topic = topics.find_one({"lower_topic": topic.lower()})
-            #https://stackoverflow.com/questions/6266555/querying-mongodb-via-pymongo-in-case-insensitive-efficiently
-
-        if not requested_topic:
-            if not topic:
-                dispatcher.utter_message(text="I'm not well-trained on that topic...")
-            else:
-                str = ""
-                str += topic.lower()
-                dispatcher.utter_message(text=("I'm not well-trained on " + str))
+        if topic is None:
+            dispatcher.utter_message(text="Sorry, I don't quite understand your question... Try rephrasing.")
         else:
-            dispatcher.utter_message(text=("Here is what I know about " + topic.lower() + ": " + requested_topic["description"]))
-            dispatcher.utter_message(text=("What would you like to know about this topic?"), buttons=[
-                {"payload": "/request_class_by_topic{\"topic\": \"" + topic.lower() + "\"}", "title": "Classes?"},
-                {"payload": "/request_job_by_topic{\"topic\": \"" + topic.lower() + "\"}", "title": "Careers?"},
-                ])
-                
+            requested_topic = topics.find_one({"lower_topic": topic.lower()})
+                #https://stackoverflow.com/questions/6266555/querying-mongodb-via-pymongo-in-case-insensitive-efficiently
+
+            if not requested_topic:
+                if not topic:
+                    dispatcher.utter_message(text="I'm not well-trained on that topic...")
+                else:
+                    str = ""
+                    str += topic.lower()
+                    dispatcher.utter_message(text=("I'm not well-trained on " + str))
+            else:
+                dispatcher.utter_message(text=("Here is what I know about " + topic.lower() + ": " + requested_topic["description"]))
+                dispatcher.utter_message(text=("What would you like to know about this topic?"), buttons=[
+                    {"payload": "/request_class_by_topic{\"topic\": \"" + topic.lower() + "\"}", "title": "Classes?"},
+                    {"payload": "/request_job_by_topic{\"topic\": \"" + topic.lower() + "\"}", "title": "Careers?"},
+                    ])
+                    
 
         return []
     
