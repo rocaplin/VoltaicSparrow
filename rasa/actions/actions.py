@@ -62,26 +62,27 @@ class ActionRequestTopics(Action):
 
         # requested_topic = None
         # if topic in self.data:
-        requested_topic = None
-
-        if topic:
-            requested_topic = topics.find_one({"lower_topic": topic.lower()})
-            #https://stackoverflow.com/questions/6266555/querying-mongodb-via-pymongo-in-case-insensitive-efficiently
-
-        if not requested_topic:
-            if not topic:
-                dispatcher.utter_message(text="I'm not well-trained on that topic...")
-            else:
-                response = ""
-                response += topic.lower()
-                dispatcher.utter_message(text=("I'm not well-trained on " + response))
+            
+        if topic is None:
+            dispatcher.utter_message(text="Sorry, I don't quite understand your question... Try rephrasing.")
         else:
-            dispatcher.utter_message(text=("Here is what I know about " + topic.lower() + ": " + requested_topic["description"]))
-            dispatcher.utter_message(text=("What would you like to know about this topic?"), buttons=[
-                {"payload": "/request_class_by_topic{\"topic\": \"" + topic.lower() + "\"}", "title": "Classes?"},
-                {"payload": "/request_job_by_topic{\"topic\": \"" + topic.lower() + "\"}", "title": "Careers?"},
-                ])
-                
+            requested_topic = topics.find_one({"lower_topic": topic.lower()})
+                #https://stackoverflow.com/questions/6266555/querying-mongodb-via-pymongo-in-case-insensitive-efficiently
+
+            if not requested_topic:
+                if not topic:
+                    dispatcher.utter_message(text="I'm not well-trained on that topic...")
+                else:
+                    str = ""
+                    str += topic.lower()
+                    dispatcher.utter_message(text=("I'm not well-trained on " + str))
+            else:
+                dispatcher.utter_message(text=("Here is what I know about " + topic.lower() + ": " + requested_topic["description"]))
+                dispatcher.utter_message(text=("What would you like to know about this topic?"), buttons=[
+                    {"payload": "/request_class_by_topic{\"topic\": \"" + topic.lower() + "\"}", "title": "Classes?"},
+                    {"payload": "/request_job_by_topic{\"topic\": \"" + topic.lower() + "\"}", "title": "Careers?"},
+                    ])
+                    
 
         return []
     
@@ -135,29 +136,29 @@ class ActionRequestClassByTopic(Action):
         client = MongoClient('mongo-db', 27017)
 
         db = client.chompsci
-        job_list = db.job_list
+        topics = db.topics
 
-        job = None
+        topic_request = None
 
         for entity in tracker.latest_message['entities']:
-            if entity["entity"] == 'job':
-                job = entity['value']
+            if entity["entity"] == 'topic':
+                topic_request = entity['value']
 
         requested_job = None
 
-        if job:
-            requested_job = job_list.find_one({"job_lower": job.lower()})
+        topic_result = topics.find_one({"lower_topic": topic_request.lower()})
 
-        if not requested_job:
-            if not job:
-                dispatcher.utter_message(text="I'm not well-trained on that topic...")
+        if not topic_result:
+            if not topic_request:
+                dispatcher.utter_message(text="Sorry, I don't understand")
             else:
-                response = ""
-                response += job
-                dispatcher.utter_message(text=("I'm not well-trained on " + response))
+                dispatcher.utter_message(text=("I don't know of any classes related to " + topic_request.lower() + "."))
         else:
-            dispatcher.utter_message(text=("Here is what I know about careers as a " + job + ": \n" + requested_job["description"]))
-            dispatcher.utter_message(text=("You can learn more about it in these classes: " + requested_job["related_courses"]))
+            if not topic_result["related_courses"]:
+                dispatcher.utter_message(text=("It doesn't seem like there are any careers related to this..."))
+            else:
+                dispatcher.utter_message(text=("You can learn more about "+topic_request.lower()+" in these classes: " + topic_result["related_courses"]))
+                
 
         return []
      

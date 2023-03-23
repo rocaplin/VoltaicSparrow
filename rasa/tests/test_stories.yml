@@ -422,12 +422,20 @@ stories:
 - story: request topic 1-1
   steps:
   - user: |
+      What can I learn about in CS?
+    intent: common_cstopics
+  - action: utter_common_cstopics
+  - user: |
       Can you tell me about [concurrency]{"entity": "topic"}
     intent: request_topics
   - action: action_request_topics
 
 - story: request topic 1-2
   steps:
+  - user: |
+      What do they teach you in CS?
+    intent: common_cstopics
+  - action: utter_common_cstopics
   - user: |
       Can you tell me about [artifical intelligence]{"entity": "topic"}
     intent: request_topics
@@ -436,12 +444,20 @@ stories:
 - story: request topic 1-3
   steps:
   - user: |
+      Which topics do they teach in CS?
+    intent: common_cstopics
+  - action: utter_common_cstopics
+  - user: |
       Can you tell me about [Natural language processing]{"entity": "topic"}
     intent: request_topics
   - action: action_request_topics
 
 - story: request topic 2-1
   steps:
+  - user: |
+      What are some topics involved in Computer science?
+    intent: common_cstopics
+  - action: utter_common_cstopics
   - user: |
       What is [networking]{"entity": "topic"}
     intent: request_topics
@@ -450,12 +466,20 @@ stories:
 - story: request topic 2-2
   steps:
   - user: |
+      What is studied in CS?
+    intent: common_cstopics
+  - action: utter_common_cstopics
+  - user: |
       What is [Soft computing]{"entity": "topic"}
     intent: request_topics
   - action: action_request_topics
 
 - story: request topic 2-3
   steps:
+  - user: |
+      CS topics?
+    intent: common_cstopics
+  - action: utter_common_cstopics
   - user: |
       What is [computational complexity theory]{"entity": "topic"}
     intent: request_topics
@@ -464,6 +488,10 @@ stories:
 - story: request topic 3-1
   steps:
   - user: |
+      Tell me about topics in computer science
+    intent: common_cstopics
+  - action: utter_common_cstopics
+  - user: |
       What are [algorithms]{"entity": "topic"}
     intent: request_topics
   - action: action_request_topics
@@ -471,12 +499,20 @@ stories:
 - story: request topic 3-2
   steps:
   - user: |
+      What do computer science majors learn?
+    intent: common_cstopics
+  - action: utter_common_cstopics
+  - user: |
       What are [Data Structures]{"entity": "topic"}
     intent: request_topics
   - action: action_request_topics
 
 - story: request topic 3-3
   steps:
+  - user: |
+      What will I learn about in computer science?
+    intent: common_cstopics
+  - action: utter_common_cstopics
   - user: |
       What are [programming language pragmatics]{"entity": "topic"}
     intent: request_topics
