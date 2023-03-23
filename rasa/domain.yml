@@ -23,6 +23,7 @@ intents:
   - modern_computers
   - common_cscareers
   - other_cscareers
+  - common_cstopics
   - request_action_test
   - request_topics:
       use_entities: true
@@ -197,6 +198,15 @@ https://www.bls.gov/oes/current/oes_nat.htm"
   - text: "Computer Science degrees cover a variety of topics potentially preparing students to pursue careers in related fields such as Hardware Design, Data Science, Digital Media, or Business.
 
 Earing a college degree demonstrates your ability to achieve and learn, traits helpful in many positions. Your major is only one indicator of fit. Personal experience, interests, and skills are also important and it is not uncommon for graduates to work outside their fields of study."
+
+  utter_common_cstopics:
+  - text: "Computer Science covers a variety of diverse topics, many of which are taught at the University of Florida. 
+  
+  Some of these topics include: operating systems, computer graphics, parallel computing, artificial intelligence, networking, cryptography, etc.
+  
+  For a complete list of subfields and their topics, refer to this link: https://en.wikipedia.org/wiki/Outline_of_computer_science
+  
+  You can ask me about any of the topics listed under each subfield."
 
 actions:
   - action_hello_world
