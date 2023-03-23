@@ -33,11 +33,6 @@ stories:
   steps:
   - intent: request_action_test
   - action: action_hello_world
-
-- story: action request jobs
-  steps:
-  - intent: request_jobs
-  - action: action_request_jobs
   
 - story: courses path 1
   steps:
@@ -117,43 +112,23 @@ stories:
   steps:
   - intent: adjacent_fields
   - action: utter_ask_major_differences
-  - intent: software
-  - action: utter_software_engineering
+  - intent: info_tech
+  - action: utter_information_technology
   - action: utter_ask_again
   - intent: affirm
   - action: utter_ask_major_differences
-
+ 
 - story: adjacent fields path 6
   steps:
   - intent: adjacent_fields
   - action: utter_ask_major_differences
-  - intent: software
-  - action: utter_software_engineering
+  - intent: info_tech
+  - action: utter_information_technology
   - action: utter_ask_again
   - intent: deny
   - action: utter_happy
-
+ 
 - story: adjacent fields path 7
-  steps:
-  - intent: adjacent_fields
-  - action: utter_ask_major_differences
-  - intent: info_tech
-  - action: utter_information_technology
-  - action: utter_ask_again
-  - intent: affirm
-  - action: utter_ask_major_differences
- 
-- story: adjacent fields path 8
-  steps:
-  - intent: adjacent_fields
-  - action: utter_ask_major_differences
-  - intent: info_tech
-  - action: utter_information_technology
-  - action: utter_ask_again
-  - intent: deny
-  - action: utter_happy
- 
-- story: adjacent fields path 9
   steps:
   - intent: adjacent_fields
   - action: utter_ask_major_differences
@@ -163,7 +138,7 @@ stories:
   - intent: affirm
   - action: utter_ask_major_differences
 
-- story: adjacent fields path 10
+- story: adjacent fields path 8
   steps:
   - intent: adjacent_fields
   - action: utter_ask_major_differences
@@ -195,6 +170,13 @@ stories:
   - action: utter_common_cscareers
   - intent: other_cscareers
   - action: utter_other_cscareers
+
+- story: cs career 3
+  steps:
+  - intent: common_cscareers
+  - action: utter_common_cscareers
+  - intent: request_jobs
+  - action: action_request_jobs
 
 - story: action request topics path
   steps:

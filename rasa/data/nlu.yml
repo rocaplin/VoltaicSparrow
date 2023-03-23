@@ -260,13 +260,6 @@ nlu:
     - computer engineer
     - ce
     
-- intent: software
-  examples: |
-    - software engineering
-    - software
-    - software engineer
-    - se
-    
 - intent: info_tech
   examples: |
     - information technology
@@ -362,6 +355,12 @@ nlu:
     - What positions is CS good for?
     - tell me about work available to cs majors
     - Tell me about jobs in Computer Science.
+    - What jobs are there as a Computer Scientist?
+    - what careers are there as a Computer Scientist?
+    - Computer science careers
+    - Computer Science jobs
+    - Job prospects
+    - Career prospects
 
 - intent: other_cscareers
   examples: |
