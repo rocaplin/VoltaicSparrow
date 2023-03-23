@@ -133,27 +133,28 @@ class ActionRequestClassByTopic(Action):
         client = MongoClient('mongo-db', 27017)
 
         db = client.chompsci
-        job_list = db.job_list
+        topics = db.topics
 
-        job = None
+        topic_request = None
 
         for entity in tracker.latest_message['entities']:
-            if entity["entity"] == 'job':
-                job = entity['value']
+            if entity["entity"] == 'topic':
+                topic_request = entity['value']
 
 
-        requested_job = job_list.find_one({"job_lower": job.lower()})
+        topic_result = topics.find_one({"lower_topic": topic_request.lower()})
 
-        if not requested_job:
-            if not job:
-                dispatcher.utter_message(text="I'm not well-trained on that topic...")
+        if not topic_result:
+            if not topic_request:
+                dispatcher.utter_message(text="Sorry, I don't understand")
             else:
-                str = ""
-                str += job
-                dispatcher.utter_message(text=("I'm not well-trained on " + str))
+                dispatcher.utter_message(text=("I don't know of any classes related to " + topic_request.lower() + "."))
         else:
-            dispatcher.utter_message(text=("Here is what I know about careers as a " + job + ": \n" + requested_job["description"]))
-            dispatcher.utter_message(text=("You can learn more about it in these classes: " + requested_job["related_courses"]))
+            if not topic_result["related_courses"]:
+                dispatcher.utter_message(text=("It doesn't seem like there are any careers related to this..."))
+            else:
+                dispatcher.utter_message(text=("You can learn more about "+topic_request.lower()+" in these classes: " + topic_result["related_courses"]))
+                
 
         return []
      
