@@ -1,0 +1,170 @@
+[
+  {
+    "text": "What careers are there as a video game developer",
+    "entities": [
+      {
+        "start": 28,
+        "end": 48,
+        "value": "video game developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Video Game Developer",
+    "entities": [
+      {
+        "start": 0,
+        "end": 20,
+        "value": "Video Game Developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "it architect",
+    "entities": [
+      {
+        "start": 0,
+        "end": 12,
+        "value": "it architect",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can you tell me about concurrency",
+    "entities": [
+      {
+        "start": 22,
+        "end": 33,
+        "value": "concurrency",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can you tell me about artifical intelligence",
+    "entities": [
+      {
+        "start": 22,
+        "end": 44,
+        "value": "artifical intelligence",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can you tell me about Natural language processing",
+    "entities": [
+      {
+        "start": 22,
+        "end": 49,
+        "value": "Natural language processing",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What is networking",
+    "entities": [
+      {
+        "start": 8,
+        "end": 18,
+        "value": "networking",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What is Soft computing",
+    "entities": [
+      {
+        "start": 8,
+        "end": 22,
+        "value": "Soft computing",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What is computational complexity theory",
+    "entities": [
+      {
+        "start": 8,
+        "end": 39,
+        "value": "computational complexity theory",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What are algorithms",
+    "entities": [
+      {
+        "start": 9,
+        "end": 19,
+        "value": "algorithms",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What are Data Structures",
+    "entities": [
+      {
+        "start": 9,
+        "end": 24,
+        "value": "Data Structures",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What are programming language pragmatics",
+    "entities": [
+      {
+        "start": 9,
+        "end": 40,
+        "value": "programming language pragmatics",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What careers are there as a database administrator",
+    "entities": [
+      {
+        "start": 28,
+        "end": 50,
+        "value": "database administrator",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What careers are there as a Mathematician",
+    "entities": [
+      {
+        "start": 28,
+        "end": 41,
+        "value": "Mathematician",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

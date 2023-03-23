@@ -1,0 +1,62 @@
+version: "3.1"
+stories:
+- story: ask about online classes 1 (./tests/test_stories.yml)
+  steps:
+  - intent: faq/ufonline
+  - action: utter_faq/ufonline
+  - action: action_listen  # predicted: utter_ask_again
+- story: ask about online classes 2 (./tests/test_stories.yml)
+  steps:
+  - intent: faq/ufonline
+  - action: utter_faq/ufonline
+  - action: action_listen  # predicted: utter_ask_again
+- story: ask about adjacent fields 5 (./tests/test_stories.yml)
+  steps:
+  - intent: adjacent_fields  # predicted: nlu_fallback: how is computer science compared to different fields?
+  - action: utter_ask_major_differences
+  - intent: software
+  - action: utter_software_engineering
+  - action: utter_ask_again
+  - intent: affirm
+  - action: utter_ask_major_differences
+  - intent: electrical
+  - action: utter_electrical_engineering  # predicted: action_unlikely_intent
+  - action: utter_ask_again
+  - intent: deny  # predicted: mood_unhappy: not at all
+  - action: utter_happy
+- story: ask about adjacent fields 6 (./tests/test_stories.yml)
+  steps:
+  - intent: adjacent_fields  # predicted: difference: how is computer science different?
+  - action: utter_ask_major_differences
+  - intent: software
+  - action: utter_software_engineering
+  - action: utter_ask_again
+  - intent: deny
+  - action: utter_happy
+- story: ask about adjacent fields 7 (./tests/test_stories.yml)
+  steps:
+  - intent: adjacent_fields  # predicted: difference: what makes computer science different?
+  - action: utter_ask_major_differences
+  - intent: info_tech
+  - action: utter_information_technology
+  - action: utter_ask_again
+  - intent: affirm
+  - action: utter_ask_major_differences
+  - intent: software
+  - action: utter_software_engineering  # predicted: action_unlikely_intent
+  - action: utter_ask_again
+  - intent: deny
+  - action: utter_happy
+- story: ask about adjacent fields 8 (./tests/test_stories.yml)
+  steps:
+  - intent: adjacent_fields  # predicted: nlu_fallback: compare computer science
+  - action: utter_ask_major_differences
+  - intent: info_tech
+  - action: utter_information_technology
+  - action: utter_ask_again
+  - intent: deny
+  - action: utter_happy
+- story: computer science history 2 (./tests/test_stories.yml)
+  steps:
+  - intent: faq/cshistory  # predicted: faq/cshistory: How did Computer Science [develop](job)?
+  - action: utter_faq/cshistory  # predicted: action_default_fallback

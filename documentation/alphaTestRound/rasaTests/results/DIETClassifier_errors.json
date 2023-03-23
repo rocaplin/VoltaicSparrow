@@ -1,0 +1,38 @@
+[
+  {
+    "text": "What jobs are there as a computer programmer",
+    "entities": [
+      {
+        "start": 25,
+        "end": 44,
+        "value": "computer programmer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 25,
+        "end": 44,
+        "value": "computer programmer",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "job",
+        "start": 23,
+        "end": 24,
+        "confidence_entity": 0.6277579069137573,
+        "value": "a",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "job",
+        "start": 25,
+        "end": 44,
+        "confidence_entity": 0.9948520064353943,
+        "value": "computer programmer",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]
