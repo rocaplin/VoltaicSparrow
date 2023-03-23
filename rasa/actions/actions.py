@@ -148,9 +148,13 @@ class ActionRequestClassByTopic(Action):
             if not topic_request:
                 dispatcher.utter_message(text="Sorry, I don't understand")
             else:
-                dispatcher.utter_message(text=("I don't know of any classes related to " + topic_request + ". Try rephrasing?"))
+                dispatcher.utter_message(text=("I don't know of any classes related to " + topic_request.lower() + "."))
         else:
-            dispatcher.utter_message(text=("You can learn more about "+topic_request.lower()+" in these classes: " + topic_result["related_courses"]))
+            if not topic_result["related_courses"]:
+                dispatcher.utter_message(text=("It doesn't seem like there are any careers related to this..."))
+            else:
+                dispatcher.utter_message(text=("You can learn more about "+topic_request.lower()+" in these classes: " + topic_result["related_courses"]))
+                
 
         return []
      
