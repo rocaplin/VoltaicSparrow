@@ -2,7 +2,7 @@ console.log("Initializing Class Database");
 
 const { MongoClient } = require("mongodb");
 const { parse } = require("csv-parse/sync");
-var fs = require('fs');
+let fs = require('fs');
 
 const uri =
   "mongodb://localhost:27017?retryWrites=true&w=majority";
@@ -16,11 +16,11 @@ async function run() {
 	const topics = database.collection('topics');
 	await topics.deleteMany({});
 
-	var comp_topics = []
+	let comp_topics = []
 
-	var rawTopicData = fs.readFileSync("./compsci-topicsdata.csv","utf-8");
+	let rawTopicData = fs.readFileSync("./compsci-topicsdata.csv","utf-8");
 
-	var parsedTopicData = parse(rawTopicData,{ delimiter: ",", from_line: 2 });
+	let parsedTopicData = parse(rawTopicData,{ delimiter: ",", from_line: 2 });
 
 	parsedTopicData.forEach(parsedTopic => {
 		comp_topics.push(
@@ -34,7 +34,7 @@ async function run() {
 			});
 	});
 
-	const res1 = await topics.insertMany(comp_topics);
+	await topics.insertMany(comp_topics);
 
 	console.log("Insert Complete. Test query results for Discrete mathematics:");
 
@@ -42,7 +42,7 @@ async function run() {
     const topic = await topics.findOne(search);
     console.log(topic);
 	
-	var dbCourseCount = await topics.estimatedDocumentCount();
+	let dbCourseCount = await topics.estimatedDocumentCount();
 	
 	console.log("Data base current course count: "+dbCourseCount);
 	
@@ -50,11 +50,11 @@ async function run() {
 	const job_list = database.collection('job_list');
 	await job_list.deleteMany({});
 
-	var list_jobs = []
+	let list_jobs = []
 
-	var rawJobData = fs.readFileSync("./CS-Jobs.csv","utf-8");
+	let rawJobData = fs.readFileSync("./CS-Jobs.csv","utf-8");
 
-	var parsedJobData = parse(rawJobData,{ delimiter: ",", from_line: 2 });
+	let parsedJobData = parse(rawJobData,{ delimiter: ",", from_line: 2 });
 
 	parsedJobData.forEach(parsedJob => {
 		list_jobs.push(
@@ -67,7 +67,7 @@ async function run() {
 			});
 	});
 
-	const res = await job_list.insertMany(list_jobs);
+	await job_list.insertMany(list_jobs);
 
 	console.log("Insert Complete. Test query results for Computer Programmer: ");
 
@@ -75,24 +75,19 @@ async function run() {
     const found_job = await job_list.findOne(search_query);
     console.log(found_job);
 
-	var dbJobListCount = await job_list.estimatedDocumentCount();
+	let dbJobListCount = await job_list.estimatedDocumentCount();
 
 	console.log("Data base current job_list count: " + dbJobListCount);
 
 	/* Course insert */
     const courses = database.collection('courses');
     await courses.deleteMany({});
-
-	const doc = {
-      name: "Intro To Databases",
-      description: "Basic class about databases",
-    }
 	
-	var docs = []
+	let docs = []
 	
-	var rawCourseData = fs.readFileSync("./classdata.csv","utf-8");
+	let rawCourseData = fs.readFileSync("./classdata.csv","utf-8");
 	
-	var parsedCourseData = parse(rawCourseData,{ delimiter: ",", from_line: 2 });
+	let parsedCourseData = parse(rawCourseData,{ delimiter: ",", from_line: 2 });
 	
 	parsedCourseData.forEach(parsedCourse => {
 		docs.push(
@@ -107,7 +102,7 @@ async function run() {
 			});
 	});
 	
-	const result = await courses.insertMany(docs);
+	await courses.insertMany(docs);
 
 	console.log("Insert Complete. Test query results for COP 3530:")
 	
@@ -115,7 +110,7 @@ async function run() {
     const course = await courses.findOne(query);
     console.log(course);
 	
-	var dbCourseCount = await courses.estimatedDocumentCount();
+	dbCourseCount = await courses.estimatedDocumentCount();
 	
 	console.log("Data base current course count: "+dbCourseCount);
   } finally {

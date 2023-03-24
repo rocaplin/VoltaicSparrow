@@ -16,7 +16,6 @@ intents:
   - adjacent_fields
   - electrical
   - comp_eng
-  - software
   - info_tech
   - info_sys
   - csetymology
@@ -120,10 +119,6 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
   Courses in computer engineering involve learning to develop prototypes and test components such as microchips, circuits, conductors, and processors.
   For those with interests in or career goals involving building computers, designing interfaces, or delving into hardware, computer engineering may be a more appealing area of study."
   
-  utter_software_engineering:
-  - text: "Software engineering is a subset of computer science that focuses on developing software from beginning to end. Software engineering is a more hands-on subsection that includes working with different programming languages to write, revise, and test new software programs.
-  The courses for computer science and software engineering often overlap and can include Introduction to Programming, Data Structures, Discrete Structures, and Operating Systems."
-  
   utter_information_technology:
   - text: "Information Technology is often referred to as 'the business side of computer science' and focuses more on meeting the technological needs of organizations. Unike computer science, information technology emphasizes using computers, databases, networks, servers, and software to process, store, transmit, retrieve, and protect data.
   While computer scientists use theoretical skills to develop and improve computer programs, information technology specialists install, implement, and maintain the programs in addition to applying them to businesses and other professional organizations.
@@ -188,6 +183,8 @@ https://en.wikipedia.org/wiki/Ada_Lovelace"
 As of May 2021, BLS data shows that 70% of those employed within Computer Occupations work as Software Developers, Support Specialists, Systems Analysts, Network/ Systems Administrators, and QA Analysts.
 
 Other common positions include Network Architects, Security Analysts, Database Administrators, Web Developers and Designers, and Research Scientists.
+
+To learn more, enter the name of a career in computer science. A list of common computer science careers can be found at https://www.computerscience.org/careers/.
 
 https://www.bls.gov/oes/current/oes_nat.htm"
     buttons:
