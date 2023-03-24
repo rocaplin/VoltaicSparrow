@@ -154,6 +154,13 @@ nlu:
     - What is the number of credits needed for a Computer Science degree?
     - How many classes do I have to take?
     - What is the typical amount of credits per class? 
+    
+- intent: faq/credit_hour_cost
+  examples: |
+    - How much does it cost?
+    - How much is tution?
+    - How much does a credit hour cost?
+    - What does it cost?
 
 - intent: faq/excess_hours
   examples: |
@@ -185,6 +192,9 @@ nlu:
     - what do I have to take?
     - what classes are needed to get a degree?
     - what do I have to take to graduate?
+    - what classes are there
+    - what courses are there
+    - tell me about the classes
 
 - intent: difference
   examples: |
@@ -215,6 +225,16 @@ nlu:
     - I do not want to go into engineering
     - I am not interested in engineering
 
+- intent: faq/university
+  examples: |
+    - Tell me about the university.
+    - What can you tell me about the university.
+    - I want to know about the University of Florida.
+    - What is UF like?
+    - Tell me about UF?
+    - Tell me about the school.
+    - Tell me about the college.
+    
 - intent: faq/ufonline
   examples: |
     - can you tell me about online classes?
@@ -236,6 +256,13 @@ nlu:
     - tell me about campus classes
     - How is campus?
     - are campus classes better
+    
+- intent: faq/enrollment
+  examples: |
+    - How do I enroll?
+    - When do I need to enroll by?
+    - What are the enrollment deadlines?
+    - What does it take to enroll?
     
 - intent: adjacent_fields
   examples: |
@@ -418,6 +445,14 @@ nlu:
   examples: |
     - USER JOB REQUEST [Algorithms]{"entity": "topic"}
     - JOB REQUEST [Data structures]{"entity": "topic"}
+    
+- intent: request_class_by_code
+  examples: |
+    - What is [COT 3100](class_code){"entity": "class_code"}
+    - I'd like to know more about [CIS 4949](class_code){"entity": "class_code"}
+    - Which class is [EGN 4952](class_code){"entity": "class_code"}
+    - Tell me about [MAS 3114](class_code){"entity": "class_code"}
+    - [CGS 4144](class_code){"entity": "class_code"}
 
 - synonym: Artificial intelligence
   examples: |
@@ -525,3 +560,88 @@ nlu:
     - computability theory
     - computational complexity theory
     - quantum computing theory
+    
+- lookup: class_code
+  examples: | 
+    - COP 3502C
+    - COP 3503C
+    - COP 3504C
+    - COP 3530
+    - COP 4600
+    - COT 3100
+    - CDA 3101
+    - CEN 3031
+    - CIS 4301
+    - CIS 4914
+    - CNT 4007
+    - COP 4020
+    - COP 4533
+    - EGS 4034
+    - CGS 3065
+    - ENC 3246
+    - MAC 2311
+    - MAC 2312
+    - MAC 2313
+    - MAS 3114
+    - PHY 2048
+    - PHY 2048L
+    - PHY 2049
+    - PHY 2049L
+    - STA 3032
+    - CAP 3020
+    - CAP 3027
+    - CAP 3032
+    - CAP 3034 
+    - CAP 3220
+    - CAP 4053
+    - CAP 4112
+    - CAP 4136
+    - CAP 4613
+    - CAP 4621
+    - CAP 4641
+    - CAP 4730
+    - CAP 4770
+    - CDA 4102
+    - CDA 4630
+    - CEN 3907C
+    - CEN 3908C
+    - CEN 3913
+    - CEN 4072
+    - CEN 4721
+    - CEN 4722
+    - CEN 4725
+    - CEN 4914
+    - CGS 2032
+    - CGS 3063
+    - CGS 3065
+    - CGS 4144
+    - CIS 4204
+    - CIS 4213
+    - CIS 4360
+    - CIS 4362
+    - CIS 4715
+    - CIS 4905
+    - CIS 4912C
+    - CIS 4913C
+    - CIS 4930
+    - CIS 4940
+    - CIS 4949
+    - CIS 4956
+    - CNT 4520
+    - CNT 4731
+    - COP 2271
+    - COP 2800
+    - COP 3275
+    - COP 4331
+    - COP 4620
+    - COP 4720
+    - COT 4501
+    - EGN 4912
+    - EGS 1005
+    - IDC 4710
+    - EGN 4951
+    - EGN 4952
+    - EIN 3354
+    - EEL 3701C
+    - EEL 4744C
+    - CIS 4940

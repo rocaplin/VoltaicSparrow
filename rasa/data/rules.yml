@@ -16,3 +16,13 @@ rules:
   steps:
   - intent: faq
   - action: utter_faq
+  
+- rule: Original greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+  
+- rule: Handle low confidence input
+  steps:
+  - intent: nlu_fallback
+  - action: utter_topic_tips

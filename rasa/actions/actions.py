@@ -159,6 +159,40 @@ class ActionRequestClassByTopic(Action):
         return []
      
     
+class ActionRequestClassByCode(Action):
+
+    def name(self) -> Text:
+        return "action_request_class_by_code"
+            
+    def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]: 
+        
+        client = MongoClient('mongo-db', 27017)
+
+        db = client.chompsci
+        courses = db.courses
+
+        class_request = None
+
+        for entity in tracker.latest_message['entities']:
+            if entity["entity"] == 'class_code':
+                class_request = entity['value'].upper()
+
+
+        class_result = courses.find_one({"code": class_request})
+
+        if not class_result:
+            if not class_request:
+                dispatcher.utter_message(text="Sorry, I don't understand")
+            else:
+                dispatcher.utter_message(text=("I don't know of any classes with the code " + class_request + "."))
+        else:
+            dispatcher.utter_message(text=(class_request+ " is "+class_result["name"]+": " + class_result["description"]))
+                
+
+        return []
+    
 class ActionRequestJobByTopic(Action):
 
     def name(self) -> Text:

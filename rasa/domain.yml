@@ -8,6 +8,7 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - ask_about_university
   - required_courses
   - difference
   - engineering
@@ -32,18 +33,17 @@ intents:
       use_entities: true
   - request_jobs:
       use_entities: true
+  - request_class_by_code:
+      use_entities: true
 
 entities:
   - job
   - topic
+  - class_code
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "I'm Chomp, the computer science chat bot. Would you like to talk about comptuer science, or about the University of Florida?"
 
   utter_did_that_help:
   - text: "Did that help you?"
@@ -56,6 +56,9 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_topic_tips:
+  - text: "Sorry, I don't understand what you want. Try rephrasing your question."
 
   utter_faq/ufonline:
   - text: "Online classes are convenient and economical. UF Online is one of the top programs in the United States and offers many degrees online.
@@ -96,6 +99,11 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
 
   utter_faq/credit_hours:
   - text: "A Computer Science Degree at UF requires a minimum of 120 total credit hours. For a full-time student, this constitutes 12-18 credit hours per semester. This is usually 4-6 classes per semester, depending on individual course credits."
+  
+  utter_faq/credit_hour_cost:
+  - text: "For in state students tuition is about $130 per credit hour. For out of state students it is about $550. You can visit https://ufonline.ufl.edu/tuition/ for the most recent prices.
+  
+  Since a full degree requires at least 120 credit hours an in state student would spend at least $15,600 on tution while an out of state student could spend $66,000 or more."
 
   utter_faq/excess_hours:
   - text: "Computer Science has a credit limit of 120 hours for both the College of Liberal Arts and Sciences and the College of Engineering. For more information, refer to this page: https://registrar.ufl.edu/courses/excess-hours."
@@ -141,7 +149,9 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
 
  - computational methods and their application.
 
- - the tools we use to perform computations."
+ - the tools we use to perform computations.
+  
+   Is there a specific topic you want to know more about, like AI or computer security?"
 
   utter_modern_computers:
   - text: "The first general purpose computers began to be built in the United States and Europe during the late 1930s. The term Computer Science was coined in the 1950s to describe related coursework being offered by universities."
@@ -150,6 +160,12 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
   - text: "The development of modern computers took place over a period of centuries drawing from a number of fields in Mathematics, Science, and Engineering, and as a result the topics addressed by these courses were just as broad. While the academic field of Computer Science is relatively young it has expanded rapidly and had far reaching societal impacts.
 
 It is likely that for all of these reasons, there are a variety of perspectives on what constitutes Computer Science, and how it should be defined."
+
+  utter_faq/university:
+  - text: "The University of Florida is located in Gainesville, was founded in 1853 and is accredited by the Southern Association of Colleges and Schools. Are you more interested in their online program or their traditional on-campus program?"
+  
+  utter_faq/enrollment:
+  - text: "To apply for enrollment you will need to submit your academic information and write a short essay. You can double check requirements, deadlines or even start the process by going to https://admissions.ufl.edu"
 
   utter_faq/cshistory:
   - text: "The foundation of Computer science predates modern computers. Ancient peoples used machines like the abacus and algorithms like the Sieve of Eratosthenes to perform calculations."
@@ -202,8 +218,24 @@ actions:
   - action_hello_world
   - action_request_topics
   - action_request_class_by_topic
+  - action_request_class_by_code
   - action_request_job_by_topic
   - action_request_jobs
+
+slots:
+  current_topic:
+    type: categorical
+    values:
+    - uf_campus
+    - uf_online
+    - computer_science
+    - careers
+    - degree
+    influence_conversation: true
+    mappings:
+    - type: from_intent
+      value: uf_campus
+      intent: ask_about_university
 
 session_config:
   session_expiration_time: 60
