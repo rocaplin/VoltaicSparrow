@@ -14,6 +14,8 @@ const ChatWindow = ({socket}) => {
         // Avoiding race conditions when setting state in functional components:
         // https://reactjs.org/docs/hooks-reference.html#functional-updates
         setChatLog((prevLog) => {
+            // adding static ids to chat log entries
+            message.id = prevLog.length;
             return prevLog.concat([message]);
         });
     };
@@ -32,7 +34,12 @@ const ChatWindow = ({socket}) => {
                 if (key === "text") {
                     appendChat({text: res[key]}, true);
                 } else if (key === "quick_replies") {
-                    appendChat({quick_replies: res[key]}, true);
+                    // adding static ids to buttons
+                    let qrArray = res[key];
+                    for (let i = 0; i < qrArray.length; ++i) {
+                        qrArray[i].id = i;
+                    }
+                    appendChat({quick_replies: qrArray}, true);
                 } else if (key === "attachment") {
                     appendChat({attachment: res[key]}, true);
                 } else {

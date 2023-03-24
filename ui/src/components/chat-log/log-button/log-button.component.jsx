@@ -13,11 +13,11 @@ const LogButton = ({buttons, sendHandler}) => {
         >
             {
                 /* Would be nice to pass key as prop... not wanting to work though... */
-                buttons["quick_replies"].map((qr_link, i) => {
+                buttons["quick_replies"].map((qr_link) => {
                     return (
                         <button
                             className="quick-reply"
-                            key={`${i}-${Math.random()}`}
+                            key={`${qr_link.id}`}
                             value={qr_link.payload}
                             // Function binding...
                             // https://reactjs.org/docs/faq-functions.html
