@@ -6,11 +6,6 @@ stories:
   steps:
   - intent: request_action_test
   - action: action_hello_world
-
-- story: action request jobs
-  steps:
-  - intent: request_jobs
-  - action: action_request_jobs
   
 - story: courses path 1
   steps:
@@ -90,43 +85,23 @@ stories:
   steps:
   - intent: adjacent_fields
   - action: utter_ask_major_differences
-  - intent: software
-  - action: utter_software_engineering
+  - intent: info_tech
+  - action: utter_information_technology
   - action: utter_ask_again
   - intent: affirm
   - action: utter_ask_major_differences
-
+ 
 - story: adjacent fields path 6
   steps:
   - intent: adjacent_fields
   - action: utter_ask_major_differences
-  - intent: software
-  - action: utter_software_engineering
+  - intent: info_tech
+  - action: utter_information_technology
   - action: utter_ask_again
   - intent: deny
   - action: utter_happy
-
+ 
 - story: adjacent fields path 7
-  steps:
-  - intent: adjacent_fields
-  - action: utter_ask_major_differences
-  - intent: info_tech
-  - action: utter_information_technology
-  - action: utter_ask_again
-  - intent: affirm
-  - action: utter_ask_major_differences
- 
-- story: adjacent fields path 8
-  steps:
-  - intent: adjacent_fields
-  - action: utter_ask_major_differences
-  - intent: info_tech
-  - action: utter_information_technology
-  - action: utter_ask_again
-  - intent: deny
-  - action: utter_happy
- 
-- story: adjacent fields path 9
   steps:
   - intent: adjacent_fields
   - action: utter_ask_major_differences
@@ -136,7 +111,7 @@ stories:
   - intent: affirm
   - action: utter_ask_major_differences
 
-- story: adjacent fields path 10
+- story: adjacent fields path 8
   steps:
   - intent: adjacent_fields
   - action: utter_ask_major_differences
@@ -169,13 +144,24 @@ stories:
   - intent: other_cscareers
   - action: utter_other_cscareers
 
-- story: action request topics path
+- story: cs career 3
   steps:
+  - intent: common_cscareers
+  - action: utter_common_cscareers
+  - intent: request_jobs
+  - action: action_request_jobs
+  
+- story: cs topics 1
+  steps:
+  - intent: common_cstopics
+  - action: utter_common_cstopics
   - intent: request_topics
   - action: action_request_topics
 
-- story: action request class by topic
+- story: cs topics to class
   steps:
+  - intent: common_cstopics
+  - action: utter_common_cstopics
   - intent: request_topics
   - action: action_request_topics
   - intent: request_class_by_topic
@@ -186,8 +172,10 @@ stories:
   - intent: request_class_by_code
   - action: action_request_class_by_code
 
-- story: action request job by topic
+- story: cs topics to job
   steps:
+  - intent: common_cstopics
+  - action: utter_common_cstopics
   - intent: request_topics
   - action: action_request_topics
   - intent: request_job_by_topic

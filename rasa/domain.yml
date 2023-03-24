@@ -17,13 +17,13 @@ intents:
   - adjacent_fields
   - electrical
   - comp_eng
-  - software
   - info_tech
   - info_sys
   - csetymology
   - modern_computers
   - common_cscareers
   - other_cscareers
+  - common_cstopics
   - request_action_test
   - request_topics:
       use_entities: true
@@ -127,10 +127,6 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
   Courses in computer engineering involve learning to develop prototypes and test components such as microchips, circuits, conductors, and processors.
   For those with interests in or career goals involving building computers, designing interfaces, or delving into hardware, computer engineering may be a more appealing area of study."
   
-  utter_software_engineering:
-  - text: "Software engineering is a subset of computer science that focuses on developing software from beginning to end. Software engineering is a more hands-on subsection that includes working with different programming languages to write, revise, and test new software programs.
-  The courses for computer science and software engineering often overlap and can include Introduction to Programming, Data Structures, Discrete Structures, and Operating Systems."
-  
   utter_information_technology:
   - text: "Information Technology is often referred to as 'the business side of computer science' and focuses more on meeting the technological needs of organizations. Unike computer science, information technology emphasizes using computers, databases, networks, servers, and software to process, store, transmit, retrieve, and protect data.
   While computer scientists use theoretical skills to develop and improve computer programs, information technology specialists install, implement, and maintain the programs in addition to applying them to businesses and other professional organizations.
@@ -204,6 +200,8 @@ As of May 2021, BLS data shows that 70% of those employed within Computer Occupa
 
 Other common positions include Network Architects, Security Analysts, Database Administrators, Web Developers and Designers, and Research Scientists.
 
+To learn more, enter the name of a career in computer science. A list of common computer science careers can be found at https://www.computerscience.org/careers/.
+
 https://www.bls.gov/oes/current/oes_nat.htm"
     buttons:
     - title: "Are there other career options?"
@@ -213,6 +211,15 @@ https://www.bls.gov/oes/current/oes_nat.htm"
   - text: "Computer Science degrees cover a variety of topics potentially preparing students to pursue careers in related fields such as Hardware Design, Data Science, Digital Media, or Business.
 
 Earing a college degree demonstrates your ability to achieve and learn, traits helpful in many positions. Your major is only one indicator of fit. Personal experience, interests, and skills are also important and it is not uncommon for graduates to work outside their fields of study."
+
+  utter_common_cstopics:
+  - text: "Computer Science covers a variety of diverse topics, many of which are taught at the University of Florida. 
+  
+  Some of these topics include: operating systems, computer graphics, parallel computing, artificial intelligence, networking, cryptography, etc.
+  
+  For a complete list of subfields and their topics, refer to this link: https://en.wikipedia.org/wiki/Outline_of_computer_science
+  
+  You can ask me about any of the topics listed under each subfield."
 
 actions:
   - action_hello_world
