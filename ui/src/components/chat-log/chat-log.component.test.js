@@ -11,38 +11,40 @@ const chatLogMock = [
     {
         message: "message test 0",
         isBot: false,
-        time: "2023-03-16T23:05:21.528Z"
+        id: 0
     },
     {
         text: "text test 0",
         isBot: true,
-        time: "2023-03-16T23:05:21.591Z"
+        id: 1
     },
     {
         message: "\nmessage test 1",
         isBot: false,
-        time: "2023-03-16T23:05:58.183Z"
+        id: 2
     },
     {
         text: "text test 1",
         isBot: true,
-        time: "2023-03-16T23:05:58.236Z"
+        id: 3
     },
     {
         quick_replies: [
             {
                 content_type: "text",
                 title: "button 0",
-                payload: "/payload/test0"
+                payload: "/payload/test0",
+                id: 0
             },
             {
                 content_type: "text",
                 title: "button 1",
-                payload: "/payload/test1"
+                payload: "/payload/test1",
+                id: 1
             }            
         ],
         isBot: true,
-        time: "2023-03-16T23:05:58.237Z"
+        id: 4
     },
     {
         attachment: {
@@ -52,17 +54,17 @@ const chatLogMock = [
             type: "image"
         },
         isBot: true,
-        time: "2023-03-16T23:05:59.237Z" 
+        id: 5
     },
     {
         message: "/payload/test0",
         isBot: false,
-        time: "2023-03-16T23:06:09.511Z"
+        id: 6
     },
     {
         text: "text test 2",
         isBot: true,
-        time: "2023-03-16T23:06:09.575Z"
+        id: 7
     }
 ];
 
