@@ -1,0 +1,78 @@
+[
+  {
+    "text": "[Security Analyst{\"entity\": \"job\"} careers",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 1,
+        "end": 17,
+        "value": "Security Analyst",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "software engineering",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "topic",
+        "start": 0,
+        "end": 20,
+        "value": "software engineering",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "software engineer",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 0,
+        "end": 17,
+        "value": "software engineer",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "who was the first computer programmer",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 18,
+        "end": 37,
+        "value": "computer programmer",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "What is AI",
+    "entities": [
+      {
+        "start": 8,
+        "end": 10,
+        "value": "AI",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic",
+        "start": 8,
+        "end": 10,
+        "confidence_entity": 0.9908958077430725,
+        "value": "Artificial intelligence",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

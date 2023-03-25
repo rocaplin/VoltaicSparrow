@@ -1,0 +1,35 @@
+{
+  "topic": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 72,
+    "confused_with": {}
+  },
+  "job": {
+    "precision": 0.9696969696969697,
+    "recall": 1.0,
+    "f1-score": 0.9846153846153847,
+    "support": 32,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9904761904761905,
+    "recall": 1.0,
+    "f1-score": 0.9952153110047847,
+    "support": 104
+  },
+  "macro avg": {
+    "precision": 0.9848484848484849,
+    "recall": 1.0,
+    "f1-score": 0.9923076923076923,
+    "support": 104
+  },
+  "weighted avg": {
+    "precision": 0.9906759906759907,
+    "recall": 1.0,
+    "f1-score": 0.9952662721893492,
+    "support": 104
+  },
+  "accuracy": 0.999195494770716
+}

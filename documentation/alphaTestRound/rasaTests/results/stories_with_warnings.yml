@@ -1,0 +1,44 @@
+version: "3.1"
+stories:
+- story: ask about adjacent fields 3 (./tests/test_stories.yml)
+  steps:
+  - intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - intent: comp_eng
+  - action: utter_computer_engineering
+  - action: utter_ask_again
+  - intent: affirm
+  - action: utter_ask_major_differences
+  - intent: electrical
+  - action: utter_electrical_engineering  # predicted: action_unlikely_intent
+  - action: utter_ask_again
+  - intent: deny
+  - action: utter_happy
+- story: ask about adjacent fields 1 (./tests/test_stories.yml)
+  steps:
+  - intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - intent: electrical
+  - action: utter_electrical_engineering
+  - action: utter_ask_again
+  - intent: affirm
+  - action: utter_ask_major_differences
+  - intent: comp_eng
+  - action: utter_computer_engineering  # predicted: action_unlikely_intent
+  - action: utter_ask_again
+  - intent: deny
+  - action: utter_happy
+- story: ask about adjacent fields 9 (./tests/test_stories.yml)
+  steps:
+  - intent: adjacent_fields
+  - action: utter_ask_major_differences
+  - intent: info_sys
+  - action: utter_information_systems
+  - action: utter_ask_again
+  - intent: affirm
+  - action: utter_ask_major_differences
+  - intent: info_tech
+  - action: utter_information_technology  # predicted: action_unlikely_intent
+  - action: utter_ask_again
+  - intent: deny
+  - action: utter_happy
