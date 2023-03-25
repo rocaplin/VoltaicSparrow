@@ -8,12 +8,14 @@ const buttonsMock = {
         {
             content_type: 'text',
             title: 'button_0',
-            payload: '/nlu/intent_0'
+            payload: '/nlu/intent_0',
+            id: 0
          },
          {
             content_type: 'text',
             title: 'button_1',
-            payload: '/nlu/intent_1'
+            payload: '/nlu/intent_1',
+            id: 1
          }
     ]
 };
