@@ -2,7 +2,6 @@ import './App.css';
 import {useState, useEffect} from "react";
 import io from "socket.io-client";
 
-//import ChatWindow from "./components/chat-window/chat-window.component";
 import ChatControls from "./components/chat-controls/chat-controls.component";
 import ChatLog from "./components/chat-log/chat-log.component";
 import ChatInput from "./components/chat-input/chat-input.component";
@@ -12,6 +11,7 @@ const socket = io(`${window.location.protocol}//${window.location.hostname}:5005
 
 socket.on('connect', function() {
   console.log("Connected to Rasa.");
+  socket.emit("user_uttered", {message: "/greet"});
 });
 
 socket.on('connect_error', (error) => {
