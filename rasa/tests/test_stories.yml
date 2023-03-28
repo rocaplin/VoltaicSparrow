@@ -1,6 +1,7 @@
 #### This file contains tests to evaluate that your bot behaves as expected.
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
+stories:
 - story: say goodbye
   steps:
   - user: |
@@ -182,7 +183,7 @@
     intent: deny
   - action: utter_happy
 
-- story: computer science definition 8
+- story: computer science definition 1
   steps:
   - user: |
       What is Computer Science anyway?

@@ -91,40 +91,6 @@ nlu:
     - no thanks
     - naw
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -143,7 +109,7 @@ nlu:
     - [Computer Programmer]{"entity": "job"} jobs
     - [it architect]{"entity": "job"} jobs
     - [video game developer]{"entity": "job"} jobs
-    - [Security Analyst{"entity": "job"} careers
+    - [Security Analyst]{"entity": "job"} careers
     - [Web Designer]{"entity": "job"} careers
     - [web developer]{"entity": "job"} careers
     - Jobs as a [Video Game Developer]{"entity": "job"}
@@ -678,7 +644,7 @@ nlu:
     - CAP 3020
     - CAP 3027
     - CAP 3032
-    - CAP 3034 
+    - CAP 3034
     - CAP 3220
     - CAP 4053
     - CAP 4112
