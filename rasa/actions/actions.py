@@ -123,7 +123,7 @@ class ActionRequestJobs(Action):
 
             buttonList = []
             for course in courseArray:
-                buttonList.append({"payload": "/request_class_by_code{\"class_code\": \"" + course.lstrip() + "\"}", "title": course})
+                buttonList.append({"payload": "/request_class_by_code{\"class_code\": \"" + course.strip() + "\"}", "title": course})
 
             dispatcher.utter_message(text=("Here is what I know about careers as a " + job + ": \n" + requested_job["description"]))
             dispatcher.utter_message(text=("You can learn more about it in these classes: " + requested_job["related_courses"]))
@@ -171,7 +171,7 @@ class ActionRequestClassByTopic(Action):
                 
                 buttonList = []
                 for course in courseArray:
-                    buttonList.append({"payload": "/request_class_by_code{\"class_code\": \"" + course.lstrip() + "\"}", "title": course})
+                    buttonList.append({"payload": "/request_class_by_code{\"class_code\": \"" + course.strip() + "\"}", "title": course})
 
 
                 dispatcher.utter_message(text=("Click the buttons below to learn more about each class:"), buttons=buttonList)
@@ -260,7 +260,7 @@ class ActionRequestJobByTopic(Action):
 
                 buttonList = []
                 for job in jobArray:
-                    buttonList.append({"payload": "/request_jobs{\"job\": \"" + job.lstrip() + "\"}", "title": job})
+                    buttonList.append({"payload": "/request_jobs{\"job\": \"" + job.strip() + "\"}", "title": job})
                 
                 dispatcher.utter_message(text=("Click the buttons below to learn more about each career:"), buttons=buttonList)
 
