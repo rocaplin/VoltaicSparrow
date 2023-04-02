@@ -443,3 +443,38 @@ stories:
       What are [programming language pragmatics]{"entity": "topic"}
     intent: request_topics
   - action: action_request_topics
+
+- story: who are you 1
+  steps:
+  - user: |
+      Who are you?
+    intent: faq/who_are_you
+  - action: utter_faq/who_are_you
+
+- story: purpose 1
+  steps:
+  - user: |
+      Why were you created?
+    intent: faq/purpose
+  - action: utter_faq/purpose
+
+- story: purpose 2
+  steps:
+  - user: |
+      who made u
+    intent: faq/purpose
+  - action: utter_faq/purpose
+
+- story: help 1
+  steps:
+  - user: |
+      What am I supposed to do?
+    intent: faq/help
+  - action: utter_faq/help
+
+- story: help 2
+  steps:
+  - user: |
+      can u help
+    intent: faq/help
+  - action: utter_faq/help
