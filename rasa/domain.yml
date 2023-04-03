@@ -43,7 +43,7 @@ entities:
 
 responses:
   utter_greet:
-  - text: "I'm Chomp, the computer science chat bot. Would you like to talk about comptuer science, or about the University of Florida?"
+  - text: "I'm Chomp, the computer science chat bot! Would you like to talk about computer science, or about the University of Florida?"
 
   utter_did_that_help:
   - text: "Did that help you?"

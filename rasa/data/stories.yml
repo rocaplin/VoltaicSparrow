@@ -150,6 +150,15 @@ stories:
   - action: utter_common_cscareers
   - intent: request_jobs
   - action: action_request_jobs
+
+- story: cs career to careers 1
+  steps:
+  - intent: common_cscareers
+  - action: utter_common_cscareers
+  - intent: request_jobs
+  - action: action_request_jobs
+  - intent: request_jobs
+  - action: action_request_jobs
   
 - story: cs topics 1
   steps:
@@ -157,6 +166,37 @@ stories:
   - action: utter_common_cstopics
   - intent: request_topics
   - action: action_request_topics
+
+- story: cs topics to topics 1
+  steps:
+  - intent: common_cstopics
+  - action: utter_common_cstopics
+  - intent: request_topics
+  - action: action_request_topics
+  - intent: request_topics
+  - action: action_request_topics
+
+- story: cs topics to topics 2
+  steps:
+  - intent: common_cstopics
+  - action: utter_common_cstopics
+  - intent: request_topics
+  - action: action_request_topics
+  - intent: request_topics
+  - action: action_request_topics
+  - intent: request_class_by_topic
+  - action: action_request_class_by_topic
+
+- story: cs topics to topics 3
+  steps:
+  - intent: common_cstopics
+  - action: utter_common_cstopics
+  - intent: request_topics
+  - action: action_request_topics
+  - intent: request_topics
+  - action: action_request_topics
+  - intent: request_job_by_topic
+  - action: action_request_job_by_topic
 
 - story: cs topics to class
   steps:
@@ -166,11 +206,6 @@ stories:
   - action: action_request_topics
   - intent: request_class_by_topic
   - action: action_request_class_by_topic
-  
-- story: action request class by code
-  steps:
-  - intent: request_class_by_code
-  - action: action_request_class_by_code
 
 - story: cs topics to job
   steps:
@@ -180,3 +215,15 @@ stories:
   - action: action_request_topics
   - intent: request_job_by_topic
   - action: action_request_job_by_topic
+    
+- story: action request class by code 1
+  steps:
+  - intent: request_class_by_code
+  - action: action_request_class_by_code
+
+  - story: action request class by code 2
+  steps:
+  - intent: request_class_by_code
+  - action: action_request_class_by_code
+  - intent: request_class_by_code
+  - action: action_request_class_by_code
