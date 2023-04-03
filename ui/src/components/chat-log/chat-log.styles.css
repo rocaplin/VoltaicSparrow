@@ -27,6 +27,10 @@
     padding-right: 8px;
 }
 
+.avatar-container img {
+  max-width: max-content;
+}
+
 .chat-text {
     color: var(--grey-800);
     text-align: left;
