@@ -17,6 +17,21 @@
   justify-content: flex-end;
 }
 
+.chat-window {
+  /* interface font */
+  font-family: 'Interface', sans-serif;
+  max-width: 359px;
+  height: calc(100% - 64px);
+  border: solid 3px var(--grey-700);
+  background-color: var(--grey-800);
+  margin: 0 0 8px;
+}
+
+.chat-input {
+  height: 64px;
+  padding: 4px;
+}
+
 @media (max-width: 23.8125rem) {
   .App {
       margin: 0;
