@@ -5,10 +5,7 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
   - bot_challenge
-  - ask_about_university
   - required_courses
   - difference
   - engineering
@@ -44,9 +41,6 @@ entities:
 responses:
   utter_greet:
   - text: "I'm Chomp, the computer science chat bot! Would you like to talk about computer science, or about the University of Florida?"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
 
   utter_happy:
   - text: "Great, carry on!"
@@ -103,7 +97,7 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
   utter_faq/credit_hour_cost:
   - text: "For in state students tuition is about $130 per credit hour. For out of state students it is about $550. You can visit https://ufonline.ufl.edu/tuition/ for the most recent prices.
   
-  Since a full degree requires at least 120 credit hours an in state student would spend at least $15,600 on tution while an out of state student could spend $66,000 or more."
+  Since a full degree requires at least 120 credit hours an in state student would spend at least $15,600 on tuition while an out of state student could spend $66,000 or more."
 
   utter_faq/excess_hours:
   - text: "Computer Science has a credit limit of 120 hours for both the College of Liberal Arts and Sciences and the College of Engineering. For more information, refer to this page: https://registrar.ufl.edu/courses/excess-hours."
@@ -118,7 +112,7 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
   - text: "Would you like to know about another major/adjacent field? You can say Electrical Engineering, Computer Engineering, Information Systems, Software Engineering, and Information Technology."
   
   utter_electrical_engineering: 
-  - text: "While there are many differences between Computer Science and Electrical Engineering, one of the most distinct ones is that electrical engineers focus on physical products and work with electricity, electrical currents. and electrical components to create solutions while computer scientists focus on nontangible concepts and use logic, computation, and coding to create solutions. 
+  - text: "While there are many differences between Computer Science and Electrical Engineering, one of the most distinct ones is that electrical engineers focus on physical products and work with electricity, electrical currents. and electrical components to create solutions while computer scientists focus on intangible concepts and use logic, computation, and coding to create solutions. 
   In terms of schoolwork, an electrical engineering degree may require more diverse courses be taken. Degrees in electrical engineering may include courses that focus on technical concepts involving digital systems and electric circuits. These courses are usually application-based in manufacturing, navigation systems, communication, health care, etc. 
   Electrical engineers may also be required to take courses that computer scientists take."
   
@@ -128,9 +122,9 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
   For those with interests in or career goals involving building computers, designing interfaces, or delving into hardware, computer engineering may be a more appealing area of study."
   
   utter_information_technology:
-  - text: "Information Technology is often referred to as 'the business side of computer science' and focuses more on meeting the technological needs of organizations. Unike computer science, information technology emphasizes using computers, databases, networks, servers, and software to process, store, transmit, retrieve, and protect data.
+  - text: "Information Technology is often referred to as 'the business side of computer science' and focuses more on meeting the technological needs of organizations. Unlike computer science, information technology emphasizes using computers, databases, networks, servers, and software to process, store, transmit, retrieve, and protect data.
   While computer scientists use theoretical skills to develop and improve computer programs, information technology specialists install, implement, and maintain the programs in addition to applying them to businesses and other professional organizations.
-  The courseload for an information technology degree includes classes in which students learn to identify, create, and configure complex computing platforms and systems to solve problems.
+  The course load for an information technology degree includes classes in which students learn to identify, create, and configure complex computing platforms and systems to solve problems.
   Those who enjoy discovering technological solutions to problems and working with others should consider a degree in information technology."
   
   utter_information_systems:
@@ -194,7 +188,7 @@ https://en.wikipedia.org/wiki/Ada_Lovelace"
       payload: "/modern_computers"
 
   utter_common_cscareers:
-  - text: "Employeers in a variety of industries hire Computer Science graduates for jobs the U.S. Bureau of Labor Statistics classifies as Computer Occupations.
+  - text: "Employers in a variety of industries hire Computer Science graduates for jobs the U.S. Bureau of Labor Statistics classifies as Computer Occupations.
 
 As of May 2021, BLS data shows that 70% of those employed within Computer Occupations work as Software Developers, Support Specialists, Systems Analysts, Network/ Systems Administrators, and QA Analysts.
 
@@ -210,7 +204,7 @@ https://www.bls.gov/oes/current/oes_nat.htm"
   utter_other_cscareers:
   - text: "Computer Science degrees cover a variety of topics potentially preparing students to pursue careers in related fields such as Hardware Design, Data Science, Digital Media, or Business.
 
-Earing a college degree demonstrates your ability to achieve and learn, traits helpful in many positions. Your major is only one indicator of fit. Personal experience, interests, and skills are also important and it is not uncommon for graduates to work outside their fields of study."
+Earning a college degree demonstrates your ability to achieve and learn, traits helpful in many positions. Your major is only one indicator of fit. Personal experience, interests, and skills are also important and it is not uncommon for graduates to work outside their fields of study."
 
   utter_common_cstopics:
   - text: "Computer Science covers a variety of diverse topics, many of which are taught at the University of Florida. 
