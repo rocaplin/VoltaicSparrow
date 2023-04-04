@@ -20,7 +20,7 @@ nlu:
     - what's up
     - greetings
     - how goes it?
-    -howdy    
+    - howdy
 
 - intent: goodbye
   examples: |
@@ -698,3 +698,66 @@ nlu:
     - EEL 3701C
     - EEL 4744C
     - CIS 4940
+
+- intent: faq/who_are_you
+  examples: |
+    - Who are you?
+    - who are you
+    - who ru
+    - What are you?
+    - what ru
+    - what are you
+    - what do you do
+    - Tell me about yourself.
+    - tell me about you
+
+- intent: faq/purpose
+  examples: |
+    - Why were you made?
+    - why were you made
+    - why do you exist
+    - Why were you created?
+    - why were you created
+    - Who made you?
+    - who created you
+    - What is your purpose?
+    - what purpose do you have
+    - what's your purpose
+    - What is your goal?
+    - what's your goal
+
+- intent: faq/help
+  examples: |
+    - What am I supposed to do now?
+    - what am i supposed to do
+    - What do I do now?
+    - what do i do
+    - What now?
+    - What can I do?
+    - what can I do
+    - What can you do for me?
+    - what can you do
+    - What can you help me with?
+    - Can you help?
+    - can you help me
+    - help me
+    - help
+
+- intent: faq/how_do_you_work
+  examples: |
+    - How do you work?
+    - how do you work
+    - tell me how you work
+    - Tell me about how you work.
+    - How were you made?
+    - how were you made
+    - How were you created?
+    - What are you made of?
+    - what was used to create you
+    - What tech stack do you use?
+    - what tech stack are you built on
+    - How is a chatbot made?
+    - how are chatbots made
+    - how do chatbots work
+    - How can I make a chatbot?
+    - how could I make a chatbot
