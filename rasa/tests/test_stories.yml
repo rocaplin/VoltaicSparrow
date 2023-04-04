@@ -478,3 +478,17 @@ stories:
       can u help
     intent: faq/help
   - action: utter_faq/help
+
+- story: how do you work 1
+  steps:
+  - user: |
+      how were you made?
+    intent: faq/how_do_you_work
+  - action: utter_faq/how_do_you_work
+
+- story: how do you work 2
+  steps:
+  - user: |
+      tell me what technology you use
+    intent: faq/how_do_you_work
+  - action: utter_faq/how_do_you_work

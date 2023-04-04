@@ -742,3 +742,22 @@ nlu:
     - can you help me
     - help me
     - help
+
+- intent: faq/how_do_you_work
+  examples: |
+    - How do you work?
+    - how do you work
+    - tell me how you work
+    - Tell me about how you work.
+    - How were you made?
+    - how were you made
+    - How were you created?
+    - What are you made of?
+    - what was used to create you
+    - What tech stack do you use?
+    - what tech stack are you built on
+    - How is a chatbot made?
+    - how are chatbots made
+    - how do chatbots work
+    - How can I make a chatbot?
+    - how could I make a chatbot

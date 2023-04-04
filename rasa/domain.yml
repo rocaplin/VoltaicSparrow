@@ -238,6 +238,13 @@ Earning a college degree demonstrates your ability to achieve and learn, traits 
     - title: "sub-topics"
       payload: "/common_cstopics"
 
+  utter_faq/how_do_you_work:
+  - text: "Chomp Sci uses Rasa, a retrieval-based chatbot development platform.
+  
+  Your questions are sent to the Chomp Sci Rasa server. The server tries to match the questions to probable intents defined in the Natural Language Understanding (NLU) unit's training data.
+  
+  Once a likely intent is selected, the Rasa server will perform a predefined series of actions associated with the intent. This usually involves querying a database for information via the Rasa action server, and/ or returning an appropriate response."
+
 actions:
   - action_hello_world
   - action_request_topics
