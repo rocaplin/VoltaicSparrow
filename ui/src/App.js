@@ -70,11 +70,16 @@ function App() {
     }, []);
 
   // Send requests to Rasa websocket channel then add to chatLog.
-  const sendRequest = async (req) => {
-      // Rasa is expecting "message" key for texts, it will not 
-      // respond if "text" is used as key.
+  // req - a string "message" to send to Rasa.
+  // alt - optional alt text to log in the chat log,
+  //       for human-readable quick_links.
+  const sendRequest = async (req, alt) => {
+      // Rasa will only respond to "message" key.
       let message = {message: req};
      await socket.emit("user_uttered", message);
+     if (alt) {
+      message = {message: alt};
+     }
      appendChat(message, false);
   };
 

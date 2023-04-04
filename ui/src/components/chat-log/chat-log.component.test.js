@@ -57,7 +57,7 @@ const chatLogMock = [
         id: 5
     },
     {
-        message: "/payload/test0",
+        message: "button 0",
         isBot: false,
         id: 6
     },
@@ -82,8 +82,8 @@ test('chat log correctly identifies and renders log entries', () => {
     expect(messages[0]).toContainElement(messageTest0);
     const messageTest1 = screen.getByText(/message test 1/);
     expect(messages[1]).toContainElement(messageTest1);
-    const messageTest2 = screen.getByText(/\/payload\/test0/);
-    expect(messages[2]).toContainElement(messageTest2);
+    const messageTest2 = screen.getAllByText(/button 0/);
+    expect(messages[2]).toContainElement(messageTest2[1]);
 
     // Text Tests.
     const texts = screen.getAllByTestId('text');
