@@ -7,6 +7,10 @@ intents:
   - deny
   - bot_challenge
   - required_courses
+  - ask_about_university
+  - ask_about_online_program
+  - ask_about_computer_science
+  - ask_about_campus
   - difference
   - engineering
   - clas
@@ -53,15 +57,18 @@ responses:
 
   utter_topic_tips:
   - text: "Sorry, I don't understand what you want. Try rephrasing your question."
+  
+  utter_school_topic_tips:
+  - text: "Sorry, are we still talking about the University of Florida? I can tell you about tuition, enrollment, credit hours and more!"
 
-  utter_faq/ufonline:
+  utter_talk_about_online_program:
   - text: "Online classes are convenient and economical. UF Online is one of the top programs in the United States and offers many degrees online.
   
 The challenges of online study can include power outages, technical difficulties, and distractions. Proactive and disciplined students will be most successful.
 
 If you would like to find out more about UF Online, visit https://ufonline.ufl.edu."
 
-  utter_faq/ufcampus:
+  utter_talk_about_campus:
   - text: "Campus classes provide a more traditional college experience. The University of Florida offers a wide variety of degree programs, facilities, and extracurricular opportunities.
 
  The challenges of campus study can include a daily commute, new living arrangements, and distractions. Proactive and disciplined students will be most successful.
@@ -132,7 +139,7 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
   Courses for a degree in information systems may combine business courses, such as Managerial Communication, with coding courses. 
   A degree in information systems is commonly less intensive than a computer science degree and does not delve into programming as deeply as computer science does."
 
-  utter_faq/csdefinition:
+  utter_talk_about_computer_science:
   - text: "While there is no official definition of Computer Science one way to view it is as the study of computation. This includes the study of:
 
  - what can and cannot be solved through computation.
@@ -151,7 +158,7 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
 
 It is likely that for all of these reasons, there are a variety of perspectives on what constitutes Computer Science, and how it should be defined."
 
-  utter_faq/university:
+  utter_talk_about_university:
   - text: "The University of Florida is located in Gainesville, was founded in 1853 and is accredited by the Southern Association of Colleges and Schools. Are you more interested in their online program or their traditional on-campus program?"
   
   utter_faq/enrollment:
@@ -214,6 +221,12 @@ Earning a college degree demonstrates your ability to achieve and learn, traits 
   For a complete list of subfields and their topics, refer to this link: https://en.wikipedia.org/wiki/Outline_of_computer_science
   
   You can ask me about any of the topics listed under each subfield."
+  
+  utter_online_topic_tips:
+  - text: "Are we still talking about UF Online? I can tell you about the required courses, credit hour requirements or even how to start enrolling." 
+  
+  utter_computer_science_topic_tips:
+  - text: "Are we still talking about computer science? Try rephrasing your question or asking about a different topic."
 
   utter_faq/who_are_you:
   - text: "I'm Chomp Sci, a chatbot designed to answer questions about studying Computer Science at the University of Florida."
@@ -265,8 +278,15 @@ slots:
     influence_conversation: true
     mappings:
     - type: from_intent
+      value: computer_science
+      intent: ask_about_computer_science
+    - type: from_intent
       value: uf_campus
       intent: ask_about_university
+    - type: from_intent
+      value: uf_online
+      intent: ask_about_online_program
+
 
 session_config:
   session_expiration_time: 60

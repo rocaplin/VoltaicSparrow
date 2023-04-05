@@ -238,7 +238,7 @@ nlu:
     - I do not want to go into engineering
     - I am not interested in engineering
 
-- intent: faq/university
+- intent: ask_about_university
   examples: |
     - Tell me about the university.
     - What can you tell me about the university.
@@ -248,7 +248,7 @@ nlu:
     - Tell me about the school.
     - Tell me about the college.
     
-- intent: faq/ufonline
+- intent: ask_about_online_program
   examples: |
     - can you tell me about online classes?
     - tell me about ufonline
@@ -263,7 +263,7 @@ nlu:
     - how is school online?
     - how is online different than on campus?
 
-- intent: faq/ufcampus
+- intent: ask_about_campus
   examples: |
     - what are classes like at the university?
     - what is it like to be a student at UF?
@@ -328,7 +328,7 @@ nlu:
     - info systems
     - systems
 
-- intent: faq/csdefinition
+- intent: ask_about_computer_science
   examples: |
     - what is computer science?
     - What does Computer Science mean?
