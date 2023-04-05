@@ -33,20 +33,30 @@
 
 }
 
-/* Margins, Default Fonts, Hero Image */
 body {
-    margin: 0.5rem;
-    background: var(--grey-200);
-
-    /* typographic font */
+    margin: 0;
+    background: var(--grey-700);
     font-family: 'Lora', serif;
-    font-size: 1.0rem;
+    font-size: 1rem;
     font-weight: 400;
-    color: var(--grey-700);
+    color: var(--grey-200);
+}
+
+img{
+    max-width: 100%;
 }
 
 #hero {
     background: #000;
+    position: relative;
+}
+
+#hero h2{
+    margin-bottom: 0;
+}
+
+#hero-top h1{
+    text-align: center;
 }
 
 h1, h2, h3 {
@@ -55,16 +65,20 @@ h1, h2, h3 {
     color: var(--grey-800);
 }
 
-#main-content {
-    padding: 0rem 0.25rem;
-}
-
-.content-style-1, .content-style-2 {
-    padding: 0.75rem 0rem;
+.content-style-1{
+    padding-top: 30px;
 }
 
 .content-style-1, .content-style-1 h3 {
-    color: var(--grey-700);
+    color: var(--grey-200);
+}
+
+.content-style-1 h3{
+    text-align: center;
+}
+
+.content-style-2{
+    padding-top: 30px;
 }
 
 .content-style-2, .content-style-2 h3 {
@@ -72,8 +86,12 @@ h1, h2, h3 {
     background: var(--grey-700);
 }
 
+.content-style-2 h3{
+    text-align: center;
+}
+
 .text-content {
-    padding: 0rem 0.25rem;
+    padding: 0 30px;
 }
 
 .image-content {
@@ -87,28 +105,29 @@ h1, h2, h3 {
     width: 100%;
 }
 
+#footer{
+    padding-top: 30px;
+}
+
 #footer, #footer h3 {
     background-color: var(--grey-100);
     color: var(--grey-500);
     text-align: center;
 }
 
+#footer h3{
+    padding: 15px 0 0;
+}
+
 #footer-content {
-    display: flex;
-    flex-direction: row;
     text-align: left;
     padding: 0rem 0.50rem;
 }
 
+#footer-content #col-1{
+    text-align: center;
+}
 
-/* Mobile */
-
-/*  Mobile Font Sizes
-    H1 - 36px - 2.250rem
-    H2 - 27px - 1.688rem
-    H3 - 21px - 1.312rem
-    P  - 16px
-*/
 h1 {
     font-size: 2.250rem;
     margin: 0rem;
@@ -118,12 +137,13 @@ h1 {
 
 h2 {
     font-size: 1.688rem;
-    margin: 0.422rem 0rem;
+    margin: 0 0 15px 0;
     text-align: center;
 }
 
 h3 {
     font-size: 1.312rem;
+    margin-top: 0;
 }
 
 #hero-image img {
@@ -136,14 +156,7 @@ h3 {
     }
 }
 
-/* Tablet */
 @media (min-width: 28.125rem) {
-/*  Tablet Font Sizes
-    H1 - 47px - 2.938rem
-    H2 - 36px - 2.250rem
-    h3 - 27px - 1.688rem
-    P  - 16px
-*/    
     h1 {
         font-size: 2.938rem;
         margin: 0rem;
@@ -156,11 +169,10 @@ h3 {
     
     h3 {
         font-size: 1.688rem;
-        margin: 0.4rem 0rem 1.2rem;
+        margin: 0rem 0rem 1.2rem;
     }    
 }
 
-/* Blend from Tablet to Desktop layout*/
 @media (min-width: 50.375rem) {
     #hero-top {
         display: flex;
@@ -181,18 +193,7 @@ h3 {
     }
 }
 
-/* Desktop */
 @media (min-width: 59.125rem) {
-    body {
-        margin: 0.75rem 0.75rem;
-    }
-    
-    /*  Desktop Font Sizes
-        H1 - 61px - 3.812rem
-        H2 - 47px - 2.938rem
-        H3 - 36px - 2.250rem
-        P  - 16px
-    */
     h1 {
         font-size: 3.812rem;
         margin: 0rem;
@@ -205,17 +206,22 @@ h3 {
     
     h3 {
         font-size: 2.250rem;
-        margin: 0.5rem 0rem 1.5rem;
+        margin: 0rem 0rem 1.5rem;
     }
 
     .content-style-1 .content {
-        display: flex;
-        flex-direction: row;
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+        align-items: center;
     }
 
-    .content-style-2 .content {
-        display: flex;
-        flex-direction: row-reverse;
+    .content-style-1 .content.row-reverse {
+        align-items: center;
+    }
+
+    .content-style-1 .content.row-reverse .image-content {
+        grid-column-start: 1;
+        grid-row-start: 1;
     }
 
     .content > * {
@@ -223,27 +229,48 @@ h3 {
     }
 }
 
-@media (min-width: 76.5rem) {
-    body {
-        margin: 0.75rem 3.75rem;
-    }    
+.bios {
+    text-align: center;
 }
 
-@media (min-width: 90.0rem) {
-    body {
-        margin: 0.75rem 6.75rem;
-    }    
+.single-bios{
+    padding: 0 30px;
 }
 
-@media (min-width: 112.5rem) {
-    body {
-        margin: 0.75rem 8.75rem;
+.info-section{
+    background-color: var(--grey-400);
+    color: #fff;
+    padding: 15px 0;
+}
+
+@media (min-width: 1025px) {
+    .bios{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0 30px;
+        gap: 0 30px;
+    }
+
+    #hero h2{
+        position: absolute;
+        width: 100%;
+        bottom: 40px;
+    }
+
+    .content-style-1{
+        padding-top: 0px;
+    }
+
+    .typographic-paragraph{
+        font-size: 17px;
     }
 }
 
-@media (min-width: 123.75rem) {
-    body {
-        max-width: 106.25rem;
-        margin: 0.75rem auto;
+@media (min-width: 1450px) {
+    .bios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0 30px;
+        gap: 0 30px;
     }
 }

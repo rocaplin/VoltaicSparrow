@@ -11,11 +11,11 @@
     <div id="root"></div>
     <section id="hero">
         <div id="hero-top">
-            <h1>What is Computer Science Anyway?</h1>
+            <h1>Curious About Computer Science at the University of Florida?</h1>
             <picture id="hero-image">
                 <source media="(max-width: 449px)" srcset="./images/mobile-hero.jpg">
                 <source media="(max-width: 805px)" srcset="./images/mobile-hero@2x.jpg">
-                <img src="./images/desktop-hero.jpg" alt="Chomp Sci, the computer science chatbot, answers a student's question.">
+                <img src="./images/desktop-hero.jpg" alt="Chomp, the computer science chatbot, answers a student's question.">
             </picture>
         </div>
         <h2>Just ask Chomp.</h2>
@@ -30,46 +30,67 @@
                     </p>
                 </div>
                 <div class="image-content">
-                        <img src="./images/programming.jpg" alt="Laptop on a desk">
+                        <img src="./images/programming.jpg" alt="A computer screen with code">
                 </div>
             </div>
-        </section>
-        <section class="content-style-2" id="content-2">
-            <div class="content">
+            <div class="content row-reverse">
                 <div class="text-content">
                     <h3 class="typographic-heading">How Does A Chatbot Work?</h3>                    
                     <p class="typographic-paragraph">
                         Chomp was built using the open source <a href="https://rasa.com/">RASA project</a>.
                     </p>
 					<p class="typographic-paragraph">
-						RASA has an AI powered Natural Language Understanding system. This uses machine learning to analyze user input and try to match them to intents and extract topics. For example, when you ask Chomp “What is an algorithm?” the NLU is what lets it recognize that is a “question” about the topic of “algorithms”.
-					</p>
-					<p class="typographic-paragraph">
-                        Once RASA has made its best guess at the user’s intent and topic it uses that info to look up an appropriate pre-written response. These pre-written responses are less interesting than the computer generated answers you might get from a system like ChatGPT, but because they were carefully written by a human they are more predictable and trust worthy than a generated answer. This makes them a great choice for academic situations where accuracy is important or for business situations where there may be legal consequences to the computer giving a wrong answer.
+						RASA has an AI powered Natural Language Understanding system. This uses machine learning to analyze user input and try to match them to intents and extract topics. For example, when you ask Chomp “What is an algorithm?”, the NLU is what lets it recognize that is a “question” about the topic of “algorithms”.
+                        Once RASA has made its best guess at the user’s intent and topic, it uses that information to look up an appropriate pre-written response. These pre-written responses are less interesting than the computer generated answers you might get from a system like ChatGPT, but because they were carefully written by a human, they are more predictable and trustworthy than a generated answer. This makes them a great choice for academic situations where accuracy is important or for business situations where there may be legal consequences to the computer giving a wrong answer.
                     </p>
 					<p class="typographic-paragraph">
-						In other words RASA uses AI to <strong>flexibly understand</strong> what you say to it, and then relies on human designed answers to provide <strong>predictable responses</strong>.
+						In other words, RASA uses AI to <strong>flexibly understand</strong> what you say to it, and then relies on human designed answers to provide <strong>predictable responses</strong>.
 					</p>
                 </div>
                 <div class="image-content">
-                        <img src="./images/nodes.jpg" alt="Nodes">
+                        <img src="./images/nodes.jpg" alt="Nodes connected by many lines">
                 </div>
             </div>
-        </section>   
+        </section>
     </div>
     <section id="footer">
-        <h3>Who Made All This?</h3>
+        <h2>Who Made All This?</h2>
         <div id="footer-content">
             <div id="col-1">
                 <p class="typographic-paragraph">
-                    Chomp and the ChompSci website were created as part of a computer science final project at the University of Florida.
+                    Chomp and the ChompSci website were created by Team Voltaic Sparrow as part of a computer science final project at the University of Florida.
                 </p>                
             </div>
-            <div id="col-2">
-                <p class="typographic-paragraph">
-                    The team included Robert Caplin, Scott Cornaby, Benjamin Moffett, Christopher Schmidt and Katriana O’Hara
-                </p>                
+            <div class="bios">
+                <div class="single-bio">
+                    <h3 class="name">Robert Caplin</h3>
+                    <img src="./images/bob.jpg" alt="Robert Caplin">
+                    <p>Bob Caplin has worked in Automated QA and Tech Support for Info Tech, Inc. He has prior degrees in Microbiology and Management from the University of Florida. He is passionate about software and would like to work for a software development company after graduation. Bob enjoys fitness and has trained in karate and competed in survival competitions. </p>
+                </div>
+                <div class="single-bio">
+                    <h3 class="name">Scott Cornaby</h3>
+                    <img src="./images/scott.jpg" alt="Scott Cornaby">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, elit quis molestie sodales, libero ante lobortis ante, id congue mi mi id neque.</p>
+                </div>
+                <div class="single-bio">
+                    <h3 class="name">Benjamin Moffett</h3>
+                    <img src="./images/ben.jpg" alt="Benjamin Moffett">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, elit quis molestie sodales, libero ante lobortis ante, id congue mi mi id neque.</p>
+                </div>
+                <div class="single-bio">
+                    <h3 class="name">Katriana O'Hara</h3>
+                    <img src="./images/kat.jpg" alt="Katriana O'Hara">
+                    <p>Katriana O’Hara is finishing her degree in Computer Science with a minor in Anthropology at the University of Florida. Following graduation, she hopes to pursue a career in cybersecurity as it is a path that combines her passions for computers and helping others. Katriana was a competitive baton twirler for 13 years and continues to practice in her free time though she no longer competes. </p>
+                </div>
+                <div class="single-bio">
+                    <h3 class="name">Christopher Schmidt</h3>
+                    <img src="./images/chris.jpg" alt="Christopher Schmidt">
+                    <p>Christopher Schmidt is a student at the University of Florida working toward a Bachelor's in Computer Science with a minor in Mathematics. He is pursuing a career in software engineering as he enjoys learning about and working with new technology. Outside of college, Christopher regularly participates in badminton and basketball in his free time, along with other hobbies like reading.</p>
+                </div>
             </div>
+        </div>
+        <div class="info-section">
+            Team Voltaic Sparrow | Project ChompSci | Class of 2023
         </div>
     </section>
 </body>

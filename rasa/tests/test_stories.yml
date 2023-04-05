@@ -20,29 +20,29 @@ stories:
   steps:
   - user: |
       What are online classes like?
-    intent: faq/ufonline
-  - action: utter_faq/ufonline
+    intent: ask_about_online_program
+  - action: utter_talk_about_online_program
 
 - story: ask about online classes 2
   steps:
   - user: |
       tell me about ufonline
-    intent: faq/ufonline
-  - action: utter_faq/ufonline
+    intent: ask_about_online_program
+  - action: utter_talk_about_online_program
 
 - story: ask about campus classes 1
   steps:
   - user: |
       Are campus classes better?
-    intent: faq/ufcampus
-  - action: utter_faq/ufcampus
+    intent: ask_about_campus
+  - action: utter_talk_about_campus
 
 - story: ask about campus classes 2
   steps:
   - user: |
       how are campus classes?
-    intent: faq/ufcampus
-  - action: utter_faq/ufcampus
+    intent: ask_about_campus
+  - action: utter_talk_about_campus
   
 - story: ask about adjacent fields 1
   steps:
@@ -129,7 +129,7 @@ stories:
 - story: ask about adjacent fields 5
   steps:
   - user: |
-      compare computer science
+      compare computer science to other fields
     intent: adjacent_fields
   - action: utter_ask_major_differences
   - user: |
@@ -187,15 +187,15 @@ stories:
   steps:
   - user: |
       What is Computer Science anyway?
-    intent: faq/csdefinition
-  - action: utter_faq/csdefinition
+    intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
 
 - story: computer science definition 2
   steps:
   - user: |
       can you define computer science
-    intent: faq/csdefinition
-  - action: utter_faq/csdefinition
+    intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
 
 - story: etymology of computer science 1
   steps:
@@ -464,3 +464,52 @@ stories:
       Tell me about [computational physics]{"entity": "topic"}
     intent: request_topics
   - action: action_request_topics
+
+- story: who are you 1
+  steps:
+  - user: |
+      Who are you?
+    intent: faq/who_are_you
+  - action: utter_faq/who_are_you
+
+- story: purpose 1
+  steps:
+  - user: |
+      Why were you created?
+    intent: faq/purpose
+  - action: utter_faq/purpose
+
+- story: purpose 2
+  steps:
+  - user: |
+      who made u
+    intent: faq/purpose
+  - action: utter_faq/purpose
+
+- story: help 1
+  steps:
+  - user: |
+      What am I supposed to do?
+    intent: faq/help
+  - action: utter_faq/help
+
+- story: help 2
+  steps:
+  - user: |
+      can u help
+    intent: faq/help
+  - action: utter_faq/help
+
+- story: how do you work 1
+  steps:
+  - user: |
+      how were you made?
+    intent: faq/how_do_you_work
+  - action: utter_faq/how_do_you_work
+
+- story: how do you work 2
+  steps:
+  - user: |
+      tell me what technology you use
+    intent: faq/how_do_you_work
+  - action: utter_faq/how_do_you_work
