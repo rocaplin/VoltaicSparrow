@@ -61,15 +61,11 @@ function App() {
                   appendChat({quick_replies: qrArray}, true);
               } else if (key === "attachment") {
                   appendChat({attachment: res[key]}, true);
-              } else {
-                  // NOTE: May want to make console output dependent on 
-                  // a debug flag.
+              } else if (process.env.NODE_ENV !== "production") {
                   // Unsupported response type:
-                  if (process.env.NODE_ENV !== "production") {
                     console.log("Unhandled Response Type:")
                     console.log(`{${key}: ${res[key]}}`);
                     console.log(res);
-                  }
               }
           };
       });
