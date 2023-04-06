@@ -241,7 +241,7 @@ Earning a college degree demonstrates your ability to achieve and learn, traits 
   - text: "I can answer basic questions you might have about studying Computer Science at the University of Florida. Some Computer Science topics I can discuss include:"
     buttons:
     - title: "a definition"
-      payload: "/faq/csdefinition"
+      payload: "/ask_about_computer_science"
     - title: "a history"
       payload: "/faq/cshistory"
     - title: "related careers"

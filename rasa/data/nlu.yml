@@ -106,31 +106,23 @@ nlu:
 
 - intent: request_jobs
   examples: |
-    - [Computer Programmer]{"entity": "job", "value": "computer programmer"} jobs
-    - [it architect]{"entity": "job", "value": "it architect"} jobs
+    - [computer programmer]{"entity": "job", "value": "computer programmer"} jobs
     - [video game developer]{"entity": "job", "value": "video game developer"} jobs
-    - [Security Analyst]{"entity": "job", "value": "security analyst"} careers
-    - [Web Designer]{"entity": "job", "value": "web designer"} careers
+    - [security analyst]{"entity": "job", "value": "security analyst"} careers
+    - [web designer]{"entity": "job", "value": "web designer"} careers
     - [web developer]{"entity": "job", "value": "web developer"} careers
-    - Jobs as a [Video Game Developer]{"entity": "job", "value": "video game developer"}
     - Jobs as a [graphic designer]{"entity": "job", "value": "graphic designer"}
     - Jobs as a [mathematician]{"entity": "job", "value": "mathematician"}
-    - Careers as a [Systems Analyst]{"entity": "job", "value": "systems analyst"}
+    - Careers as a [systems analyst]{"entity": "job", "value": "systems analyst"}
     - Careers as a [software engineer]{"entity": "job", "value": "software engineer"}
-    - What jobs are there as a [computer programmer]{"entity": "job", "value": "computer programmer"}
-    - What careers are there as a [Computer Programmer]{"entity": "job", "value": "computer programmer"}
+    - What jobs are there as a [it architect]{"entity": "job", "value": "it architect"}
+    - What careers are there as a [coder]{"entity": "job", "value": "computer programmer"}
     - What careers are there as a [database administrator]{"entity": "job", "value": "database administrator"}
-    - [Network Administrator]{"entity": "job", "value": "network administrator"}
-    - [Video Game Developer]{"entity": "job", "value": "video game developer"}
-    - What does a [programmer]{"entity": "job", "value": "computer programmer"} do?
-    - tell me about being a [coder]{"entity": "job", "value": "computer programmer"}
+    - [network administrator]{"entity": "job", "value": "network administrator"}
     - what do [coders]{"entity": "job", "value": "computer programmer"} do
-    - What is a [programmer]{"entity": "job", "value": "computer programmer"}?
     - Tell me about what [programmers]{"entity": "job", "value": "computer programmer"} do.
     - what are [computer programmers]{"entity": "job", "value": "computer programmer"}
-    - what's it like to be a [mathematician]{"entity": "job", "value": "mathematician"}
     - what do [graphic designers]{"entity": "job", "value": "graphic designer"} do?
-    - What's it like to work in [graphic design]{"entity": "job", "value": "graphic designer"}?
     - what does a [security specialist]{"entity": "job", "value": "security analyst"} do
     - what are [security specialists]{"entity": "job", "value": "security analyst"}
     - tell me what [information security officers]{"entity": "job", "value": "security analyst"} do
@@ -139,19 +131,17 @@ nlu:
     - What does a [data analyst]{"entity": "job", "value": "data scientist"} do?
     - What do [data analysts]{"entity": "job", "value": "data scientist"} do
     - what do [data scientists]{"entity": "job", "value": "data scientist"} do?
-    - tell me about [data scientists]{"entity": "job", "value": "data scientist"}
+    - what is a [data scientist]{"entity": "job", "value": "data scientist"}
     - tell me what a [computer engineer]{"entity": "job", "value": "hardware engineer"} is
     - What are [computer engineers]{"entity": "job", "value": "hardware engineer"}?
     - what are [dbas]{"entity": "job", "value": "database administrator"}
     - what's a [dba]{"entity": "job", "value": "database administrator"}
-    - tell me about [dbas]{"entity": "job", "value": "database administrator"}
-    - What is it like to be a [dba]{"entity": "job", "value": "database administrator"}?
     - What do [database administrators]{"entity": "job", "value": "database administrator"} do?
-    - Tell me what a [software engineer]{"entity": "job", "value": "software engineer"} does?
     - What are [software engineers]{"entity": "job", "value": "software engineer"}?
-    - tell me about [software engineers]{"entity": "job", "value": "software engineer"}
     - tell me about [network admins]{"entity": "job", "value": "network administrator"}
+    - What does a [network admin]{"entity": "job", "value": "network administrator"} do?
     - What is it like to work as a [network analyst]{"entity": "job", "value": "network administrator"}?
+    - Can you tell me what [network analysts]{"entity": "job", "value": "network administrator"} do?
     - what are [network administrators]{"entity": "job", "value": "network administrator"}
     - what are [game programmers]{"entity": "job", "value": "video game developer"}
     - What does a [game programmer]{"entity": "job", "value": "video game developer"} do?
@@ -165,7 +155,6 @@ nlu:
     - what are [front end developers]{"entity": "job", "value": "web developer"}
     - Tell me what a [front end engineer]{"entity": "job", "value": "web developer"} does.
     - what do [front end engineers]{"entity": "job", "value": "web developer"} do
-    - What is a [web designer]{"entity": "job", "value": "web designer"}?
     - tell me about [web designers]{"entity": "job", "value": "web designer"}
     - what is a [ui/ux designer]{"entity": "job", "value": "web designer"}
     - What are [ui/ux designers]{"entity": "job", "value": "web designer"}
@@ -175,8 +164,7 @@ nlu:
     - Tell me about [systems analysts]{"entity": "job", "value": "systems analyst"}
     - What is a [system analyst]{"entity": "job", "value": "systems analyst"}?
     - What are [system analysts]{"entity": "job", "value": "systems analyst"}?
-    - Tell me what a [business systems analyst]{"entity": "job", "value": "systems analyst"} is.
-    - What are [business systems analysts]{"entity": "job", "value": "systems analyst"}?
+    - Tell me what a [software developer]{"entity": "job", "value": "software developer"} does.
     - tell me about [software developers]{"entity": "job", "value": "software developer"}
 
 - lookup: job
@@ -404,7 +392,9 @@ nlu:
     - how was computer science invented
     - Where did computer science come from?
     - how did computer science start
+    - How was computer science developed?
     - who made computer science
+    - When was Computer Science started?
 
 - intent: faq/leibniz
   examples: |
@@ -456,6 +446,7 @@ nlu:
     - Career prospects
     - what is computer science good for?
     - where can I go with computer science?
+    - what do computer science majors do
 
 - intent: other_cscareers
   examples: |
@@ -500,26 +491,25 @@ nlu:
   examples: |
     - Can you tell me about [concurrency]{"entity": "topic", "value": "concurrency"}
     - Can you tell me about [data structures]{"entity": "topic", "value": "data structures"}
-    - what is [dsa]{"entity": "topic", "value": "data structures"}
     - Can you tell me about [coding theory]{"entity": "topic", "value": "coding theory"}
     - Can you tell me about [natural language processing]{"entity": "topic", "value": "natural language processing"}
     - What do you know about [nlp]{"entity": "topic", "value": "natural language processing"}
     - Can you tell me about [programming language theory]{"entity": "topic", "value": "programming language theory"}
     - Can you tell me about [game theory]{"entity": "topic", "value": "game theory"}
-    - What is [AI]{"entity": "topic", "value": "artificial intelligence"}
+    - What is [ai]{"entity": "topic", "value": "artificial intelligence"}
     - What is [discrete mathematics]{"entity": "topic", "value": "discrete mathematics"}
-    - what is [discrete math]{"entity": "topic", "value": "discrete math"}
+    - what is [discrete math]{"entity": "topic", "value": "discrete mathematics"}
     - What is [programming language pragmatics]{"entity": "topic", "value": "programming language pragmatics"}
     - What is [quantum computing theory]{"entity": "topic", "value": "quantum computing theory"}
     - What is [mathematical logic]{"entity": "topic", "value": "mathematical logic"}
     - What are [algorithms]{"entity": "topic", "value": "algorithms"}
     - what's an [algorithm]{"entity": "topic", "value": "algorithms"}
     - What are [operating systems]{"entity": "topic", "value": "operating systems"}
-    - I'd like to learn about [Cryptography]{"entity": "topic", "value": "cryptography"}
+    - I'd like to learn about [cryptography]{"entity": "topic", "value": "cryptography"}
     - tell me about [crypto]{"entity": "topic", "value": "cryptography"}
     - I'd like to learn about [computer vision]{"entity": "topic", "value": "computer vision"}
     - I'd like to learn about [computer security]{"entity": "topic", "value": "computer security"}
-    - I'd like to learn about [computational complexity theory]{"entity": "topic", "value": "computational complexity"}
+    - I'd like to learn about [computational complexity theory]{"entity": "topic", "value": "computational complexity theory"}
     - Tell me about [networking]{"entity": "topic", "value": "networking"}
     - Tell me about [artificial intelligence]{"entity": "topic", "value": "artificial intelligence"}
     - Tell me about [computer architecture]{"entity": "topic", "value": "computer architecture"}
@@ -532,7 +522,6 @@ nlu:
     - what are [bioinformatics]{"entity": "topic", "value": "bioinformatics and computational biology"}
     - [robotics]{"entity": "topic", "value": "robotics"}
     - [image processing]{"entity": "topic", "value": "image processing"}
-    - [quantum computing theory]{"entity": "topic", "value": "quantum computing theory"}
     - [computational neuroscience]{"entity": "topic", "value": "computational neuroscience"}
 
 - intent: request_class_by_topic
