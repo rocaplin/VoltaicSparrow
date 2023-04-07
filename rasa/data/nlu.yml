@@ -20,7 +20,7 @@ nlu:
     - what's up
     - greetings
     - how goes it?
-    -howdy    
+    - howdy
 
 - intent: goodbye
   examples: |
@@ -91,40 +91,6 @@ nlu:
     - no thanks
     - naw
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -138,6 +104,87 @@ nlu:
     - Is the action server working
     - Action server test
 
+- intent: request_jobs
+  examples: |
+    - [computer programmer]{"entity": "job", "value": "computer programmer"} jobs
+    - [video game developer]{"entity": "job", "value": "video game developer"} jobs
+    - [security analyst]{"entity": "job", "value": "security analyst"} careers
+    - [web designer]{"entity": "job", "value": "web designer"} careers
+    - [web developer]{"entity": "job", "value": "web developer"} careers
+    - Jobs as a [graphic designer]{"entity": "job", "value": "graphic designer"}
+    - Jobs as a [mathematician]{"entity": "job", "value": "mathematician"}
+    - Careers as a [systems analyst]{"entity": "job", "value": "systems analyst"}
+    - Careers as a [software engineer]{"entity": "job", "value": "software engineer"}
+    - What jobs are there as a [it architect]{"entity": "job", "value": "it architect"}
+    - What careers are there as a [coder]{"entity": "job", "value": "computer programmer"}
+    - What careers are there as a [database administrator]{"entity": "job", "value": "database administrator"}
+    - [network administrator]{"entity": "job", "value": "network administrator"}
+    - what do [coders]{"entity": "job", "value": "computer programmer"} do
+    - Tell me about what [programmers]{"entity": "job", "value": "computer programmer"} do.
+    - what are [computer programmers]{"entity": "job", "value": "computer programmer"}
+    - what do [graphic designers]{"entity": "job", "value": "graphic designer"} do?
+    - what does a [security specialist]{"entity": "job", "value": "security analyst"} do
+    - what are [security specialists]{"entity": "job", "value": "security analyst"}
+    - tell me what [information security officers]{"entity": "job", "value": "security analyst"} do
+    - What's an [information security officer]{"entity": "job", "value": "security analyst"}?
+    - Tell me about [security analysts]{"entity": "job", "value": "security analyst"}.
+    - What does a [data analyst]{"entity": "job", "value": "data scientist"} do?
+    - What do [data analysts]{"entity": "job", "value": "data scientist"} do
+    - what do [data scientists]{"entity": "job", "value": "data scientist"} do?
+    - what is a [data scientist]{"entity": "job", "value": "data scientist"}
+    - tell me what a [computer engineer]{"entity": "job", "value": "hardware engineer"} is
+    - What are [computer engineers]{"entity": "job", "value": "hardware engineer"}?
+    - what are [dbas]{"entity": "job", "value": "database administrator"}
+    - what's a [dba]{"entity": "job", "value": "database administrator"}
+    - What do [database administrators]{"entity": "job", "value": "database administrator"} do?
+    - What are [software engineers]{"entity": "job", "value": "software engineer"}?
+    - tell me about [network admins]{"entity": "job", "value": "network administrator"}
+    - What does a [network admin]{"entity": "job", "value": "network administrator"} do?
+    - What is it like to work as a [network analyst]{"entity": "job", "value": "network administrator"}?
+    - Can you tell me what [network analysts]{"entity": "job", "value": "network administrator"} do?
+    - what are [network administrators]{"entity": "job", "value": "network administrator"}
+    - what are [game programmers]{"entity": "job", "value": "video game developer"}
+    - What does a [game programmer]{"entity": "job", "value": "video game developer"} do?
+    - What is a [game designer]{"entity": "job", "value": "video game developer"}?
+    - Tell me about [game designers]{"entity": "job", "value": "video game developer"}.
+    - what are [level designers]{"entity": "job", "value": "video game developer"}
+    - What does a [level designer]{"entity": "job", "value": "video game developer"} do?
+    - What are [game developers]{"entity": "job", "value": "video game developer"}?
+    - tell me about [web developers]{"entity": "job", "value": "web developer"}
+    - What's a [front end developer]{"entity": "job", "value": "web developer"}?
+    - what are [front end developers]{"entity": "job", "value": "web developer"}
+    - Tell me what a [front end engineer]{"entity": "job", "value": "web developer"} does.
+    - what do [front end engineers]{"entity": "job", "value": "web developer"} do
+    - tell me about [web designers]{"entity": "job", "value": "web designer"}
+    - what is a [ui/ux designer]{"entity": "job", "value": "web designer"}
+    - What are [ui/ux designers]{"entity": "job", "value": "web designer"}
+    - what is a [ux designer]{"entity": "job", "value": "web designer"}
+    - What do [ux designers]{"entity": "job", "value": "web designer"} do?
+    - what are [it architects]{"entity": "job", "value": "it architect"}
+    - Tell me about [systems analysts]{"entity": "job", "value": "systems analyst"}
+    - What is a [system analyst]{"entity": "job", "value": "systems analyst"}?
+    - What are [system analysts]{"entity": "job", "value": "systems analyst"}?
+    - Tell me what a [software developer]{"entity": "job", "value": "software developer"} does.
+    - tell me about [software developers]{"entity": "job", "value": "software developer"}
+
+- lookup: job
+  examples: |
+    - computer programmer
+    - mathematician
+    - graphic designer
+    - security analyst
+    - data scientist
+    - hardware engineer
+    - database administrator
+    - software engineer
+    - network administrator
+    - video game developer
+    - web developer
+    - web designer
+    - it architect
+    - systems analyst
+    - software developer
+    
 - intent: faq/credit_hours
   examples: |
     - How many credit hours are required for Computer Science students?
@@ -220,7 +267,7 @@ nlu:
     - I do not want to go into engineering
     - I am not interested in engineering
 
-- intent: faq/university
+- intent: ask_about_university
   examples: |
     - Tell me about the university.
     - What can you tell me about the university.
@@ -230,7 +277,7 @@ nlu:
     - Tell me about the school.
     - Tell me about the college.
     
-- intent: faq/ufonline
+- intent: ask_about_online_program
   examples: |
     - can you tell me about online classes?
     - tell me about ufonline
@@ -245,7 +292,7 @@ nlu:
     - how is school online?
     - how is online different than on campus?
 
-- intent: faq/ufcampus
+- intent: ask_about_campus
   examples: |
     - what are classes like at the university?
     - what is it like to be a student at UF?
@@ -267,11 +314,17 @@ nlu:
     
 - intent: adjacent_fields
   examples: |
-    - how does computer science compare to  other fields?
+    - how does computer science compare to other fields?
     - what is the difference between computer science and other fields?
     - computer science versus other majors
     - compare computer science and other fields
     - tell me about how computer science is different from other majors
+    - what makes computer science unique from other fields?
+    - comp sci versus other programs
+    - is computer science different from other majors?
+    - what makes computer science different from other majors?
+    - are other majors better than computer science?
+    - what other fields are there related to computer science?
     
 - intent: electrical
   examples: |
@@ -310,7 +363,7 @@ nlu:
     - info systems
     - systems
 
-- intent: faq/csdefinition
+- intent: ask_about_computer_science
   examples: |
     - what is computer science?
     - What does Computer Science mean?
@@ -345,7 +398,9 @@ nlu:
     - how was computer science invented
     - Where did computer science come from?
     - how did computer science start
+    - How was computer science developed?
     - who made computer science
+    - When was Computer Science started?
 
 - intent: faq/leibniz
   examples: |
@@ -397,6 +452,7 @@ nlu:
     - Career prospects
     - what is computer science good for?
     - where can I go with computer science?
+    - what do computer science majors do
 
 - intent: other_cscareers
   examples: |
@@ -413,25 +469,6 @@ nlu:
     - is that it?
     - what else is there?
     - are there more careers?
-
-- intent: request_jobs
-  examples: |
-    - [Computer Programmer]{"entity": "job"} jobs
-    - [it architect]{"entity": "job"} jobs
-    - [video game developer]{"entity": "job"} jobs
-    - [Security Analyst{"entity": "job"} careers
-    - [Web Designer]{"entity": "job"} careers
-    - [web developer]{"entity": "job"} careers
-    - Jobs as a [Video Game Developer]{"entity": "job"}
-    - Jobs as a [graphic designer]{"entity": "job"}
-    - Jobs as a [mathematician]{"entity": "job"}
-    - Careers as a [Systems Analyst]{"entity": "job"}
-    - Careers as a [software engineer]{"entity": "job"}
-    - What jobs are there as a [computer programmer]{"entity": "job"}
-    - What careers are there as a [Computer Programmer]{"entity": "job"}
-    - What careers are there as a [database administrator]{"entity": "job"}
-    - [Network Administrator]{"entity": "job"}
-    - [Video Game Developer]{"entity": "job"}
 
 - intent: common_cstopics
   examples: |
@@ -455,148 +492,63 @@ nlu:
     - which topics are taught in computer science
     - which topics are covered in computer science?
 
-
 - intent: request_topics
   examples: |
-    - Can you tell me about [Concurrency]{"entity": "topic"}
-    - Can you tell me about [data structures]{"entity": "topic"}
-    - Can you tell me about [coding theory]{"entity": "topic"}
-    - Can you tell me about [Natural language processing]{"entity": "topic"}
-    - Can you tell me about [programming language theory]{"entity": "topic"}
-    - Can you tell me about [game theory]{"entity": "topic"}
-    - What is [AI]{"entity": "topic"}
-    - What is [Game theory]{"entity": "topic"}
-    - What is [discrete mathematics]{"entity": "topic"}
-    - What is [Programming language pragmatics]{"entity": "topic"}
-    - What is [quantum computing theory]{"entity": "topic"}
-    - What is [Mathematical logic]{"entity": "topic"}
-    - What are [algorithms]{"entity": "topic"}
-    - What are [Data structures]{"entity": "topic"}
-    - What are [operating systems]{"entity": "topic"}
-    - What are [Programming language pragmatics]{"entity": "topic"}
-    - I'd like to learn about [Cryptography]{"entity": "topic"}
-    - I'd like to learn about [computer vision]{"entity": "topic"}
-    - I'd like to learn about [computer security]{"entity": "topic"}
-    - I'd like to learn about [Programming language theory]{"entity": "topic"}
-    - I'd like to learn about [computational complexity theory]{"entity": "topic"}
-    - Tell me about [Networking]{"entity": "topic"}
-    - Tell me about [Artificial intelligence]{"entity": "topic"}
-    - Tell me about [Computer architecture]{"entity": "topic"}
-    - Tell me about [Software engineering]{"entity": "topic"}
-    - Tell me about [Human-computer interaction]{"entity": "topic"}
-    - Tell me about [Bioinformatics and computational biology]{"entity": "topic"}
-    - [Robotics]{"entity": "topic"}
-    - [Image processing]{"entity": "topic"}
-    - [Quantum computing theory]{"entity": "topic"}
-    - [Computational neuroscience]{"entity": "topic"}
+    - Can you tell me about [concurrency]{"entity": "topic", "value": "concurrency"}
+    - Can you tell me about [data structures]{"entity": "topic", "value": "data structures"}
+    - Can you tell me about [coding theory]{"entity": "topic", "value": "coding theory"}
+    - Can you tell me about [natural language processing]{"entity": "topic", "value": "natural language processing"}
+    - What do you know about [nlp]{"entity": "topic", "value": "natural language processing"}
+    - Can you tell me about [programming language theory]{"entity": "topic", "value": "programming language theory"}
+    - Can you tell me about [game theory]{"entity": "topic", "value": "game theory"}
+    - What is [ai]{"entity": "topic", "value": "artificial intelligence"}
+    - What is [discrete mathematics]{"entity": "topic", "value": "discrete mathematics"}
+    - what is [discrete math]{"entity": "topic", "value": "discrete mathematics"}
+    - What is [programming language pragmatics]{"entity": "topic", "value": "programming language pragmatics"}
+    - What is [quantum computing theory]{"entity": "topic", "value": "quantum computing theory"}
+    - What is [mathematical logic]{"entity": "topic", "value": "mathematical logic"}
+    - What are [algorithms]{"entity": "topic", "value": "algorithms"}
+    - what's an [algorithm]{"entity": "topic", "value": "algorithms"}
+    - What are [operating systems]{"entity": "topic", "value": "operating systems"}
+    - I'd like to learn about [cryptography]{"entity": "topic", "value": "cryptography"}
+    - tell me about [crypto]{"entity": "topic", "value": "cryptography"}
+    - I'd like to learn about [computer vision]{"entity": "topic", "value": "computer vision"}
+    - I'd like to learn about [computer security]{"entity": "topic", "value": "computer security"}
+    - I'd like to learn about [computational complexity theory]{"entity": "topic", "value": "computational complexity theory"}
+    - Tell me about [networking]{"entity": "topic", "value": "networking"}
+    - Tell me about [artificial intelligence]{"entity": "topic", "value": "artificial intelligence"}
+    - Tell me about [computer architecture]{"entity": "topic", "value": "computer architecture"}
+    - Tell me about [software engineering]{"entity": "topic", "value": "software engineering"}
+    - Tell me about [human-computer interaction]{"entity": "topic", "value": "human-computer interaction"}
+    - What is [hid]{"entity": "topic", "value": "human-computer interaction"}
+    - can you tell me about [human computer interaction]{"entity": "topic", "value": "human-computer interaction"}
+    - Tell me about [bioinformatics and computational biology]{"entity": "topic", "value": "bioinformatics and computational biology"}
+    - What is [computational biology]{"entity": "topic", "value": "bioinformatics and computational biology"}
+    - what are [bioinformatics]{"entity": "topic", "value": "bioinformatics and computational biology"}
+    - [robotics]{"entity": "topic", "value": "robotics"}
+    - [image processing]{"entity": "topic", "value": "image processing"}
+    - [computational neuroscience]{"entity": "topic", "value": "computational neuroscience"}
 
 - intent: request_class_by_topic
   examples: |
-    - USER REQUEST [Coding theory]{"entity": "topic"}
-    - CLASS REQUEST [Concurrency]{"entity": "topic"}
+    - USER REQUEST [coding theory]{"entity": "topic"}
+    - CLASS REQUEST [concurrency]{"entity": "topic"}
 
 - intent: request_job_by_topic
   examples: |
-    - USER JOB REQUEST [Algorithms]{"entity": "topic"}
-    - JOB REQUEST [Data structures]{"entity": "topic"}
+    - USER JOB REQUEST [algorithms]{"entity": "topic"}
+    - JOB REQUEST [data structures]{"entity": "topic"}
     
 - intent: request_class_by_code
   examples: |
-    - What is [COT 3100](class_code){"entity": "class_code"}
-    - I'd like to know more about [CIS 4949](class_code){"entity": "class_code"}
-    - Which class is [EGN 4952](class_code){"entity": "class_code"}
-    - Tell me about [MAS 3114](class_code){"entity": "class_code"}
-    - [CGS 4144](class_code){"entity": "class_code"}
-
-- lookup: job
-  examples: |
-    - Computer Programmer
-    - Mathematician
-    - Graphic Designer
-    - Security Analyst
-    - Data Scientist
-    - Hardware Engineer
-    - Database Administrator
-    - Software Engineer
-    - Network Administrator
-    - Video Game Developer
-    - Web Developer
-    - Web Designer
-    - IT Architect
-    - Systems Analyst
-    - Software Developer
-    - computer programmer
-    - mathematician
-    - graphic designer
-    - security analyst
-    - data scientist
-    - hardware engineer
-    - database administrator
-    - software engineer
-    - network administrator
-    - video game developer
-    - web developer
-    - web designer
-    - it architect
-    - systems analyst
-    - software developer
-
-- synonym: Artificial intelligence
-  examples: |
-    - AI
+    - What is [COT 3100]{"entity": "class_code"}
+    - I'd like to know more about [CIS 4949]{"entity": "class_code"}
+    - Which class is [EGN 4952]{"entity": "class_code"}
+    - Tell me about [MAS 3114]{"entity": "class_code"}
+    - [CGS 4144]{"entity": "class_code"}
     
 - lookup: topic
   examples: | 
-    - Coding theory
-    - Game theory
-    - Discrete mathematics
-    - Graph theory
-    - Mathematical logic
-    - Number theory
-    - Algorithms
-    - Data structures
-    - Artificial intelligence
-    - Automated reasoning
-    - Computer vision
-    - Soft computing
-    - Natural language processing
-    - Robotics
-    - Networking
-    - Computer security
-    - Cryptography
-    - Computer architecture
-    - Operating systems
-    - Computer graphics
-    - Image processing
-    - Information visualization
-    - Parallel computing
-    - Concurrency
-    - Distributed computing
-    - Relational databases
-    - Structured storage
-    - Data mining
-    - Compiler theory
-    - Programming language pragmatics
-    - Programming language theory
-    - Formal semantics
-    - Type theory
-    - Computational science
-    - Numerical analysis
-    - Symbolic computation
-    - Computational physics
-    - Computational chemistry
-    - Bioinformatics and Computational biology
-    - Computational neuroscience
-    - Formal methods
-    - Software engineering
-    - Algorithm design
-    - Computer programming
-    - Human-computer interaction
-    - Reverse engineering
-    - Automata theory
-    - Computability theory
-    - Computational complexity theory
-    - Quantum computing theory 
     - coding theory
     - game theory
     - discrete mathematics
@@ -732,3 +684,69 @@ nlu:
     - EEL 3701C
     - EEL 4744C
     - CIS 4940
+
+- intent: faq/who_are_you
+  examples: |
+    - Who are you?
+    - who are you
+    - who ru
+    - What are you?
+    - what ru
+    - what are you
+    - what do you do
+    - Tell me about yourself.
+    - tell me about you
+
+- intent: faq/purpose
+  examples: |
+    - Why were you made?
+    - why were you made
+    - why do you exist
+    - Why were you created?
+    - why were you created
+    - Who made you?
+    - who created you
+    - What is your purpose?
+    - what purpose do you have
+    - what's your purpose
+    - What is your goal?
+    - what's your goal
+
+- intent: faq/help
+  examples: |
+    - What am I supposed to do now?
+    - what am i supposed to do
+    - What do I do now?
+    - what do i do
+    - What now?
+    - What can I do?
+    - what can I do
+    - What can you do for me?
+    - what can you do
+    - What can you help me with?
+    - Can you help?
+    - can you help me
+    - help me
+    - help
+
+- intent: faq/how_do_you_work
+  examples: |
+    - How do you work?
+    - how do you work
+    - tell me how you work
+    - Tell me about how you work.
+    - How were you made?
+    - how were you made
+    - How were you created?
+    - What are you made of?
+    - what was used to create you
+    - What tech stack do you use?
+    - tell me what tech stack you use
+    - what tech stack are you built on
+    - what technology do you use?
+    - tell me about the technology you use
+    - How is a chatbot made?
+    - how are chatbots made
+    - how do chatbots work
+    - How can I make a chatbot?
+    - how could I make a chatbot

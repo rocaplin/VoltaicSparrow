@@ -6,6 +6,26 @@ stories:
   steps:
   - intent: request_action_test
   - action: action_hello_world
+
+- story: ask about university
+  steps:
+  - intent: ask_about_university
+  - action: utter_talk_about_university
+
+- story: ask about online program
+  steps:
+  - intent: ask_about_online_program
+  - action: utter_talk_about_online_program
+
+- story: ask about computer science
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+
+- story: ask about campus
+  steps:
+  - intent: ask_about_campus
+  - action: utter_talk_about_campus
   
 - story: courses path 1
   steps:
@@ -48,8 +68,8 @@ stories:
   - intent: electrical
   - action: utter_electrical_engineering
   - action: utter_ask_again
-  - intent: affirm
-  - action: utter_ask_major_differences
+  - intent: comp_eng
+  - action: utter_computer_engineering
 
 - story: adjacent fields path 2
   steps:
@@ -68,8 +88,8 @@ stories:
   - intent: comp_eng
   - action: utter_computer_engineering
   - action: utter_ask_again
-  - intent: affirm
-  - action: utter_ask_major_differences
+  - intent: info_tech
+  - action: utter_information_technology
 
 - story: adjacent fields path 4
   steps:
@@ -88,8 +108,8 @@ stories:
   - intent: info_tech
   - action: utter_information_technology
   - action: utter_ask_again
-  - intent: affirm
-  - action: utter_ask_major_differences
+  - intent: info_sys
+  - action: utter_information_systems
  
 - story: adjacent fields path 6
   steps:
@@ -108,8 +128,8 @@ stories:
   - intent: info_sys
   - action: utter_information_systems
   - action: utter_ask_again
-  - intent: affirm
-  - action: utter_ask_major_differences
+  - intent: electrical
+  - action: utter_electrical_engineering
 
 - story: adjacent fields path 8
   steps:
@@ -221,7 +241,7 @@ stories:
   - intent: request_class_by_code
   - action: action_request_class_by_code
 
-  - story: action request class by code 2
+- story: action request class by code 2
   steps:
   - intent: request_class_by_code
   - action: action_request_class_by_code

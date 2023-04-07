@@ -21,8 +21,8 @@ rules:
   steps:
   - intent: greet
   - action: utter_greet
-  
-- rule: Handle low confidence input
+
+- rule: bot does not understand (fallback)
   steps:
   - intent: nlu_fallback
-  - action: utter_topic_tips
+  - action: action_request_topic_tips

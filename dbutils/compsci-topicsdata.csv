@@ -1,10 +1,10 @@
 Computer Science Topics,Computer Science Topics Lowercase,Description,Key words,Possible courses,Possible Careers,Career 2,Personal Notes
-Coding theory,coding theory,"Coding theory is useful in networking, programming, system development, and other areas where computers communicate with each other.",Coding theory; coding,,,,"Very broad, probably not necessary"
+Coding theory,coding theory,"Coding theory is useful in networking, programming, system development, and other areas where computers communicate with each other.",Coding theory;coding,,,,"Very broad, probably not necessary"
 Game theory,game theory,Game theory is useful in artificial intelligence and cybernetics.,Game theory,,,,"Very broad, probably not necessary"
 Discrete mathematics,discrete mathematics,"Discrete mathematics covers the mathematics of discrete events; i.e., events that involve distinct elements, finite structures of distinct elements or finite sampled versions of continuous phenomena (such as movement).",Discrete; discrete mathematics; graphs; logic; proofs,COT3100,Mathematician,,Covered directly by a class
-Graph theory,graph theory,The study of graphs; Provides foundations for data structures and searching algorithms.,Graph; Graphs; Graph theory,COT3100; COP3530,Mathematician,,
+Graph theory,graph theory,The study of graphs; Provides foundations for data structures and searching algorithms.,Graph; Graphs; Graph theory,COT3100;  COP3530,Mathematician,,
 Mathematical logic,mathematical logic,The study of logic within mathematics. ,Mathematics; Logic,COT3100,Mathematician,,"Very broad, probably not necessary"
-Number theory,number theory,Theory of the integers. Used in cryptography as well as a test domain in artificial intelligence.,Number theory; Cryptography; Cryptology,CIS 4362,,,"Very broad, probably not necessary"
+Number theory,number theory,Theory of the integers. Used in cryptography as well as a test domain in artificial intelligence.,Number theory; Cryptography;  Cryptology,CIS 4362,,,"Very broad, probably not necessary"
 Algorithms,algorithms,Sequential and parallel computational procedures for solving a wide range of problems.,Algorithms; Search algorithms; Computational procedures,COP3530,Computer Programmer,,
 Data structures,data structures,The organization and manipulation of data. ,Data; Manipulation of data; Data structures,COP3530,Computer Programmer,,
 Artificial intelligence,artificial intelligence,The implementation and study of systems that exhibit an autonomous intelligence or behavior of their own.,Artificial Intelligence; AI; Machine learning; autonomous intelligence,CAP 4621; CAP 3032; CAP 4053,Software Engineer,Data Scientist,

@@ -177,7 +177,7 @@ class ActionRequestClassByTopic(Action):
                 dispatcher.utter_message(text=("I don't know of any classes related to " + topic_request.lower() + "."))
         else:
             if not topic_result["related_courses"]:
-                dispatcher.utter_message(text=("It doesn't seem like there are any careers related to this..."))
+                dispatcher.utter_message(text=("It doesn't seem like there are any classes related to this..."))
             else:
                 dispatcher.utter_message(text=("You can learn more about "+topic_request.lower()+" in these classes: \n" + topic_result["related_courses"]))
                 
@@ -205,32 +205,27 @@ class ActionRequestClassByCode(Action):
             if entity["entity"] == 'class_code':
                 class_request = entity['value'].upper()
 
-        if class_request is None:
-            random_courses = random.sample(courses.distinct("code"), 3)
-            dispatcher.utter_message(text=("Sorry, I don't quite understand your question... try rephrasing, or ask about one of these courses."), buttons=[
-                {"payload": "/request_class_by_code{\"class_code\": \"" + random_courses[0] + "\"}", "title": random_courses[0]},
-                {"payload": "/request_class_by_code{\"class_code\": \"" + random_courses[1] + "\"}", "title": random_courses[1]},
-                {"payload": "/request_class_by_code{\"class_code\": \"" + random_courses[2] + "\"}", "title": random_courses[2]}
-                ])
-        else:
-            class_result = courses.find_one({"code": class_request})
-            if not class_result:
-                random_courses = random.sample(courses.distinct("code"), 3)
-                if not class_request:
-                    dispatcher.utter_message(text=("I don't know of any classes with that code... try asking about one of these courses."), buttons=[
-                        {"payload": "/request_class_by_code{\"class_code\": \"" + random_courses[0] + "\"}", "title": random_courses[0]},
-                        {"payload": "/request_class_by_code{\"class_code\": \"" + random_courses[1] + "\"}", "title": random_courses[1]},
-                        {"payload": "/request_class_by_code{\"class_code\": \"" + random_courses[2] + "\"}", "title": random_courses[2]}
-                        ])
-                else:
-                    dispatcher.utter_message(text=("I don't know of any classes with the code " + class_request + "... try asking about one of these careers."), buttons=[
-                        {"payload": "/request_class_by_code{\"class_code\": \"" + random_courses[0] + "\"}", "title": random_courses[0]},
-                        {"payload": "/request_class_by_code{\"class_code\": \"" + random_courses[1] + "\"}", "title": random_courses[1]},
-                        {"payload": "/request_class_by_code{\"class_code\": \"" + random_courses[2] + "\"}", "title": random_courses[2]}
-                        ])
+
+        class_result = courses.find_one({"code": class_request})
+
+        if not class_result:
+            random_classes = random.sample(courses.distinct("class_code"), 3)
+            if not class_request:
+                dispatcher.utter_message(text=("Sorry, I don't quite understand your question... try rephrasing, or ask about one of these classes."), buttons=[
+                    {"payload": "/request_class_by_code{\"class_code\": \"" + random_classes[0] + "\"}", "title": random_classes[0]},
+                    {"payload": "/request_class_by_code{\"class_code\": \"" + random_classes[1] + "\"}", "title": random_classes[1]},
+                    {"payload": "/request_class_by_code{\"class_code\": \"" + random_classes[2] + "\"}", "title": random_classes[2]}
+                    ])
             else:
-                dispatcher.utter_message(text=(class_request + " is " + class_result["name"] + ": \n" + class_result["description"]))
+                dispatcher.utter_message(text=("I don't know of any classes with the code " + class_request + "... try rephrasing, or ask about one of these classes."), buttons=[
+                    {"payload": "/request_class_by_code{\"class_code\": \"" + random_classes[0] + "\"}", "title": random_classes[0]},
+                    {"payload": "/request_class_by_code{\"class_code\": \"" + random_classes[1] + "\"}", "title": random_classes[1]},
+                    {"payload": "/request_class_by_code{\"class_code\": \"" + random_classes[2] + "\"}", "title": random_classes[2]}
+                    ])
+        else:
+            dispatcher.utter_message(text=(class_request+ " is "+class_result["name"]+": " + class_result["description"]))
                 
+
         return []
     
 class ActionRequestJobByTopic(Action):
@@ -271,6 +266,38 @@ class ActionRequestJobByTopic(Action):
                 dispatcher.utter_message(text=("It doesn't seem like there are any careers related to this..."))
             else:
                 dispatcher.utter_message(text=("Here is a career related to " + topic.lower() + ": \n" + requested_topic["related_careers"]))
+
+        return []
+    
+class ActionRequestTopicTips(Action):
+
+    def name(self) -> Text:
+        return "action_request_topic_tips"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        slot_value = tracker.get_slot('current_topic')
+
+        topics_list = [["/faq/credit_hours", "Credit hours?"], ["faq/credit_hour_cost", "Cost of tuition?"], ["/faq/excess_hours","Excess hours?"], ["/faq/workload_per_hour","How much homework?"], ["/required_courses","Required courses?"], ["/ask_about_university","About UF"], ["/ask_about_online_program","About UF Online"], ["/ask_about_computer_science","What is Computer Science?"], ["/ask_about_campus","About UF Campus"], ["/adjacent_fields","Other fields like computer science"], ["/modern_computers","About modern computers"], ["/csetymology","Why is it called computer science?"], ["/common_cscareers","Computer Science careers"], ["/common_cstopics","Computer Science topics"]]
+        response_text = ""
+
+        if slot_value == "uf_campus":
+            response_text = "Sorry, are we still talking about the University of Florida? I can tell you about tuition, enrollment, credit hours, and more!"
+        elif slot_value == "uf_online":
+            response_text = "Sorry, are we still talking about UF Online? I can tell you about the required courses, credit hour requirements, or even how to start enrolling."
+        elif slot_value == "computer_science":
+            response_text = "Sorry, are we still talking about computer science? Try rephrasing your question or asking about a different topic."
+        else:
+            response_text = "Sorry, I don't understand what you want. Try rephrasing your question."
+            
+        random_topics = random.sample(topics_list, 3)
+        dispatcher.utter_message(text=response_text, buttons=[
+                {"payload": random_topics[0][0], "title": random_topics[0][1]},
+                {"payload": random_topics[1][0], "title": random_topics[1][1]},
+                {"payload": random_topics[2][0], "title": random_topics[2][1]}
+                ])
 
         return []
 

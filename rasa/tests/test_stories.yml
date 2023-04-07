@@ -1,6 +1,7 @@
 #### This file contains tests to evaluate that your bot behaves as expected.
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
+stories:
 - story: say goodbye
   steps:
   - user: |
@@ -55,10 +56,6 @@
   - action: utter_electrical_engineering
   - action: utter_ask_again
   - user: |
-      yes
-    intent: affirm
-  - action: utter_ask_major_differences
-  - user: |
       comp eng
     intent: comp_eng
   - action: utter_computer_engineering
@@ -95,10 +92,6 @@
     intent: comp_eng
   - action: utter_computer_engineering
   - action: utter_ask_again
-  - user: |
-      yeh
-    intent: affirm
-  - action: utter_ask_major_differences
   - user: |
       EE
     intent: electrical
@@ -152,10 +145,6 @@
     intent: info_sys
   - action: utter_information_systems
   - action: utter_ask_again
-  - user: |
-      yuh
-    intent: affirm
-  - action: utter_ask_major_differences
   - user: |
       Info tech
     intent: info_tech
@@ -442,3 +431,58 @@
       What are [programming language pragmatics]{"entity": "topic"}
     intent: request_topics
   - action: action_request_topics
+
+- story: topic to topic
+  steps:
+  - user: |
+      topics in cs?
+    intent: common_cstopics
+  - action: utter_common_cstopics
+  - user: |
+      What's [Image Processing]{"entity": "topic"}
+    intent: request_topics
+  - action: action_request_topics
+  - user: |
+      [coding theory]{"entity": "topic"}
+    intent: request_topics
+  - action: action_request_topics
+
+- story: career to career
+  steps:
+  - user: |
+      jobs?
+    intent: common_cscareers
+  - action: utter_common_cscareers
+  - user: |
+      [software engineer]{"entity": "job"} job
+    intent: request_jobs
+  - action: action_request_jobs
+  - user: |
+      [software developer]{"entity": "job"}
+    intent: request_jobs
+  - action: action_request_jobs
+
+- story: course to course
+  steps:
+  - user: |
+      tell me about [COP 4620]{"entity": "class_code"}
+    intent: request_class_by_code
+  - action: action_request_class_by_code
+  - user: |
+      [COP 4720]{"entity": "class_code"}
+    intent: request_class_by_code
+  - action: action_request_class_by_code
+
+- story: courses 1
+  steps:
+  - user: |
+      What's [CGS 4144]{"entity": "class_code"}
+    intent: request_class_by_code
+  - action: action_request_class_by_code
+
+- story: courses 2
+  steps:
+  - user: |
+      Give me some information about [PHY 2048]{"entity": "class_code"}
+    intent: request_class_by_code
+  - action: action_request_class_by_code
