@@ -66,8 +66,10 @@ const ChatLog = ({log, sendHandler}) => {
                         );
                     } else {
                         // Unsupported response type:
-                        console.log(Object.keys(elem));
-                        console.log(elem);
+                        if (process.env.NODE_ENV !== "production") {
+                            console.log(Object.keys(elem));
+                            console.log(elem);
+                        }
                     }
                 })
             }

@@ -1,0 +1,33 @@
+# Stage 1: Build React App and copy static resources.
+# Pull the Node image from Docker Hub
+FROM node:14-slim AS build
+
+# Setting Working Directory
+WORKDIR /usr/app
+
+# Copying only package.json
+COPY package*.json ./
+
+# Install Dependencies
+RUN npm install --ignore-scripts
+
+# Copy rest of the code to image.
+COPY public ./public 
+COPY src ./src
+
+# Run React Unit Tests.
+# If tests fail, build will not complete.
+ENV CI=true
+RUN npm test
+
+# Build the React App.
+RUN npm run build
+
+# Stage 2: Build deployment image.
+FROM nginxinc/nginx-unprivileged
+
+# Copy nginx config to image.
+COPY nginx /etc/nginx
+
+# Copy React bundle to public.
+COPY --from=build /usr/app/build /usr/share/nginx/html

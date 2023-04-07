@@ -10,12 +10,16 @@ import ChatInput from "./components/chat-input/chat-input.component";
 const socket = io(`${window.location.protocol}//${window.location.hostname}:5005`);
 
 socket.on('connect', function() {
-  console.log("Connected to Rasa.");
+  if (process.env.NODE_ENV !== "production") {
+    console.log("Connected to Rasa.");
+  }
   socket.emit("user_uttered", {message: "/greet"});
 });
 
 socket.on('connect_error', (error) => {
-  console.log(error);
+  if (process.env.NODE_ENV !== "production") {
+    console.log(error);
+  }
 });
 
 
@@ -57,24 +61,27 @@ function App() {
                   appendChat({quick_replies: qrArray}, true);
               } else if (key === "attachment") {
                   appendChat({attachment: res[key]}, true);
-              } else {
-                  // NOTE: May want to make console output dependent on 
-                  // a debug flag.
+              } else if (process.env.NODE_ENV !== "production") {
                   // Unsupported response type:
-                  console.log("Unhandled Response Type:")
-                  console.log(`{${key}: ${res[key]}}`);
-                  console.log(res);
+                    console.log("Unhandled Response Type:")
+                    console.log(`{${key}: ${res[key]}}`);
+                    console.log(res);
               }
           };
       });
     }, []);
 
   // Send requests to Rasa websocket channel then add to chatLog.
-  const sendRequest = async (req) => {
-      // Rasa is expecting "message" key for texts, it will not 
-      // respond if "text" is used as key.
+  // req - a string "message" to send to Rasa.
+  // alt - optional alt text to log in the chat log,
+  //       for human-readable quick_links.
+  const sendRequest = async (req, alt) => {
+      // Rasa will only respond to "message" key.
       let message = {message: req};
      await socket.emit("user_uttered", message);
+     if (alt) {
+      message = {message: alt};
+     }
      appendChat(message, false);
   };
 

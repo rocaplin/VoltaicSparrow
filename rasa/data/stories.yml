@@ -27,6 +27,26 @@ stories:
   - intent: ask_about_campus
   - action: utter_talk_about_campus
   
+- story: ask about university
+  steps:
+  - intent: ask_about_university
+  - action: utter_talk_about_university
+  
+- story: ask about online program
+  steps:
+  - intent: ask_about_online_program
+  - action: utter_talk_about_online_program
+  
+- story: ask about computer science
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  
+- story: ask about campus
+  steps:
+  - intent: ask_about_campus
+  - action: utter_talk_about_campus
+  
 - story: courses path 1
   steps:
   - intent: required_courses

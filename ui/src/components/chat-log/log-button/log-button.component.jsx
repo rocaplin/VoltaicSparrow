@@ -23,7 +23,7 @@ const LogButton = ({buttons, sendHandler}) => {
                             // https://reactjs.org/docs/faq-functions.html
                             // https://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/
                             onClick={() => {
-                                sendHandler(qr_link.payload);
+                                sendHandler(qr_link.payload, qr_link.title);
                                 scrollToBottom({behavior: 'auto'});
                             }}
                         >

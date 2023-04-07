@@ -232,6 +232,42 @@ Earning a college degree demonstrates your ability to achieve and learn, traits 
   For a complete list of subfields and their topics, refer to this link: https://en.wikipedia.org/wiki/Outline_of_computer_science
   
   You can ask me about any of the topics listed under each subfield."
+  
+  utter_online_topic_tips:
+  - text: "Are we still talking about UF Online? I can tell you about the required courses, credit hour requirements or even how to start enrolling." 
+  
+  utter_computer_science_topic_tips:
+  - text: "Are we still talking about computer science? Try rephrasing your question or asking about a different topic."
+
+  utter_faq/who_are_you:
+  - text: "I'm Chomp Sci, a chatbot designed to answer questions about studying Computer Science at the University of Florida."
+
+  utter_faq/purpose:
+  - text: "Team Voltaic Sparrow made me for their Spring 2023 Senior Project, CIS4914. My goal is to answer basic questions about studying Computer Science at the University of Florida."
+    buttons:
+    - title: "CIS 4914"
+      payload: "/request_class_by_code{\"class_code\": \"CIS 4914\"}"
+
+  utter_faq/help:
+  - text: "I can answer basic questions you might have about studying Computer Science at the University of Florida. Some Computer Science topics I can discuss include:"
+    buttons:
+    - title: "a definition"
+      payload: "/faq/csdefinition"
+    - title: "a history"
+      payload: "/faq/cshistory"
+    - title: "related careers"
+      payload: "/common_cscareers"
+    - title: "required coursework"
+      payload: "/required_courses"
+    - title: "sub-topics"
+      payload: "/common_cstopics"
+
+  utter_faq/how_do_you_work:
+  - text: "Chomp Sci uses Rasa, a retrieval-based chatbot development platform.
+  
+  Your questions are sent to the Chomp Sci Rasa server. The server tries to match the questions to probable intents defined in the Natural Language Understanding (NLU) unit's training data.
+  
+  Once a likely intent is selected, the Rasa server will perform a predefined series of actions associated with the intent. This usually involves querying a database for information via the Rasa action server, and/ or returning an appropriate response."
 
   utter_faq/who_are_you:
   - text: "I'm Chomp Sci, a chatbot designed to answer questions about studying Computer Science at the University of Florida."

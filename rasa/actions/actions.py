@@ -143,8 +143,20 @@ class ActionRequestJobs(Action):
                     {"payload": "/request_jobs{\"job\": \"" + random_jobs[2].lower() + "\"}", "title": random_jobs[2]}
                     ])
             else:
-                dispatcher.utter_message(text=("Here is what I know about careers as a " + job + ": \n" + requested_job["description"]))
-                dispatcher.utter_message(text=("You can learn more about it in these classes: " + requested_job["related_courses"]))
+                response = ""
+                response += job
+                dispatcher.utter_message(text=("I'm not well-trained on " + response))
+        else:
+            courseArray = requested_job["related_courses"].split(';')
+
+            buttonList = []
+            for course in courseArray:
+                buttonList.append({"payload": "/request_class_by_code{\"class_code\": \"" + course.strip() + "\"}", "title": course})
+
+            dispatcher.utter_message(text=("Here is what I know about careers as a " + job + ": \n" + requested_job["description"]))
+            dispatcher.utter_message(text=("You can learn more about it in these classes: " + requested_job["related_courses"]))
+
+            dispatcher.utter_message(text=("Click the buttons below to learn more about each class:"), buttons=buttonList)
 
         return []
 
@@ -179,7 +191,16 @@ class ActionRequestClassByTopic(Action):
             if not topic_result["related_courses"]:
                 dispatcher.utter_message(text=("It doesn't seem like there are any classes related to this..."))
             else:
-                dispatcher.utter_message(text=("You can learn more about "+topic_request.lower()+" in these classes: \n" + topic_result["related_courses"]))
+                courseArray = topic_result["related_courses"].split(';')
+
+                dispatcher.utter_message(text=("You can learn more about "+topic_request.lower()+" in these classes: " + topic_result["related_courses"]))
+                
+                buttonList = []
+                for course in courseArray:
+                    buttonList.append({"payload": "/request_class_by_code{\"class_code\": \"" + course.strip() + "\"}", "title": course})
+
+
+                dispatcher.utter_message(text=("Click the buttons below to learn more about each class:"), buttons=buttonList)
                 
 
         return []
@@ -265,7 +286,14 @@ class ActionRequestJobByTopic(Action):
             if not requested_topic["related_careers"]:
                 dispatcher.utter_message(text=("It doesn't seem like there are any careers related to this..."))
             else:
-                dispatcher.utter_message(text=("Here is a career related to " + topic.lower() + ": \n" + requested_topic["related_careers"]))
+                jobArray = requested_topic["related_careers"].split(';')
+                dispatcher.utter_message(text=("Here are careers related to " + topic.lower() + ": " + requested_topic["related_careers"]))
+
+                buttonList = []
+                for job in jobArray:
+                    buttonList.append({"payload": "/request_jobs{\"job\": \"" + job.strip() + "\"}", "title": job})
+                
+                dispatcher.utter_message(text=("Click the buttons below to learn more about each career:"), buttons=buttonList)
 
         return []
     
