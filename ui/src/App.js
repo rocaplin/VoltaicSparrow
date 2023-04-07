@@ -10,12 +10,16 @@ import ChatInput from "./components/chat-input/chat-input.component";
 const socket = io(`${window.location.protocol}//${window.location.hostname}:5005`);
 
 socket.on('connect', function() {
-  console.log("Connected to Rasa.");
+  if (process.env.NODE_ENV !== "production") {
+    console.log("Connected to Rasa.");
+  }
   socket.emit("user_uttered", {message: "/greet"});
 });
 
 socket.on('connect_error', (error) => {
-  console.log(error);
+  if (process.env.NODE_ENV !== "production") {
+    console.log(error);
+  }
 });
 
 
@@ -57,13 +61,11 @@ function App() {
                   appendChat({quick_replies: qrArray}, true);
               } else if (key === "attachment") {
                   appendChat({attachment: res[key]}, true);
-              } else {
-                  // NOTE: May want to make console output dependent on 
-                  // a debug flag.
+              } else if (process.env.NODE_ENV !== "production") {
                   // Unsupported response type:
-                  console.log("Unhandled Response Type:")
-                  console.log(`{${key}: ${res[key]}}`);
-                  console.log(res);
+                    console.log("Unhandled Response Type:")
+                    console.log(`{${key}: ${res[key]}}`);
+                    console.log(res);
               }
           };
       });

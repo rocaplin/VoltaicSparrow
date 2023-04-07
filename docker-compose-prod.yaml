@@ -1,0 +1,48 @@
+version: "3"
+services:
+  
+  ui:
+   build:
+      context: ./ui
+      dockerfile: Dockerfile.prod
+   ports:
+    -  80:80
+   environment:
+    - DEPLOY_MODE=prod
+   container_name: mern-ui
+   volumes:
+    -  ./ui/src:/usr/app/src
+    -  ./ui/public:/usr/app/public
+   stdin_open: true
+   tty: true
+
+  db:
+    image: mongo
+    ports:
+      - 27017:27017
+    container_name: mongo-db
+    volumes:
+      - mongo-data:/data/db
+      - ./db:/seeddata
+      - ./db/initdb.sh:/docker-entrypoint-initdb.d/initdb.sh:ro
+      
+  rasa:
+    image: rasa/rasa:3.4.1-full
+    ports:
+      - 5005:5005
+    volumes:
+      - ./rasa:/app
+    command: run --enable-api --cors "*"
+    
+  action-server:
+    container_name: rasa-action-server
+    image: rasa/rasa:3.4.1-full
+    ports:
+      - 5055:5055
+    volumes:
+      - ./rasa/actions:/app/actions
+    command: run actions -p 5055 --cors "*"
+    
+volumes:
+  mongo-data:
+    driver: local
