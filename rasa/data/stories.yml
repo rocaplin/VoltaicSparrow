@@ -178,6 +178,22 @@ stories:
   - intent: request_topics
   - action: action_request_topics
 
+- story: cs topics 2
+  steps:
+  - intent: common_cstopics
+  - action: utter_common_cstopics
+  - intent: example_topics
+  - action: action_example_topics
+
+- story: cs topics 3
+  steps:
+  - intent: common_cstopics
+  - action: utter_common_cstopics
+  - intent: example_topics
+  - action: action_example_topics
+  - intent: request_topics
+  - action: action_request_topics
+
 - story: cs topics to class
   steps:
   - intent: common_cstopics

@@ -25,6 +25,7 @@ intents:
   - common_cscareers
   - other_cscareers
   - common_cstopics
+  - example_topics
   - request_action_test
   - request_topics:
       use_entities: true
@@ -149,6 +150,9 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
  - the tools we use to perform computations.
   
    Is there a specific topic you want to know more about, like AI or computer security?"
+    buttons:
+    - title: "What topics can I learn about?"
+      payload: "/common_cstopics"
 
   utter_modern_computers:
   - text: "The first general purpose computers began to be built in the United States and Europe during the late 1930s. The term Computer Science was coined in the 1950s to describe related coursework being offered by universities."
@@ -221,6 +225,9 @@ Earning a college degree demonstrates your ability to achieve and learn, traits 
   For a complete list of subfields and their topics, refer to this link: https://en.wikipedia.org/wiki/Outline_of_computer_science
   
   You can ask me about any of the topics listed under each subfield."
+    buttons:
+    - title: "Give me some examples."
+      payload: "/example_topics"
   
   utter_online_topic_tips:
   - text: "Are we still talking about UF Online? I can tell you about the required courses, credit hour requirements or even how to start enrolling." 
@@ -265,6 +272,7 @@ actions:
   - action_request_class_by_code
   - action_request_job_by_topic
   - action_request_jobs
+  - action_example_topics
 
 slots:
   current_topic:
