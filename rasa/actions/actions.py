@@ -329,3 +329,32 @@ class ActionRequestTopicTips(Action):
 
         return []
 
+class ActionExampleTopics(Action):
+
+    def name(self) -> Text:
+        return "action_example_topics"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        client = MongoClient('mongo-db', 27017)
+
+        db = client["chompsci"]
+        topics = db.topics
+
+        # topic = None
+
+        # for entity in tracker.latest_message['entities']:
+        #     if entity["entity"] == 'topic':
+        #         topic = entity['value']
+            
+        buttonList = []
+        randTopics = random.sample(topics.distinct("topic"), 3)
+        for topic in randTopics:
+            buttonList.append({"payload": "/request_topics{\"topic\": \"" + topic + "\"}", "title": topic})
+        
+        dispatcher.utter_message(text=("Here are some example topics I know about: "), buttons=buttonList)
+                    
+
+        return []
