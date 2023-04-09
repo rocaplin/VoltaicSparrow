@@ -1,0 +1,2 @@
+#Make sure that our linux docker shell scripts don't get switched to windows style endings
+*.sh            text eol=lf
