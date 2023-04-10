@@ -12,7 +12,7 @@ for %%i in (%*) do (
 	)
 	if /i "%%i" == "train" (
 		set /a cmdcount+=1
-			call :dockercmd train
+			call :dockercmd "train --domain ./domain"
 	)
 	if /i "%%i" == "test" (
 		set /a cmdcount+=1

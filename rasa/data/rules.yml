@@ -21,8 +21,3 @@ rules:
   steps:
   - intent: greet
   - action: utter_greet
-
-- rule: bot does not understand (fallback)
-  steps:
-  - intent: nlu_fallback
-  - action: action_request_topic_tips
