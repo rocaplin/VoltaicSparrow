@@ -119,39 +119,29 @@ class ActionRequestJobs(Action):
 
         requested_job = None
 
-        if job is None:
-            random_jobs = random.sample(job_list.distinct("job"), 3)
-            dispatcher.utter_message(text=("Sorry, I don't quite understand your question... try rephrasing, or ask about one of these careers."), buttons=[
-                    {"payload": "/request_jobs{\"job\": \"" + random_jobs[0].lower() + "\"}", "title": random_jobs[0]},
-                    {"payload": "/request_jobs{\"job\": \"" + random_jobs[1].lower() + "\"}", "title": random_jobs[1]},
-                    {"payload": "/request_jobs{\"job\": \"" + random_jobs[2].lower() + "\"}", "title": random_jobs[2]}
-                    ])
-        else:
+        if job:
             requested_job = job_list.find_one({"job_lower": job.lower()})
-            if not requested_job:
-                random_jobs = random.sample(job_list.distinct("job"), 3)
-                if not job:
-                    dispatcher.utter_message(text=("I don't know anything about that career... try asking about one of these careers."), buttons=[
-                    {"payload": "/request_jobs{\"job\": \"" + random_jobs[0].lower() + "\"}", "title": random_jobs[0]},
-                    {"payload": "/request_jobs{\"job\": \"" + random_jobs[1].lower() + "\"}", "title": random_jobs[1]},
-                    {"payload": "/request_jobs{\"job\": \"" + random_jobs[2].lower() + "\"}", "title": random_jobs[2]}
-                    ])
-                else:
-                    dispatcher.utter_message(text=("I don't know anything about " + job.lower() + "... try asking about one of these careers."), buttons=[
+
+        if not requested_job:
+            random_jobs = random.sample(job_list.distinct("job"), 3)
+            if not job:
+                dispatcher.utter_message(text=("I don't know anything about that career... try asking about one of these careers."), buttons=[
                     {"payload": "/request_jobs{\"job\": \"" + random_jobs[0].lower() + "\"}", "title": random_jobs[0]},
                     {"payload": "/request_jobs{\"job\": \"" + random_jobs[1].lower() + "\"}", "title": random_jobs[1]},
                     {"payload": "/request_jobs{\"job\": \"" + random_jobs[2].lower() + "\"}", "title": random_jobs[2]}
                     ])
             else:
-                response = ""
-                response += job
-                dispatcher.utter_message(text=("I'm not well-trained on " + response))
+                dispatcher.utter_message(text=("I don't know anything about " + job + "... try asking about one of these careers."), buttons=[
+                    {"payload": "/request_jobs{\"job\": \"" + random_jobs[0].lower() + "\"}", "title": random_jobs[0]},
+                    {"payload": "/request_jobs{\"job\": \"" + random_jobs[1].lower() + "\"}", "title": random_jobs[1]},
+                    {"payload": "/request_jobs{\"job\": \"" + random_jobs[2].lower() + "\"}", "title": random_jobs[2]}
+                    ])
         else:
-            courseArray = requested_job["related_courses"].split(';')
+            jobArray = requested_job["related_courses"].split(';')
 
             buttonList = []
-            for course in courseArray:
-                buttonList.append({"payload": "/request_class_by_code{\"class_code\": \"" + course.strip() + "\"}", "title": course})
+            for job_item in jobArray:
+                buttonList.append({"payload": "/request_class_by_code{\"class_code\": \"" + job_item.strip() + "\"}", "title": job_item})
 
             dispatcher.utter_message(text=("Here is what I know about careers as a " + job + ": \n" + requested_job["description"]))
             dispatcher.utter_message(text=("You can learn more about it in these classes: " + requested_job["related_courses"]))
