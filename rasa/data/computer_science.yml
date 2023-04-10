@@ -7,6 +7,8 @@ nlu:
     - I want to be a computer programmer
     - I want to make software
     - I like making apps
+    - I like writing programs
+    - I want to be a better programmer
     
 - intent: express_interest_in_video_games
   examples: |
@@ -52,6 +54,15 @@ rules:
    
 stories:
   
+- story: Interested In Programming Ask For Classes
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_programming
+  - action: utter_cs_interest_programming
+  - intent: affirm
+  - action: action_get_courses_for_software_development
+  
 - story: Interested In Programming Early End Restart
   steps:
   - intent: ask_about_computer_science
@@ -71,8 +82,17 @@ stories:
   - action: utter_cs_interest_programming
   - intent: deny
   - action: utter_cs_disengage
+  - intent: deny
+  - action: utter_goodbye
+  
+- story: Interested In Gaming Ask For Classes
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_video_games
+  - action: utter_cs_interest_games
   - intent: affirm
-  - action: utter_cs_generic_prompt
+  - action: action_get_courses_for_software_development
   
 - story: Interested In Gaming Early End Restart
   steps:
@@ -96,6 +116,15 @@ stories:
   - intent: deny
   - action: utter_goodbye
   
+- story: Interested In Hacking Ask For Classes
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_hacking
+  - action: utter_cs_interest_hacking
+  - intent: affirm
+  - action: action_get_courses_for_computer_security
+  
 - story: Interested In Hacking Early End Restart
   steps:
   - intent: ask_about_computer_science
@@ -117,6 +146,15 @@ stories:
   - action: utter_cs_disengage
   - intent: deny
   - action: utter_goodbye
+  
+- story: Interested In AI Ask For Classes
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_ai
+  - action: utter_cs_interest_ai
+  - intent: affirm
+  - action: action_get_courses_for_ai
   
 - story: Interested In AI Early End Restart
   steps:

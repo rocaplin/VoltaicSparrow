@@ -8,6 +8,11 @@ intents:
   - express_interest_in_ai
   - test_trivia
   
+actions:
+    - action_get_courses_for_software_development
+    - action_get_courses_for_computer_security
+    - action_get_courses_for_ai
+  
 slots:
   has_seen_cs_topic:
     type: bool
@@ -28,10 +33,12 @@ responses:
 
  - How computer science impacts more practical issues like hardware or software design
   
-   Why are you interested in computers?"
+   Why are you interested in computer science?"
 
   utter_cs_interest_programming:
-  - text: "There's more to computer science than just writing programs, but it can definitely help you become a better programmer. Would you like to hear about some of our best programming related classes?"
+  - text: "There's more to computer science than just writing programs, but it can definitely help you become a better programmer. 
+  
+  Would you like to hear about some of our best programming related classes?"
   
   utter_cs_interest_games:
   - text: "A lot of people get interested in computers through gaming.
@@ -63,5 +70,5 @@ responses:
   
   utter_cs_trivia:
   - text: "The first program ever was written by the mathematician Ada Lovelace"
-  - text: "You technically don't need a computer to do computer science. A lot of important analsysi work can be done using nothing but pure math and your brain."
+  - text: "You technically don't need a computer to do computer science. A lot of important analysis work can be done using nothing but pure math and your brain."
   - text: "An 'algorithm' is a step by step process to solve a computing problem and is named after the ancient Persian mathematician Al-Khwarizmi"

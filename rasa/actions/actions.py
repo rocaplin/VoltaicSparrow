@@ -348,3 +348,81 @@ class ActionExampleTopics(Action):
                     
 
         return []
+     
+class ActionGetCoursesForSoftwareDevelopment(Action):
+    def name(self) -> Text:
+        return "action_get_courses_for_software_development"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            
+        courseButtonTuple = DatabaseHelper.getCoursesByTopic("software engineering")
+        
+        if not courseButtonTuple:
+            dispatcher.utter_message(text="Huh, that's strange. I can't find the list of software engineering courses. I'm sorry.")
+
+        dispatcher.utter_message(text=("These are our software engineering courses: " + ", ".join(courseButtonTuple[0])))
+        dispatcher.utter_message(text=("Click the buttons below to learn more about each class:"), buttons=courseButtonTuple[1])
+                
+        return []
+        
+class ActionGetCoursesForComputerSecurity(Action):
+    def name(self) -> Text:
+        return "action_get_courses_for_computer_security"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            
+        courseButtonTuple = DatabaseHelper.getCoursesByTopic("computer security")
+        
+        if not courseButtonTuple:
+            dispatcher.utter_message(text="Huh, that's strange. I can't find the list of security related courses. I'm sorry.")
+
+        dispatcher.utter_message(text=("These are our computer security courses: " + ", ".join(courseButtonTuple[0])))
+        dispatcher.utter_message(text=("Click the buttons below to learn more about each class:"), buttons=courseButtonTuple[1])
+                
+        return []
+        
+class ActionGetCoursesForAI(Action):
+    def name(self) -> Text:
+        return "action_get_courses_for_ai"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            
+        courseButtonTuple = DatabaseHelper.getCoursesByTopic("artificial intelligence")
+        
+        if not courseButtonTuple:
+            dispatcher.utter_message(text="Huh, that's strange. I can't find the list of AI and data science courses. I'm sorry.")
+
+        dispatcher.utter_message(text=("These are our AI and data science courses: " + ", ".join(courseButtonTuple[0])))
+        dispatcher.utter_message(text=("Click the buttons below to learn more about each class:"), buttons=courseButtonTuple[1])
+                
+        return []
+     
+class DatabaseHelper():
+
+    @staticmethod
+    def getCoursesByTopic(topic):
+        client = MongoClient('mongo-db', 27017)
+
+        db = client.chompsci
+        topics = db.topics
+
+        topic_result = topics.find_one({"lower_topic": topic.lower()})
+        
+        if not topic_result or not topic_result["related_courses"]:
+            return None
+
+        courseArray = topic_result["related_courses"].split(';')
+
+        courseList = []
+        buttonList = []
+        for course in courseArray:
+            courseList.append(course.strip())
+            buttonList.append({"payload": "/request_class_by_code{\"class_code\": \"" + course.strip() + "\"}", "title": course})
+
+        return (courseList,buttonList)
