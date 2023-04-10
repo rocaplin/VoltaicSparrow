@@ -178,7 +178,27 @@ stories:
   - intent: deny
   - action: utter_goodbye
   
-- story: Interested In Other Early End
+- story: Interested In Other Ask For Topics
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: nlu_fallback
+  - action: utter_cs_interest_fallback
+  - intent: affirm
+  - action: action_example_topics
+  
+- story: Interested In Other Early End Reset
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: nlu_fallback
+  - action: utter_cs_interest_fallback
+  - intent: deny
+  - action: utter_cs_disengage
+  - intent: affirm
+  - action: utter_cs_generic_prompt
+  
+- story: Interested In Other Early End Final
   steps:
   - intent: ask_about_computer_science
   - action: utter_talk_about_computer_science

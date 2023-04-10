@@ -50,7 +50,7 @@ responses:
   utter_cs_interest_hacking:
   - text: "Computer security is more important than ever these days and computer science can give you the tools you need to outsmart hackers or even to do a little reverse engineering of your own.
   
-  Would you like to hear about some security related courses."
+  Would you like to hear about some security related courses?"
   
   utter_cs_interest_ai:
   - text: "Artificial Intelligence, machine learning and data science have all become big business these days. I'm actually partially powered by machine learning myself!
@@ -60,7 +60,7 @@ responses:
   utter_cs_interest_fallback:
   - text: "I see. Most people get interested in computer science because they want to work as programmers. Others want to be researchers or even hackers.
   
-  Would you like to hear about some of the computer science classes available at the University of Florida?"
+  Are you interested in hearing about some of the topics that computer science covers?"
   
   utter_cs_disengage:
   - text: "Ok. Do you have any other questions about computer science or the University of Florida?"
