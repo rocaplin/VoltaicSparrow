@@ -750,3 +750,13 @@ nlu:
     - how do chatbots work
     - How can I make a chatbot?
     - how could I make a chatbot
+
+- intent: example_topics
+  examples: |
+    - What are some examples of topics in Computer Science?
+    - give me some example topics
+    - What are some examples of topics?
+    - Give me some examples of topics in Computer Science.
+    - List topic examples in CS.
+    - tell me about cs topic examples
+    - what topic examples are there in CompSci

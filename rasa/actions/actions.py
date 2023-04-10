@@ -220,7 +220,7 @@ class ActionRequestClassByCode(Action):
         class_result = courses.find_one({"code": class_request})
 
         if not class_result:
-            random_classes = random.sample(courses.distinct("class_code"), 3)
+            random_classes = random.sample(courses.distinct("code"), 3)
             if not class_request:
                 dispatcher.utter_message(text=("Sorry, I don't quite understand your question... try rephrasing, or ask about one of these classes."), buttons=[
                     {"payload": "/request_class_by_code{\"class_code\": \"" + random_classes[0] + "\"}", "title": random_classes[0]},
