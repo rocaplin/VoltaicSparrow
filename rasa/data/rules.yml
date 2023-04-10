@@ -21,37 +21,8 @@ rules:
   steps:
   - intent: greet
   - action: utter_greet
-  
-- rule: bot does not understand (university topic)
-  condition:
-  - slot_was_set:
-    - current_topic: uf_campus  
-  steps:
-  - intent: nlu_fallback
 
-  - action: utter_school_topic_tips
-  
-- rule: bot does not understand (online program topic)
-  condition:
-  - slot_was_set:
-    - current_topic: uf_online
+- rule: bot does not understand (fallback)
   steps:
   - intent: nlu_fallback
-  - action: utter_online_topic_tips
-  
-- rule: bot does not understand (computer science)
-  condition:
-  - slot_was_set:
-    - current_topic: computer_science
-  steps:
-  - intent: nlu_fallback
-  - action: utter_computer_science_topic_tips
-  
-- rule: bot does not understand (final fallback)
-  condition:
-  - slot_was_set:
-    - current_topic: null  
-  steps:
-  - intent: nlu_fallback
-  - action: utter_topic_tips
- 
+  - action: action_request_topic_tips

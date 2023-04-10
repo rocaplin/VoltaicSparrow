@@ -314,11 +314,17 @@ nlu:
     
 - intent: adjacent_fields
   examples: |
-    - how does computer science compare to  other fields?
+    - how does computer science compare to other fields?
     - what is the difference between computer science and other fields?
     - computer science versus other majors
     - compare computer science and other fields
     - tell me about how computer science is different from other majors
+    - what makes computer science unique from other fields?
+    - comp sci versus other programs
+    - is computer science different from other majors?
+    - what makes computer science different from other majors?
+    - are other majors better than computer science?
+    - what other fields are there related to computer science?
     
 - intent: electrical
   examples: |
@@ -485,7 +491,6 @@ nlu:
     - Tell me about topics in computer science
     - which topics are taught in computer science
     - which topics are covered in computer science?
-
 
 - intent: request_topics
   examples: |
