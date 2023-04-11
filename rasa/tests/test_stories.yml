@@ -493,7 +493,11 @@ stories:
       which topics do they teach in cs?
     intent: common_cstopics
   - action: utter_common_cstopics
-  - action: example_topics
+  - user: /example_topics
+    intent: example_topics
+  - action: action_example_topics
+  - user: /request_topics
+    intent: request_topics
   - action: action_request_topics
 
 - story: request topic 4-2
@@ -502,7 +506,9 @@ stories:
       which topics do they teach in cs?
     intent: common_cstopics
   - action: utter_common_cstopics
-  - action: example_topics
+  - user: /example_topics
+    intent: example_topics
+  - action: action_example_topics
   - user: |
       Tell me about [computational physics]{"entity": "topic"}
     intent: request_topics
