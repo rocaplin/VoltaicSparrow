@@ -138,3 +138,75 @@ stories:
       absolutely
     intent: affirm
   - action: utter_cs_generic_prompt
+
+- story: interest in hacking 3, end early, final
+  steps:
+  - user: |
+      What does computer science mean?
+    intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - user: |
+      I like computer security
+    intent: express_interest_in_hacking
+  - action: utter_cs_interest_hacking
+  - user: |
+      nay
+    intent: deny
+  - action: utter_cs_disengage
+  - user: |
+      naw
+    intent: deny
+  - action: utter_goodbye
+
+- story: interest in AI 1
+  steps:
+  - user: |
+      Could you define Computer Science?
+    intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - user: |
+      I want to study AI
+    intent: express_interest_in_ai
+  - action: utter_cs_interest_ai
+  - user: |
+      yes
+    intent: affirm
+  - action: action_get_courses_for_ai
+
+- story: interest in AI 2, restart
+  steps:
+  - user: |
+      What is computer science
+    intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - user: |
+      I want to research machine learning
+    intent: express_interest_in_ai
+  - action: utter_cs_interest_ai
+  - user: |
+      I don't think so
+    intent: deny
+  - action: utter_cs_disengage
+  - user: |
+      that sounds good
+    intent: affirm
+  - action: utter_cs_generic_prompt
+
+- story: interest in AI 3, end early, final
+  steps:
+  - user: |
+      Tell me what computer science means
+    intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - user: |
+      I want to go into data science
+    intent: express_interest_in_ai
+  - action: utter_cs_interest_ai
+  - user: |
+      no thanks
+    intent: deny
+  - action: utter_cs_disengage
+  - user: |
+      no thanks
+    intent: deny
+  - action: utter_goodbye
