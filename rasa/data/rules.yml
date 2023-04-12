@@ -21,3 +21,8 @@ rules:
   steps:
   - intent: greet
   - action: utter_greet
+
+- rule: Acknowledge being thanked
+  steps:
+    - intent: thank
+    - action: utter_acknowledgment
