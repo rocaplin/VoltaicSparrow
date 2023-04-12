@@ -562,3 +562,40 @@ stories:
       tell me what technology you use
     intent: faq/how_do_you_work
   - action: utter_faq/how_do_you_work
+
+- story: required courses 1
+  steps:
+  - user: |
+      what classes do I have to take in computer science?
+    intent: required_courses
+  - action: utter_which_college
+  - user: |
+      engineering
+    intent: engineering
+  - action: utter_required_courses_eng
+  
+- story: required courses 2
+  steps:
+  - user: |
+      what classes are needed for computer science?
+    intent: required_courses
+  - action: utter_which_college
+  - user: |
+      clas
+    intent: clas
+  - action: utter_required_courses_clas
+  
+- story: required courses 3
+  steps:
+  - user: |
+      what classes are needed to get a degree?
+    intent: required_courses
+  - action: utter_which_college
+  - user: |
+      college of engineering
+    intent: engineering
+  - action: utter_required_courses_eng
+  - user: |
+      cool, thanks
+    intent: thanks
+  - action: utter_acknowledgment
