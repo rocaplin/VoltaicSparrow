@@ -68,18 +68,36 @@ stories:
   steps:
   - intent: required_courses
   - action: utter_which_college
+  - intent: engineering
+  - action: utter_required_courses_eng
+  - intent: thank
+  - action: utter_acknowledgment
+  
+- story: courses path 4
+  steps:
+  - intent: required_courses
+  - action: utter_which_college
   - intent: difference
   - action: utter_difference
   - action: utter_which_college
   - intent: clas
   - action: utter_required_courses_clas
   
-- story: courses path 4
+- story: courses path 5
   steps:
   - intent: required_courses
   - action: utter_which_college
   - intent: clas
   - action: utter_required_courses_clas
+  
+- story: courses path 6
+  steps:
+  - intent: required_courses
+  - action: utter_which_college
+  - intent: clas
+  - action: utter_required_courses_clas
+  - intent: thank
+  - action: utter_acknowledgment
   
 - story: adjacent fields path 1
   steps:
