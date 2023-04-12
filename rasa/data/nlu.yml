@@ -257,6 +257,7 @@ nlu:
     - what classes are there
     - what courses are there
     - tell me about the classes
+    - what classes are needed for computer science?
 
 - intent: difference
   examples: |
