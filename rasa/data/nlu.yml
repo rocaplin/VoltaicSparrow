@@ -68,7 +68,6 @@ nlu:
     - okay
     - surely
     - OK
-    - thanks
 
 - intent: deny
   examples: |
@@ -90,7 +89,24 @@ nlu:
     - not really
     - no thanks
     - naw
-
+    
+- intent: thank
+  examples: |
+    - thanks
+    - thank you
+    - thank you very much
+    - thank you so much
+    - I appreciate it
+    - I appreciate this
+    - I can't thank you enough
+    - much appreciated
+    - many thanks
+    - I'm beyond grateful
+    - you made this so easy
+    - you made this easy
+    - you're so helpful
+    - much obliged
+    
 - intent: bot_challenge
   examples: |
     - are you a bot?
