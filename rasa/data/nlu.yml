@@ -346,6 +346,7 @@ nlu:
     - what makes computer science different from other majors?
     - are other majors better than computer science?
     - what other fields are there related to computer science?
+    - what is computer science like compared to other fields?
     
 - intent: electrical
   examples: |
