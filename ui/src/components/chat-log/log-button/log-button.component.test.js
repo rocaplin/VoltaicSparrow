@@ -1,7 +1,11 @@
 import {render, screen} from "@testing-library/react";
 import LogButton from "./log-button.component";
 
-const sendMock = () => {};
+const sendMock = () => {
+    /*
+      empty block because mocking dependency
+    */
+};
 
 const buttonsMock = {
     quick_replies: [
