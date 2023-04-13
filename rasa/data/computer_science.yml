@@ -84,6 +84,8 @@ stories:
   - action: utter_cs_disengage
   - intent: deny
   - action: utter_goodbye
+  - action: utter_greet
+  - action: action_restart
   
 - story: Interested In Gaming Ask For Classes
   steps:
@@ -115,6 +117,8 @@ stories:
   - action: utter_cs_disengage
   - intent: deny
   - action: utter_goodbye
+  - action: utter_greet
+  - action: action_restart
   
 - story: Interested In Hacking Ask For Classes
   steps:
@@ -146,6 +150,8 @@ stories:
   - action: utter_cs_disengage
   - intent: deny
   - action: utter_goodbye
+  - action: utter_greet
+  - action: action_restart
   
 - story: Interested In AI Ask For Classes
   steps:
@@ -177,6 +183,8 @@ stories:
   - action: utter_cs_disengage
   - intent: deny
   - action: utter_goodbye
+  - action: utter_greet
+  - action: action_restart
   
 - story: Interested In Other Ask For Topics
   steps:
@@ -208,3 +216,5 @@ stories:
   - action: utter_cs_disengage
   - intent: deny
   - action: utter_goodbye
+  - action: utter_greet
+  - action: action_restart

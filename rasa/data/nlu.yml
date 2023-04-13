@@ -201,6 +201,7 @@ nlu:
     - How much is tution?
     - How much does a credit hour cost?
     - What does it cost?
+    - What is tution?
 
 - intent: faq/excess_hours
   examples: |

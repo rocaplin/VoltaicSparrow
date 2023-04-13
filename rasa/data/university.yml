@@ -1,0 +1,74 @@
+version: "3.1"
+
+nlu:
+- intent: express_interest_in_programming
+  examples: |
+    - I like programming computers
+    - I want to be a computer programmer
+    - I want to make software
+    - I like making apps
+    - I like writing programs
+
+stories:    
+
+- story: ask about university general introduction online path
+  steps:
+  - intent: ask_about_university
+  - action: utter_ask_what_university_topic
+  - intent: deny
+  - action: utter_talk_about_university
+  - intent: ask_about_online_program
+  - action: utter_talk_about_online_program
+  - action: utter_more_questions_prompt
+  
+- story: ask about university general introduction campus path
+  steps:
+  - intent: ask_about_university
+  - action: utter_ask_what_university_topic
+  - intent: deny
+  - action: utter_talk_about_university
+  - intent: ask_about_campus
+  - action: utter_talk_about_campus
+  - action: utter_more_questions_prompt
+  
+- story: ask about university skip to questions path
+  steps:
+  - intent: ask_about_university
+  - action: utter_ask_what_university_topic
+  - intent: affirm
+  - action: utter_university_original_question_prompt
+  - action: utter_university_question_prompt
+    
+- story: courses path 1
+  steps:
+  - intent: required_courses
+  - action: utter_which_college
+  - intent: difference
+  - action: utter_difference
+  - action: utter_which_college
+  - intent: engineering
+  - action: utter_required_courses_eng
+  
+- story: courses path 2
+  steps:
+  - intent: required_courses
+  - action: utter_which_college
+  - intent: engineering
+  - action: utter_required_courses_eng
+  
+- story: courses path 3
+  steps:
+  - intent: required_courses
+  - action: utter_which_college
+  - intent: difference
+  - action: utter_difference
+  - action: utter_which_college
+  - intent: clas
+  - action: utter_required_courses_clas
+  
+- story: courses path 4
+  steps:
+  - intent: required_courses
+  - action: utter_which_college
+  - intent: clas
+  - action: utter_required_courses_clas
