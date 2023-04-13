@@ -493,7 +493,8 @@ stories:
       which topics do they teach in cs?
     intent: common_cstopics
   - action: utter_common_cstopics
-  - user: /example_topics
+  - user: |
+      what are some examples of cs topics?
     intent: example_topics
   - action: action_example_topics
   - user: /request_topics
@@ -506,7 +507,8 @@ stories:
       which topics do they teach in cs?
     intent: common_cstopics
   - action: utter_common_cstopics
-  - user: /example_topics
+  - user: |
+      /example_topics
     intent: example_topics
   - action: action_example_topics
   - user: |
