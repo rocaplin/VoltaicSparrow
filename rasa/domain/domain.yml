@@ -151,20 +151,6 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
   Courses for a degree in information systems may combine business courses, such as Managerial Communication, with coding courses. 
   A degree in information systems is commonly less intensive than a computer science degree and does not delve into programming as deeply as computer science does."
 
-  utter_talk_about_computer_science:
-  - text: "While there is no official definition of Computer Science one way to view it is as the study of computation. This includes the study of:
- 
- - what can and cannot be solved through computation.
- 
- - computational methods and their application.
- 
- - the tools we use to perform computations.
-  
-   Is there a specific topic you want to know more about, like AI or computer security?"
-    buttons:
-    - title: "What topics can I learn about?"
-      payload: "/common_cstopics"
-
   utter_modern_computers:
   - text: "The first general purpose computers began to be built in the United States and Europe during the late 1930s. The term Computer Science was coined in the 1950s to describe related coursework being offered by universities."
 

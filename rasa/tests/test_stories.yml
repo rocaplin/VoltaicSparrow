@@ -497,6 +497,9 @@ stories:
       what are some examples of cs topics?
     intent: example_topics
   - action: action_example_topics
+  - user: /request_topics
+    intent: request_topics
+  - action: action_request_topics
 
 - story: request topic 4-2
   steps:

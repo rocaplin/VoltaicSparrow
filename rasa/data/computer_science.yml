@@ -1,0 +1,210 @@
+version: "3.1"
+
+nlu:
+- intent: express_interest_in_programming
+  examples: |
+    - I like programming computers
+    - I want to be a computer programmer
+    - I want to make software
+    - I like making apps
+    - I like writing programs
+    - I want to be a better programmer
+    
+- intent: express_interest_in_video_games
+  examples: |
+    - I want to make video games
+    - I want to program games
+    - I really like video games
+    - I like gaming
+    - I'm a gamer
+    
+- intent: express_interest_in_hacking
+  examples: |
+    - I'm interested in hacking
+    - I want to be a hacker
+    - I wanna be a hacker
+    - Hacking comptuers sounds fun
+    - I like computer security
+    - I'm interested in security
+    - I'm interested in computer security
+    
+- intent: express_interest_in_ai
+  examples: |
+    - I'm interested in AI
+    - I'm interested in artificial intelligence
+    - I want to go into data science
+    - I want to study AI
+    - I'm interested in machine learning
+    - I want to research machine learning
+    - I want to research artificial intelligence
+    
+- intent: test_trivia
+  examples: |
+    - Tell me some trivia
+    - Test the trivia action
+    - I want some trivia
+
+rules:
+
+- rule: Test the trivia intent
+  steps:
+  - intent: test_trivia
+  - action: utter_cs_trivia   
+
+   
+stories:
+  
+- story: Interested In Programming Ask For Classes
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_programming
+  - action: utter_cs_interest_programming
+  - intent: affirm
+  - action: action_get_courses_for_software_development
+  
+- story: Interested In Programming Early End Restart
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_programming
+  - action: utter_cs_interest_programming
+  - intent: deny
+  - action: utter_cs_disengage
+  - intent: affirm
+  - action: utter_cs_generic_prompt
+  
+- story: Interested In Programming Early End Final
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_programming
+  - action: utter_cs_interest_programming
+  - intent: deny
+  - action: utter_cs_disengage
+  - intent: deny
+  - action: utter_goodbye
+  
+- story: Interested In Gaming Ask For Classes
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_video_games
+  - action: utter_cs_interest_games
+  - intent: affirm
+  - action: action_get_courses_for_software_development
+  
+- story: Interested In Gaming Early End Restart
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_video_games
+  - action: utter_cs_interest_games
+  - intent: deny
+  - action: utter_cs_disengage
+  - intent: affirm
+  - action: utter_cs_generic_prompt
+  
+- story: Interested In Gaming Early End Final
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_video_games
+  - action: utter_cs_interest_games
+  - intent: deny
+  - action: utter_cs_disengage
+  - intent: deny
+  - action: utter_goodbye
+  
+- story: Interested In Hacking Ask For Classes
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_hacking
+  - action: utter_cs_interest_hacking
+  - intent: affirm
+  - action: action_get_courses_for_computer_security
+  
+- story: Interested In Hacking Early End Restart
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_hacking
+  - action: utter_cs_interest_hacking
+  - intent: deny
+  - action: utter_cs_disengage
+  - intent: affirm
+  - action: utter_cs_generic_prompt
+  
+- story: Interested In Hacking Early End Final
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_hacking
+  - action: utter_cs_interest_hacking
+  - intent: deny
+  - action: utter_cs_disengage
+  - intent: deny
+  - action: utter_goodbye
+  
+- story: Interested In AI Ask For Classes
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_ai
+  - action: utter_cs_interest_ai
+  - intent: affirm
+  - action: action_get_courses_for_ai
+  
+- story: Interested In AI Early End Restart
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_ai
+  - action: utter_cs_interest_ai
+  - intent: deny
+  - action: utter_cs_disengage
+  - intent: affirm
+  - action: utter_cs_generic_prompt
+  
+- story: Interested In AI Early End Final
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_ai
+  - action: utter_cs_interest_ai
+  - intent: deny
+  - action: utter_cs_disengage
+  - intent: deny
+  - action: utter_goodbye
+  
+- story: Interested In Other Ask For Topics
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: nlu_fallback
+  - action: utter_cs_interest_fallback
+  - intent: affirm
+  - action: action_example_topics
+  
+- story: Interested In Other Early End Reset
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: nlu_fallback
+  - action: utter_cs_interest_fallback
+  - intent: deny
+  - action: utter_cs_disengage
+  - intent: affirm
+  - action: utter_cs_generic_prompt
+  
+- story: Interested In Other Early End Final
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: nlu_fallback
+  - action: utter_cs_interest_fallback
+  - intent: deny
+  - action: utter_cs_disengage
+  - intent: deny
+  - action: utter_goodbye

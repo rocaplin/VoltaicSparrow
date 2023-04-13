@@ -8,15 +8,15 @@ for %%i in (%*) do (
 	
 	if /i "%%i" == "validate" (
 		set /a cmdcount+=1
-			call :dockercmd "data validate"
+			call :dockercmd "data validate --domain ./domain"
 	)
 	if /i "%%i" == "train" (
 		set /a cmdcount+=1
-			call :dockercmd train
+			call :dockercmd "train --domain ./domain"
 	)
 	if /i "%%i" == "test" (
 		set /a cmdcount+=1
-			call :dockercmd test
+			call :dockercmd "test --domain ./domain"
 	)
 	if /i "%%i" == "shell" (
 		set /a cmdcount+=1

@@ -367,6 +367,8 @@ nlu:
   examples: |
     - what is computer science?
     - What does Computer Science mean?
+    - Tell me about computer science.
+    - I want to talk about computer science.
     - Could you define Computer science?
     - How do I define Computer Science?
     - what is computer science's definition?
