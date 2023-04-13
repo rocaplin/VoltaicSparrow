@@ -5,6 +5,7 @@ intents:
   - goodbye
   - affirm
   - deny
+  - thank
   - bot_challenge
   - required_courses
   - ask_about_university
@@ -53,6 +54,9 @@ responses:
   utter_goodbye:
   - text: "Bye"
 
+  utter_acknowledgment:
+  - text: "I'm glad I could be of help! Carry on!"
+  
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 

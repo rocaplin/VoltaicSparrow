@@ -68,7 +68,6 @@ nlu:
     - okay
     - surely
     - OK
-    - thanks
 
 - intent: deny
   examples: |
@@ -90,7 +89,29 @@ nlu:
     - not really
     - no thanks
     - naw
-
+    
+- intent: thank
+  examples: |
+    - thanks
+    - thank you
+    - thank you very much
+    - thank you so much
+    - I appreciate it
+    - I appreciate this
+    - I can't thank you enough
+    - much appreciated
+    - many thanks
+    - I'm beyond grateful
+    - you made this so easy
+    - you made this easy
+    - you're so helpful
+    - much obliged
+    - cool, thanks
+    - awesome, thanks
+    - danke
+    - gracias
+    - ok, thanks
+    
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -236,6 +257,7 @@ nlu:
     - what classes are there
     - what courses are there
     - tell me about the classes
+    - what classes are needed for computer science?
 
 - intent: difference
   examples: |
@@ -325,6 +347,7 @@ nlu:
     - what makes computer science different from other majors?
     - are other majors better than computer science?
     - what other fields are there related to computer science?
+    - what is computer science like compared to other fields?
     
 - intent: electrical
   examples: |
