@@ -597,5 +597,5 @@ stories:
   - action: utter_required_courses_eng
   - user: |
       cool, thanks
-    intent: thanks
+    intent: thank
   - action: utter_acknowledgment
