@@ -4,7 +4,11 @@ import ChatLog from "./chat-log.component";
 // NOTE: screen.debug() is a useful method to print parse tree.
 
 // Normally used to send messages to Rasa.
-const sendMock = () => {};
+const sendMock = () => {
+    /*
+      empty block because mocking dependency
+    */
+};
 
 // Mock chat log data from chat-window.component
 const chatLogMock = [
