@@ -72,6 +72,13 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
   
   utter_which_college:
   - text: "Which college are you interested in pursuing computer science in? There are two: the College of Liberal Arts and Sciences and the Herbert Wertheim College of Engineering."
+    buttons:
+    - title: "Liberal Arts and Sciences"
+      payload: /clas
+    - title: "Engineering"
+      payload: /engineering
+    - title: "What's the difference?"
+      payload: /difference
   
   utter_difference:
   - text: "Some things change when you pursue a computer science degree in one college versus the other. The difference between the two lies mostly in the courses you will be taking. Additionally, there may be some college requirements that will differ depending on the choice you make."
@@ -163,7 +170,7 @@ It is likely that for all of these reasons, there are a variety of perspectives 
   - text: "The University of Florida is located in Gainesville, was founded in 1853 and is accredited by the Southern Association of Colleges and Schools. Are you more interested in their online program or their traditional on-campus program?"
   
   utter_faq/enrollment:
-  - text: "To apply for enrollment you will need to submit your academic information and write a short essay. You can double check requirements, deadlines or even start the process by going to https://admissions.ufl.edu"
+  - text: "To apply for enrollment you will need to submit your academic information and write a short essay. You can double check requirements, deadlines or even start the process by going to https://admissions.ufl.edu/apply/freshman/"
 
   utter_faq/cshistory:
   - text: "The foundation of Computer science predates modern computers. Ancient peoples used machines like the abacus and algorithms like the Sieve of Eratosthenes to perform calculations."
@@ -198,9 +205,7 @@ https://en.wikipedia.org/wiki/Ada_Lovelace"
   utter_common_cscareers:
   - text: "Employers in a variety of industries hire Computer Science graduates for jobs the U.S. Bureau of Labor Statistics classifies as Computer Occupations.
 
-As of May 2021, BLS data shows that 70% of those employed within Computer Occupations work as Software Developers, Support Specialists, Systems Analysts, Network/ Systems Administrators, and QA Analysts.
-
-Other common positions include Network Architects, Security Analysts, Database Administrators, Web Developers and Designers, and Research Scientists.
+As of May 2021, BLS data shows that 70% of those employed within Computer Occupations work as Software Developers, Support Specialists, Systems Analysts, Network/Systems Administrators, and QA Analysts.
 
 To learn more, enter the name of a career in computer science. A list of common computer science careers can be found at https://www.computerscience.org/careers/.
 
