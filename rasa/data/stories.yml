@@ -2,102 +2,23 @@ version: "3.1"
 
 stories:
   
-- story: action test path
+- story: no more questions
   steps:
-  - intent: request_action_test
-  - action: action_hello_world
-
-- story: ask about university
-  steps:
-  - intent: ask_about_university
-  - action: utter_talk_about_university
-
-- story: ask about online program
-  steps:
-  - intent: ask_about_online_program
-  - action: utter_talk_about_online_program
-
-- story: ask about computer science
-  steps:
-  - intent: ask_about_computer_science
-  - action: utter_talk_about_computer_science
-
-- story: ask about campus
-  steps:
-  - intent: ask_about_campus
-  - action: utter_talk_about_campus
+  - action: utter_more_questions_prompt
+  - intent: deny
+  - action: utter_goodbye
+  - action: utter_greet
+  - action: action_restart
   
-- story: ask about university
+- story: generic fallback
   steps:
-  - intent: ask_about_university
-  - action: utter_talk_about_university
-  
-- story: ask about online program
-  steps:
-  - intent: ask_about_online_program
-  - action: utter_talk_about_online_program
+  - intent: nlu_fallback
+  - action: action_request_topic_tips
   
 - story: ask about computer science
   steps:
   - intent: ask_about_computer_science
   - action: utter_talk_about_computer_science
-  
-- story: ask about campus
-  steps:
-  - intent: ask_about_campus
-  - action: utter_talk_about_campus
-  
-- story: courses path 1
-  steps:
-  - intent: required_courses
-  - action: utter_which_college
-  - intent: difference
-  - action: utter_difference
-  - action: utter_which_college
-  - intent: engineering
-  - action: utter_required_courses_eng
-  
-- story: courses path 2
-  steps:
-  - intent: required_courses
-  - action: utter_which_college
-  - intent: engineering
-  - action: utter_required_courses_eng
-  
-- story: courses path 3
-  steps:
-  - intent: required_courses
-  - action: utter_which_college
-  - intent: engineering
-  - action: utter_required_courses_eng
-  - intent: thank
-  - action: utter_acknowledgment
-  
-- story: courses path 4
-  steps:
-  - intent: required_courses
-  - action: utter_which_college
-  - intent: difference
-  - action: utter_difference
-  - action: utter_which_college
-  - intent: clas
-  - action: utter_required_courses_clas
-  
-- story: courses path 5
-  steps:
-  - intent: required_courses
-  - action: utter_which_college
-  - intent: clas
-  - action: utter_required_courses_clas
-  
-- story: courses path 6
-  steps:
-  - intent: required_courses
-  - action: utter_which_college
-  - intent: clas
-  - action: utter_required_courses_clas
-  - intent: thank
-  - action: utter_acknowledgment
   
 - story: adjacent fields path 1
   steps:
