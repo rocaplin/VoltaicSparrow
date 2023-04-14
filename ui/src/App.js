@@ -88,7 +88,6 @@ function App() {
   // Should ChatWindow be rendered or not?
 const renderChatWindow = (isOpen, connection) => {
   if (isOpen) {
-    //return (<ChatWindow socket={connection}/>);
     return(
       <div className="chat-window">
           <ChatLog log={chatLog} sendHandler={sendRequest}/>

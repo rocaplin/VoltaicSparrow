@@ -1,7 +1,11 @@
 import {render, screen} from "@testing-library/react";
 import ChatInput from "./chat-input.component";
 
-const sendHandlerMock = () => {};
+const sendHandlerMock = () => {
+    /*
+      empty block because mocking dependency
+    */
+};
 
 test('that chat input area renders properly', () => {
     render(<ChatInput

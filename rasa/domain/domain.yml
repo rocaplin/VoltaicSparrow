@@ -5,6 +5,7 @@ intents:
   - goodbye
   - affirm
   - deny
+  - thank
   - bot_challenge
   - required_courses
   - ask_about_campus
@@ -52,6 +53,9 @@ responses:
   
   I'm going to reset myself now, just in case you change your mind and have more questions."
 
+  utter_acknowledgment:
+  - text: "I'm glad I could be of help! Carry on!"
+  
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
   
