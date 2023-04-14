@@ -25,7 +25,7 @@ slots:
 
 responses:
   utter_talk_about_computer_science:
-  - text: "While there is no official definition of Computer Science one way to view it is as the study of computation. This includes the study of:
+  - text: "While there is no official definition of Computer Science, one way to view it is as the study of computation. This includes the study of:
 
  - What can and cannot be solved through step by step processes called algorithms
 
@@ -48,12 +48,12 @@ responses:
   Would you like to hear about some related classes?"
   
   utter_cs_interest_hacking:
-  - text: "Computer security is more important than ever these days and computer science can give you the tools you need to outsmart hackers or even to do a little reverse engineering of your own.
+  - text: "Computer security is more important than ever these days, and computer science can give you the tools you need to outsmart hackers or to even do a little reverse engineering of your own.
   
   Would you like to hear about some security related courses?"
   
   utter_cs_interest_ai:
-  - text: "Artificial Intelligence, machine learning and data science have all become big business these days. I'm actually partially powered by machine learning myself!
+  - text: "Artificial Intelligence, machine learning, and data science have all become big business these days. I'm actually partially powered by machine learning myself!
   
   Would you like to hear about some of the AI related courses you can take at UF?"
   
