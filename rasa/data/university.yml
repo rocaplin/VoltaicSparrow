@@ -27,9 +27,10 @@ stories:
   - action: utter_ask_what_university_topic
   - intent: deny
   - action: utter_talk_about_university
-  - intent: ask_about_online_program
-  - action: utter_talk_about_online_program
+  - intent: ask_about_campus
+  - action: utter_talk_about_campus
   - action: utter_more_questions_prompt
+
   
 - story: ask about university skip to questions path
   steps:
@@ -50,6 +51,22 @@ stories:
   - intent: ask_about_campus
   - action: utter_talk_about_campus
   - action: utter_more_questions_prompt
+  
+- story: User has multiple questions about online program
+  steps:
+  - intent: ask_about_online_program
+  - action: utter_talk_about_online_program
+  - action: utter_more_questions_prompt
+  - intent: affirm
+  - action: utter_university_question_prompt
+  
+- story: User has multiple questions about campus program
+  steps:
+  - intent: ask_about_campus
+  - action: utter_talk_about_campus
+  - action: utter_more_questions_prompt
+  - intent: affirm
+  - action: utter_university_question_prompt
     
 - story: courses path 1
   steps:
