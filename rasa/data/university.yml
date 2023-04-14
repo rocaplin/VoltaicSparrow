@@ -1,14 +1,5 @@
 version: "3.1"
 
-nlu:
-- intent: express_interest_in_programming
-  examples: |
-    - I like programming computers
-    - I want to be a computer programmer
-    - I want to make software
-    - I like making apps
-    - I like writing programs
-
 stories:    
 
 - story: ask about university general introduction online path
