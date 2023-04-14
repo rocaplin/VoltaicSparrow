@@ -228,6 +228,9 @@ Earning a college degree demonstrates your ability to achieve and learn, traits 
     buttons:
     - title: "Give me some examples."
       payload: "/example_topics"
+      
+  utter_prompt_for_more_classes:
+  - text: "Are there any other classes or topics you have questions about?"
   
   utter_online_topic_tips:
   - text: "Are we still talking about UF Online? I can tell you about the required courses, credit hour requirements or even how to start enrolling." 
