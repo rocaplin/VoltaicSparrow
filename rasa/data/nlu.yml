@@ -219,9 +219,16 @@ nlu:
 - intent: faq/credit_hour_cost
   examples: |
     - How much does it cost?
-    - How much is tution?
+    - How much is tuition?
+    - How much is tuition in state?
+    - How much is tuition out of state?
     - How much does a credit hour cost?
     - What does it cost?
+    - What is tuition?
+    - What is tuition for in state students?
+    - What is tuition for out of state students
+    - What is in state tuition
+    - What is out of state tuition?
 
 - intent: faq/excess_hours
   examples: |
@@ -230,6 +237,12 @@ nlu:
     - What's the maximum amount of credits I can take?
     - What happens if I go over the credit hour limit?
     - Do I have to pay extra if I go over the credit limit?
+    - Is 120 credits the max?
+    - Max amount of credits?
+    - Maximum credits?
+    - Max credits
+    - Excess hours
+    - excess hours?
     
 - intent: faq/workload_per_hour
   examples: |

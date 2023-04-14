@@ -6,6 +6,8 @@ rules:
   steps:
   - intent: goodbye
   - action: utter_goodbye
+  - action: utter_greet
+  - action: action_restart
 
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
@@ -16,6 +18,7 @@ rules:
   steps:
   - intent: faq
   - action: utter_faq
+  - action: utter_more_questions_prompt
   
 - rule: Original greeting
   steps:
