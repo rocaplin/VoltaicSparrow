@@ -51,6 +51,8 @@ stories:
       no thanks
     intent: deny
   - action: utter_goodbye
+  - action: utter_greet
+  - action: action_restart
 
 - story: interest in gaming 1
   steps:
@@ -104,6 +106,8 @@ stories:
       no
     intent: deny
   - action: utter_goodbye
+  - action: utter_greet
+  - action: action_restart
 
 - story: interest in hacking 1
   steps:
@@ -157,6 +161,8 @@ stories:
       naw
     intent: deny
   - action: utter_goodbye
+  - action: utter_greet
+  - action: action_restart
 
 - story: interest in AI 1
   steps:
@@ -210,3 +216,5 @@ stories:
       no thanks
     intent: deny
   - action: utter_goodbye
+  - action: utter_greet
+  - action: action_restart

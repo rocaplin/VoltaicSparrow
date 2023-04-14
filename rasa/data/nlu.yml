@@ -68,7 +68,6 @@ nlu:
     - okay
     - surely
     - OK
-    - thanks
 
 - intent: deny
   examples: |
@@ -90,7 +89,29 @@ nlu:
     - not really
     - no thanks
     - naw
-
+    
+- intent: thank
+  examples: |
+    - thanks
+    - thank you
+    - thank you very much
+    - thank you so much
+    - I appreciate it
+    - I appreciate this
+    - I can't thank you enough
+    - much appreciated
+    - many thanks
+    - I'm beyond grateful
+    - you made this so easy
+    - you made this easy
+    - you're so helpful
+    - much obliged
+    - cool, thanks
+    - awesome, thanks
+    - danke
+    - gracias
+    - ok, thanks
+    
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -198,9 +219,16 @@ nlu:
 - intent: faq/credit_hour_cost
   examples: |
     - How much does it cost?
-    - How much is tution?
+    - How much is tuition?
+    - How much is tuition in state?
+    - How much is tuition out of state?
     - How much does a credit hour cost?
     - What does it cost?
+    - What is tuition?
+    - What is tuition for in state students?
+    - What is tuition for out of state students
+    - What is in state tuition
+    - What is out of state tuition?
 
 - intent: faq/excess_hours
   examples: |
@@ -209,6 +237,12 @@ nlu:
     - What's the maximum amount of credits I can take?
     - What happens if I go over the credit hour limit?
     - Do I have to pay extra if I go over the credit limit?
+    - Is 120 credits the max?
+    - Max amount of credits?
+    - Maximum credits?
+    - Max credits
+    - Excess hours
+    - excess hours?
     
 - intent: faq/workload_per_hour
   examples: |
@@ -239,6 +273,7 @@ nlu:
     - What are the CS degree requirements?
     - Tell me about CS degree requirements
     - What classes do I need for a computer science degree
+    - what classes are needed for computer science?
 
 - intent: difference
   examples: |
@@ -331,6 +366,7 @@ nlu:
     - can you tell me about other engineering majors?
     - are there other similar fields?
     - are there other similar majors?
+    - what is computer science like compared to other fields?
     
 - intent: electrical
   examples: |
@@ -759,3 +795,13 @@ nlu:
     - how do chatbots work
     - How can I make a chatbot?
     - how could I make a chatbot
+
+- intent: example_topics
+  examples: |
+    - What are some examples of topics in Computer Science?
+    - give me some example topics
+    - What are some examples of topics?
+    - Give me some examples of topics in Computer Science.
+    - List topic examples in CS.
+    - tell me about cs topic examples
+    - what topic examples are there in CompSci

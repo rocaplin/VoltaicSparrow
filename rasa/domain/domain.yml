@@ -5,11 +5,9 @@ intents:
   - goodbye
   - affirm
   - deny
+  - thank
   - bot_challenge
   - required_courses
-  - ask_about_university
-  - ask_about_online_program
-  - ask_about_computer_science
   - ask_about_campus
   - difference
   - engineering
@@ -51,10 +49,20 @@ responses:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Goodbye and thanks for chatting with Chomp, the Computer Science Chatbot!
+  
+  I'm going to reset myself now, just in case you change your mind and have more questions."
 
+  utter_acknowledgment:
+  - text: "I'm glad I could be of help! Carry on!"
+  
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+  
+  utter_more_questions_prompt:
+  - text: "Do you have any other questions?"
+  - text: "Do you have any more questions?"
+  - text: "Any other questions I can help you with?"
 
   utter_talk_about_online_program:
   - text: "Online classes are convenient and economical. UF Online is one of the top programs in the United States and offers many degrees online.
@@ -158,9 +166,6 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
   - text: "The development of modern computers took place over a period of centuries drawing from a number of fields in Mathematics, Science, and Engineering, and as a result the topics addressed by these courses were just as broad. While the academic field of Computer Science is relatively young it has expanded rapidly and had far reaching societal impacts.
 
 It is likely that for all of these reasons, there are a variety of perspectives on what constitutes Computer Science, and how it should be defined."
-
-  utter_talk_about_university:
-  - text: "The University of Florida is located in Gainesville, was founded in 1853 and is accredited by the Southern Association of Colleges and Schools. Are you more interested in their online program or their traditional on-campus program?"
   
   utter_faq/enrollment:
   - text: "To apply for enrollment you will need to submit your academic information and write a short essay. You can double check requirements, deadlines or even start the process by going to https://admissions.ufl.edu/apply/freshman/"
