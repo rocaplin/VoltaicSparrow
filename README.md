@@ -81,7 +81,7 @@ responses:
 And we would then need a data file something like:
 ```
 nlu:
-- greet
+- intent: greet
   examples: |
     - Hello
     - Hi
