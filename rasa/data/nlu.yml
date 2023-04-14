@@ -784,7 +784,6 @@ nlu:
     - What is your goal?
     - what's your goal
     - why are you here?
-    - what do you do?
 
 - intent: faq/help
   examples: |
