@@ -85,15 +85,11 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
   
   utter_required_courses_eng:
   - text: "There are a number of courses that you will be taking as a computer science student in the College of Engineering. All students are required to take six critical tracking courses: MAC 2311 Analytic Geometry and Calculus 1, MAC 2312 Analytic Geometry and Calculus 2, MAC 2313 Analytic Geometry and Calculus 3, COP3502C Programming Fundamentals 1, PHY 2048 Physics with Calculus 1, and PHY 2049 Physics with Calculus 2. 
- 
- Some additional courses you can expect to be taking include COP 3503C Programming Fundamentals 2, COT 3100 Applications of Discrete Structures, COP 3530 Data Structures and Algorithm, COP 4600 Operating Systems, and COP 4020 Programming Language Concepts. 
   
  For more information on required courses, please visit https://catalog.ufl.edu/UGRD/colleges-schools/UGENG/CPS_BSCS/."
   
   utter_required_courses_clas:
-  - text: "There are a number of courses that you will be taking as a computer science student in the College of Liberal Arts and Sciences including MAC 1147 Precalculus Algebra and Trigonometry and/or MAC 2311 Analytic Geometry and Calculus 1, MAC 2312 Analytic Geometry and Calculus 2, MAC 2313 Analytic Geometry and Calculus 3, COP3502C Programming Fundamentals 1 or COP 3504C Advanced Programming Fundamentals for CIS Majors, PHY 2053 Physics 1 or PHY 2048 Physics with Calculus 1, and PHY 2054 Physics 2 or PHY 2049 Physics with Calculus 2. 
- 
- Some additional courses you can expect to be taking include COP 3503C Programming Fundamentals 2 or COP 3504C Advanced Programming Fundamentals for CIS Majors, COT 3100 Applications of Discrete Structures, COP 3530 Data Structures and Algorithm, and COP 4600 Operating Systems. 
+  - text: "There are a number of courses that you will be taking as a computer science student in the College of Liberal Arts and Sciences including MAC 2311 Analytic Geometry and Calculus 1, MAC 2312 Analytic Geometry and Calculus 2, MAC 2313 Analytic Geometry and Calculus 3, COP3502C Programming Fundamentals 1, PHY 2053 Physics 1, and PHY 2054 Physics 2. Note that some of these courses may be substituted.
   
  If you would like more information on required courses for a computer science degree, please visit https://catalog.ufl.edu/UGRD/colleges-schools/UGLAS/CSC_BS/.
  
@@ -139,19 +135,16 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
   
   utter_electrical_engineering: 
   - text: "While there are many differences between Computer Science and Electrical Engineering, one of the most distinct ones is that electrical engineers focus on physical products and work with electricity, electrical currents. and electrical components to create solutions while computer scientists focus on intangible concepts and use logic, computation, and coding to create solutions. 
-  In terms of schoolwork, an electrical engineering degree may require more diverse courses be taken. Degrees in electrical engineering may include courses that focus on technical concepts involving digital systems and electric circuits. These courses are usually application-based in manufacturing, navigation systems, communication, health care, etc. 
-  Electrical engineers may also be required to take courses that computer scientists take."
+  Degrees in electrical engineering may include courses that focus on technical concepts involving digital systems and electric circuits. These courses are usually application-based in manufacturing, navigation systems, communication, health care, etc."
   
   utter_computer_engineering:
   - text: "Though Computer Science and Computer Engineering sound similar, the two actually specialize in two separate aspects of computer technology. With computer engineering, more priority is given to computer design and development. Computer science, on the other hand, focuses more on computing theory and data analysis. 
-  Courses in computer engineering involve learning to develop prototypes and test components such as microchips, circuits, conductors, and processors.
-  For those with interests in or career goals involving building computers, designing interfaces, or delving into hardware, computer engineering may be a more appealing area of study."
+  Courses in computer engineering involve learning to develop prototypes and test components such as microchips, circuits, conductors, and processors."
   
   utter_information_technology:
-  - text: "Information Technology is often referred to as 'the business side of computer science' and focuses more on meeting the technological needs of organizations. Unlike computer science, information technology emphasizes using computers, databases, networks, servers, and software to process, store, transmit, retrieve, and protect data.
-  While computer scientists use theoretical skills to develop and improve computer programs, information technology specialists install, implement, and maintain the programs in addition to applying them to businesses and other professional organizations.
-  The course load for an information technology degree includes classes in which students learn to identify, create, and configure complex computing platforms and systems to solve problems.
-  Those who enjoy discovering technological solutions to problems and working with others should consider a degree in information technology."
+  - text: "Information Technology is often referred to as 'the business side of computer science' and focuses more on the technological needs of organizations. Unlike computer science, information technology emphasizes using computers, databases, networks, servers, and software to process, store, transmit, retrieve, and protect data.
+  While computer scientists use theoretical skills to develop and improve computer programs, information technology specialists install, implement, and maintain the programs while applying them to businesses and other professional organizations.
+  The course load for an information technology degree includes classes in which students learn to identify, create, and configure complex computing platforms and systems to solve problems."
   
   utter_information_systems:
   - text: "Computer Information Systems, or just Information Systems, focuses on applying technology and systems to help businesses run. It can be viewed as a more commercial approach to computer science. 
