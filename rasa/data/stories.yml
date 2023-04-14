@@ -13,7 +13,7 @@ stories:
 - story: generic fallback
   steps:
   - intent: nlu_fallback
-  - action: utter_cs_interest_fallback
+  - action: action_request_topic_tips
   
 - story: ask about computer science
   steps:

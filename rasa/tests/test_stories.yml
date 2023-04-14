@@ -8,6 +8,8 @@ stories:
       bye-bye!
     intent: goodbye
   - action: utter_goodbye
+  - action: utter_greet
+  - action: action_restart
 
 - story: bot challenge
   steps:
@@ -22,6 +24,7 @@ stories:
       What are online classes like?
     intent: ask_about_online_program
   - action: utter_talk_about_online_program
+  - action: utter_more_questions_prompt
 
 - story: ask about online classes 2
   steps:
@@ -29,6 +32,7 @@ stories:
       tell me about ufonline
     intent: ask_about_online_program
   - action: utter_talk_about_online_program
+  - action: utter_more_questions_prompt
 
 - story: ask about campus classes 1
   steps:
@@ -36,6 +40,7 @@ stories:
       Are campus classes better?
     intent: ask_about_campus
   - action: utter_talk_about_campus
+  - action: utter_more_questions_prompt
 
 - story: ask about campus classes 2
   steps:
@@ -43,6 +48,7 @@ stories:
       how are campus classes?
     intent: ask_about_campus
   - action: utter_talk_about_campus
+  - action: utter_more_questions_prompt
   
 - story: ask about adjacent fields 1
   steps:
