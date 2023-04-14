@@ -9,6 +9,11 @@ nlu:
     - I like making apps
     - I like writing programs
     - I want to be a better programmer
+    - I really like programming
+    - I like programming
+    - programming interests me
+    - programming is fun
+    - programming is cool
     
 - intent: express_interest_in_video_games
   examples: |
@@ -17,6 +22,9 @@ nlu:
     - I really like video games
     - I like gaming
     - I'm a gamer
+    - I want to make games
+    - making games is cool
+    - I want to make my own games
     
 - intent: express_interest_in_hacking
   examples: |
@@ -27,6 +35,8 @@ nlu:
     - I like computer security
     - I'm interested in security
     - I'm interested in computer security
+    - hacking is xool
+    - I want to learn about hacking
     
 - intent: express_interest_in_ai
   examples: |
@@ -37,12 +47,16 @@ nlu:
     - I'm interested in machine learning
     - I want to research machine learning
     - I want to research artificial intelligence
+    - I like data science
+    - AI is cool
     
 - intent: test_trivia
   examples: |
     - Tell me some trivia
     - Test the trivia action
     - I want some trivia
+    - What trivia is there?
+    - I want to do the trivia
 
 rules:
 
