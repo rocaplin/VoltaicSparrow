@@ -215,10 +215,14 @@ stories:
   steps:
   - intent: request_class_by_code
   - action: action_request_class_by_code
+  - action: utter_prompt_for_more_classes
 
 - story: action request class by code 2
   steps:
   - intent: request_class_by_code
   - action: action_request_class_by_code
-  - intent: request_class_by_code
-  - action: action_request_class_by_code
+  - action: utter_prompt_for_more_classes
+  - intent: deny
+  - action: utter_goodbye
+  - action: utter_greet
+  - action: action_restart

@@ -288,6 +288,9 @@ nlu:
     - what classes are there
     - what courses are there
     - tell me about the classes
+    - What are the CS degree requirements?
+    - Tell me about CS degree requirements
+    - What classes do I need for a computer science degree
     - what classes are needed for computer science?
     - required classes?
     - what classes are required?
@@ -386,6 +389,9 @@ nlu:
     - what makes computer science different from other majors?
     - are other majors better than computer science?
     - what other fields are there related to computer science?
+    - can you tell me about other engineering majors?
+    - are there other similar fields?
+    - are there other similar majors?
     - what is computer science like compared to other fields?
     
 - intent: electrical
@@ -502,6 +508,7 @@ nlu:
   examples: |
     - what can I do with a degree in computer science?
     - What is a CS degree good for?
+    - What jobs can I get?
     - what jobs are available for cs majors?
     - which careers are a good fit for CompSci majors?
     - tell me about cs careers
