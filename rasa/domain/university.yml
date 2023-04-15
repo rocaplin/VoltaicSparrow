@@ -15,9 +15,9 @@ responses:
   - text: "Ok, I’ll skip the school intro and get straight into answering questions."
 
   utter_university_question_prompt:
-  - text: "I’ll do my best to answer any questions you have about our computer science programs, tuition or enrollment."
+  - text: "I’ll do my best to answer any questions you have about our computer science programs, tuition, or enrollment."
    
   utter_talk_about_university:
-  - text: "The University of Florida is located in Gainesville, was founded in 1853 and is accredited by the Southern Association of Colleges and Schools. 
+  - text: "The University of Florida is located in Gainesville, was founded in 1853, and is accredited by the Southern Association of Colleges and Schools. 
   
   Are you more interested in their online program or their traditional on-campus program?"

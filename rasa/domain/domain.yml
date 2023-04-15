@@ -43,7 +43,7 @@ entities:
 
 responses:
   utter_greet:
-  - text: "I'm Chomp, the computer science chat bot! Would you like to talk about computer science, or about the University of Florida?"
+  - text: "I'm Chomp, the computer science chat bot! Would you like to talk about computer science or about the University of Florida?"
 
   utter_happy:
   - text: "Great, carry on!"
@@ -51,7 +51,7 @@ responses:
   utter_goodbye:
   - text: "Goodbye and thanks for chatting with Chomp, the Computer Science Chatbot!
   
-  I'm going to reset myself now, just in case you change your mind and have more questions."
+  I'm going to reset myself now just in case you change your mind and have more questions."
 
   utter_acknowledgment:
   - text: "I'm glad I could be of help! Carry on!"
@@ -104,18 +104,18 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
  In addition to required courses for the computer science major, there are some courses that must be taken to satisfy the degree requirements for the College of Liberal Arts and Sciences. For more information on these additional requirements, check out https://catalog.ufl.edu/UGRD/colleges-schools/UGLAS/#degreerequirementstext."
 
   utter_faq/credit_hours:
-  - text: "A Computer Science Degree at UF requires a minimum of 120 total credit hours. For a full-time student, this constitutes 12-18 credit hours per semester. This is usually 4-6 classes per semester, depending on individual course credits."
+  - text: "A Computer Science Degree at UF requires a minimum of 120 total credit hours. For a full-time student, this constitutes 12-18 credit hours per semester. This is usually 4-6 classes per semester depending on individual course credits."
   
   utter_faq/credit_hour_cost:
-  - text: "For in state students tuition is about $130 per credit hour. For out of state students it is about $550. You can visit https://ufonline.ufl.edu/tuition/ for the most recent prices.
+  - text: "For in state students, tuition is about $130 per credit hour. For out of state students, it is about $550. You can visit https://ufonline.ufl.edu/tuition/ for the most recent prices.
   
-  Since a full degree requires at least 120 credit hours an in state student would spend at least $15,600 on tuition while an out of state student could spend $66,000 or more."
+  Since a full degree requires at least 120 credit hours, an in state student would spend at least $15,600 on tuition while an out of state student could spend $66,000 or more."
 
   utter_faq/excess_hours:
   - text: "Computer Science has a credit limit of 120 hours for both the College of Liberal Arts and Sciences and the College of Engineering. For more information, refer to this page: https://registrar.ufl.edu/courses/excess-hours."
 
   utter_faq/workload_per_hour:
-  - text: "Each credit hour is defined as one hour of in-person instruction and a minimum of two hours of out-of-class work per week. A 15-credit semester would consist of 15 hours of in-person instruction, and 30 hours of out-of-class work per week."
+  - text: "Each credit hour is defined as one hour of in-person instruction and a minimum of two hours of out-of-class work per week. A 15-credit semester would consist of 15 hours of in-person instruction and 30 hours of out-of-class work per week."
   
   utter_ask_major_differences:
   - text: "Which major/adjacent field would you like to know about in comparison to Computer Science?"
@@ -163,21 +163,21 @@ If you would like to find out more about UF Online, visit https://ufonline.ufl.e
   - text: "The first general purpose computers began to be built in the United States and Europe during the late 1930s. The term Computer Science was coined in the 1950s to describe related coursework being offered by universities."
 
   utter_csetymology:
-  - text: "The development of modern computers took place over a period of centuries drawing from a number of fields in Mathematics, Science, and Engineering, and as a result the topics addressed by these courses were just as broad. While the academic field of Computer Science is relatively young it has expanded rapidly and had far reaching societal impacts.
+  - text: "The development of modern computers took place over a period of centuries, drawing from a number of fields in Mathematics, Science, and Engineering. As a result, the topics addressed by these courses were just as broad. While the academic field of Computer Science is relatively young, it has expanded rapidly and has far reaching societal impacts.
 
-It is likely that for all of these reasons, there are a variety of perspectives on what constitutes Computer Science, and how it should be defined."
+It is likely that for all of these reasons, there are a variety of perspectives on what constitutes Computer Science and how it should be defined."
   
   utter_faq/enrollment:
-  - text: "To apply for enrollment you will need to submit your academic information and write a short essay. You can double check requirements, deadlines or even start the process by going to https://admissions.ufl.edu/apply/freshman/"
+  - text: "To apply for enrollment, you will need to submit your academic information and write a short essay. You can double check requirements, deadlines, or even start the process by going to https://admissions.ufl.edu/apply/freshman/"
 
   utter_faq/cshistory:
-  - text: "The foundation of Computer science predates modern computers. Ancient peoples used machines like the abacus and algorithms like the Sieve of Eratosthenes to perform calculations."
+  - text: "The foundation of Computer science predates modern computers. Ancient peoples used machines, like the abacus, and algorithms, like the Sieve of Eratosthenes, to perform calculations."
     buttons:
     - title: "What happened next?"
       payload: "/faq/leibniz"
 
   utter_faq/leibniz:
-  - text: "During the Enlightenment mechanical calculators began to appear in Europe. The famous mathematician Leibniz created one such calculator in 1873. He is sometimes credited as the founder of computer science for documenting the use of logical operations in a binary number system.
+  - text: "During the Enlightenment, mechanical calculators began to appear in Europe. The famous mathematician Leibniz created one such calculator in 1873. He is sometimes credited as the founder of computer science for documenting the use of logical operations in a binary number system.
 
 https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz"
     buttons:
@@ -185,7 +185,7 @@ https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz"
       payload: "/faq/babbage"
 
   utter_faq/babbage:
-  - text: "During the Industrial Revolution Charles Babbage designed increasingly complicated calculators culminating in his Analytical Engine, the first general-purpose computer, in 1837. Due to financial and manufacturing difficulties the Analytical Engine was never built.
+  - text: "During the Industrial Revolution, Charles Babbage designed increasingly complicated calculators culminating in his Analytical Engine, the first general-purpose computer, in 1837. Due to financial and manufacturing difficulties, the Analytical Engine was never built.
 
 https://en.wikipedia.org/wiki/Charles_Babbage"
     buttons:
@@ -215,7 +215,7 @@ https://www.bls.gov/oes/current/oes_nat.htm"
   utter_other_cscareers:
   - text: "Computer Science degrees cover a variety of topics potentially preparing students to pursue careers in related fields such as Hardware Design, Data Science, Digital Media, or Business.
 
-Earning a college degree demonstrates your ability to achieve and learn, traits helpful in many positions. Your major is only one indicator of fit. Personal experience, interests, and skills are also important and it is not uncommon for graduates to work outside their fields of study."
+Earning a college degree demonstrates your ability to achieve and learn, traits helpful in many positions. Your major is only one indicator of fit. Personal experience, interests, and skills are also important, and it is not uncommon for graduates to work outside their fields of study."
 
   utter_common_cstopics:
   - text: "Computer Science covers a variety of diverse topics, many of which are taught at the University of Florida. 
@@ -233,7 +233,7 @@ Earning a college degree demonstrates your ability to achieve and learn, traits 
   - text: "Are there any other classes or topics you have questions about?"
   
   utter_online_topic_tips:
-  - text: "Are we still talking about UF Online? I can tell you about the required courses, credit hour requirements or even how to start enrolling." 
+  - text: "Are we still talking about UF Online? I can tell you about the required courses, credit hour requirements, or even how to start enrolling." 
   
   utter_computer_science_topic_tips:
   - text: "Are we still talking about computer science? Try rephrasing your question or asking about a different topic."
@@ -242,7 +242,7 @@ Earning a college degree demonstrates your ability to achieve and learn, traits 
   - text: "I'm Chomp Sci, a chatbot designed to answer questions about studying Computer Science at the University of Florida."
 
   utter_faq/purpose:
-  - text: "Team Voltaic Sparrow made me for their Spring 2023 Senior Project, CIS4914. My goal is to answer basic questions about studying Computer Science at the University of Florida."
+  - text: "Team Voltaic Sparrow made me as part of their Spring 2023 Senior Project for CIS 4914. My goal is to answer basic questions about studying Computer Science at the University of Florida."
     buttons:
     - title: "CIS 4914"
       payload: "/request_class_by_code{\"class_code\": \"CIS 4914\"}"
@@ -266,7 +266,7 @@ Earning a college degree demonstrates your ability to achieve and learn, traits 
   
   Your questions are sent to the Chomp Sci Rasa server. The server tries to match the questions to probable intents defined in the Natural Language Understanding (NLU) unit's training data.
   
-  Once a likely intent is selected, the Rasa server will perform a predefined series of actions associated with the intent. This usually involves querying a database for information via the Rasa action server, and/ or returning an appropriate response."
+  Once a likely intent is selected, the Rasa server will perform a predefined series of actions associated with the intent. This usually involves querying a database for information via the Rasa action server and/ or returning an appropriate response."
 
 actions:
   - action_hello_world

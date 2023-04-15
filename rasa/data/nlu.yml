@@ -215,6 +215,8 @@ nlu:
     - How many classes do I have to take?
     - How many classes are needed for computer science?
     - What is the typical amount of credits per class? 
+    - How many credits is computer science?
+    - How many credits are needed?
     
 - intent: faq/credit_hour_cost
   examples: |
@@ -229,6 +231,14 @@ nlu:
     - What is tuition for out of state students
     - What is in state tuition
     - What is out of state tuition?
+    - How much do I have to pay?
+    - Is it expensive?
+    - What does the price look like?
+    - How much money are we talking about?
+    - How much money is it?
+    - How much is it?
+    - cost?
+    - price?
 
 - intent: faq/excess_hours
   examples: |
@@ -243,6 +253,9 @@ nlu:
     - Max credits
     - Excess hours
     - excess hours?
+    - What does excess hours mean?
+    - Does it cost more if I take more than 120 credits?
+    - How much do I pay for going over 120 credits?
     
 - intent: faq/workload_per_hour
   examples: |
@@ -256,6 +269,11 @@ nlu:
     - Is Computer Science hard?
     - How much homework will I have?
     - How much homework will I have as a Computer Science student?
+    - How much work is it?
+    - Is the courseload overwhelming?
+    - What is the significance of the number of credits?
+    - What does the number of credits mean in terms of workload?
+    - Do the number of credits relate to the courseload?
     
 - intent: required_courses
   examples: |
@@ -274,6 +292,10 @@ nlu:
     - Tell me about CS degree requirements
     - What classes do I need for a computer science degree
     - what classes are needed for computer science?
+    - required classes?
+    - what classes are required?
+    - what courses will I be taking?
+    - what do the classes look like?
 
 - intent: difference
   examples: |
@@ -314,6 +336,9 @@ nlu:
     - Tell me about UF?
     - Tell me about the school.
     - Tell me about the college.
+    - What is UF like?
+    - What is the university like?
+    - What is it like being a gator?
     
 - intent: ask_about_online_program
   examples: |
@@ -349,6 +374,7 @@ nlu:
     - When do I need to enroll by?
     - What are the enrollment deadlines?
     - What does it take to enroll?
+    - What is needed to enroll?
     
 - intent: adjacent_fields
   examples: |
@@ -415,11 +441,13 @@ nlu:
     - How do I define Computer Science?
     - what is computer science's definition?
     - tell me what computer science means
+    - what is meant by computer science?
 
 - intent: modern_computers
   examples: |
     - When were the first modern computers built?
     - When did the first general purpose computer get built?
+    - when was the first modern computer made?
 
 - intent: csetymology
   examples: |
@@ -514,6 +542,9 @@ nlu:
     - is that it?
     - what else is there?
     - are there more careers?
+    - is there anything else?
+    - what else can I do?
+    - what else?
 
 - intent: common_cstopics
   examples: |
@@ -536,6 +567,8 @@ nlu:
     - Tell me about topics in computer science
     - which topics are taught in computer science
     - which topics are covered in computer science?
+    - what is there to learn?
+    - what will I learn?
 
 - intent: request_topics
   examples: |
@@ -741,6 +774,7 @@ nlu:
     - what do you do
     - Tell me about yourself.
     - tell me about you
+    - who dis?
 
 - intent: faq/purpose
   examples: |
@@ -756,6 +790,7 @@ nlu:
     - what's your purpose
     - What is your goal?
     - what's your goal
+    - why are you here?
 
 - intent: faq/help
   examples: |
@@ -795,6 +830,7 @@ nlu:
     - how do chatbots work
     - How can I make a chatbot?
     - how could I make a chatbot
+    - how are you working?
 
 - intent: example_topics
   examples: |
@@ -805,3 +841,7 @@ nlu:
     - List topic examples in CS.
     - tell me about cs topic examples
     - what topic examples are there in CompSci
+    - examples?
+    - what are some topics?
+    - what topics can I ask about?
+    - what topics are there?
