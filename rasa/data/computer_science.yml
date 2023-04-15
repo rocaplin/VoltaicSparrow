@@ -143,6 +143,13 @@ stories:
   - intent: affirm
   - action: action_get_courses_for_computer_security
   
+- story: Interested In Hacking Skip Early Prompts
+  steps:
+  - intent: express_interest_in_hacking
+  - action: utter_cs_interest_hacking
+  - intent: affirm
+  - action: action_get_courses_for_computer_security
+  
 - story: Interested In Hacking Early End Restart
   steps:
   - intent: ask_about_computer_science
@@ -171,6 +178,13 @@ stories:
   steps:
   - intent: ask_about_computer_science
   - action: utter_talk_about_computer_science
+  - intent: express_interest_in_ai
+  - action: utter_cs_interest_ai
+  - intent: affirm
+  - action: action_get_courses_for_ai
+  
+- story: Interested In AI Skip Early Prompts
+  steps:
   - intent: express_interest_in_ai
   - action: utter_cs_interest_ai
   - intent: affirm
