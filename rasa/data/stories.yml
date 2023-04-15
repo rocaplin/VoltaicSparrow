@@ -29,6 +29,7 @@ stories:
   - action: utter_ask_again
   - intent: comp_eng
   - action: utter_computer_engineering
+  - action: utter_ask_again
 
 - story: adjacent fields path 2
   steps:
@@ -49,6 +50,7 @@ stories:
   - action: utter_ask_again
   - intent: info_tech
   - action: utter_information_technology
+  - action: utter_ask_again
 
 - story: adjacent fields path 4
   steps:
@@ -69,6 +71,7 @@ stories:
   - action: utter_ask_again
   - intent: info_sys
   - action: utter_information_systems
+  - action: utter_ask_again
  
 - story: adjacent fields path 6
   steps:
@@ -89,6 +92,7 @@ stories:
   - action: utter_ask_again
   - intent: electrical
   - action: utter_electrical_engineering
+  - action: utter_ask_again
 
 - story: adjacent fields path 8
   steps:

@@ -474,10 +474,12 @@ stories:
       tell me about [COP 4620]{"entity": "class_code"}
     intent: request_class_by_code
   - action: action_request_class_by_code
+  - action: utter_prompt_for_more_classes
   - user: |
       [COP 4720]{"entity": "class_code"}
     intent: request_class_by_code
   - action: action_request_class_by_code
+  - action: utter_prompt_for_more_classes
 
 - story: courses 1
   steps:
@@ -485,6 +487,7 @@ stories:
       What's [CGS 4144]{"entity": "class_code"}
     intent: request_class_by_code
   - action: action_request_class_by_code
+  - action: utter_prompt_for_more_classes
 
 - story: courses 2
   steps:
@@ -492,6 +495,7 @@ stories:
       Give me some information about [PHY 2048]{"entity": "class_code"}
     intent: request_class_by_code
   - action: action_request_class_by_code
+  - action: utter_prompt_for_more_classes
   
 - story: request topic 4-1
   steps:
