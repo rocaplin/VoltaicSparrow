@@ -1,0 +1,1400 @@
+[
+  {
+    "text": "I want to be a computer programmer",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 15,
+        "end": 34,
+        "value": "computer programmer",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I like computer security",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "topic",
+        "start": 7,
+        "end": 24,
+        "value": "computer security",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I'm interested in computer security",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "topic",
+        "start": 18,
+        "end": 35,
+        "value": "computer security",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I'm interested in artificial intelligence",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "topic",
+        "start": 18,
+        "end": 41,
+        "value": "artificial intelligence",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I want to research artificial intelligence",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "topic",
+        "start": 19,
+        "end": 42,
+        "value": "artificial intelligence",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "What careers are there as a coder",
+    "entities": [
+      {
+        "start": 28,
+        "end": 33,
+        "value": "computer programmer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 28,
+        "end": 33,
+        "confidence_entity": 0.9960060715675354,
+        "value": "computer programmer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what do coders do",
+    "entities": [
+      {
+        "start": 8,
+        "end": 14,
+        "value": "computer programmer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 8,
+        "end": 14,
+        "confidence_entity": 0.9972817897796631,
+        "value": "computer programmer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Tell me about what programmers do.",
+    "entities": [
+      {
+        "start": 19,
+        "end": 30,
+        "value": "computer programmer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 19,
+        "end": 30,
+        "confidence_entity": 0.6292288899421692,
+        "value": "computer programmer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what are computer programmers",
+    "entities": [
+      {
+        "start": 9,
+        "end": 29,
+        "value": "computer programmer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 9,
+        "end": 29,
+        "confidence_entity": 0.8785685896873474,
+        "value": "computer programmer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what do graphic designers do?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 25,
+        "value": "graphic designer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 8,
+        "end": 25,
+        "confidence_entity": 0.999182403087616,
+        "value": "graphic designer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what does a security specialist do",
+    "entities": [
+      {
+        "start": 12,
+        "end": 31,
+        "value": "security analyst",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 12,
+        "end": 31,
+        "confidence_entity": 0.9981970191001892,
+        "value": "security analyst",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what are security specialists",
+    "entities": [
+      {
+        "start": 9,
+        "end": 29,
+        "value": "security analyst",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 9,
+        "end": 29,
+        "confidence_entity": 0.9986773133277893,
+        "value": "security analyst",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tell me what information security officers do",
+    "entities": [
+      {
+        "start": 13,
+        "end": 42,
+        "value": "security analyst",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 13,
+        "end": 42,
+        "confidence_entity": 0.9860906600952148,
+        "value": "security analyst",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What's an information security officer?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 38,
+        "value": "security analyst",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 10,
+        "end": 38,
+        "confidence_entity": 0.9952862858772278,
+        "value": "security analyst",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Tell me about security analysts.",
+    "entities": [
+      {
+        "start": 14,
+        "end": 31,
+        "value": "security analyst",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 14,
+        "end": 31,
+        "confidence_entity": 0.998616099357605,
+        "value": "security analyst",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What does a data analyst do?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "value": "data scientist",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 12,
+        "end": 24,
+        "confidence_entity": 0.9994077682495117,
+        "value": "data scientist",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What do data analysts do",
+    "entities": [
+      {
+        "start": 8,
+        "end": 21,
+        "value": "data scientist",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 8,
+        "end": 21,
+        "confidence_entity": 0.9994839429855347,
+        "value": "data scientist",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what do data scientists do?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 23,
+        "value": "data scientist",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 8,
+        "end": 23,
+        "confidence_entity": 0.999321699142456,
+        "value": "data scientist",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tell me what a computer engineer is",
+    "entities": [
+      {
+        "start": 15,
+        "end": 32,
+        "value": "hardware engineer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 15,
+        "end": 32,
+        "confidence_entity": 0.9989861845970154,
+        "value": "hardware engineer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What are computer engineers?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 27,
+        "value": "hardware engineer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 9,
+        "end": 27,
+        "confidence_entity": 0.9993414282798767,
+        "value": "hardware engineer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what are dbas",
+    "entities": [
+      {
+        "start": 9,
+        "end": 13,
+        "value": "database administrator",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 9,
+        "end": 13,
+        "confidence_entity": 0.9953070282936096,
+        "value": "database administrator",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what's a dba",
+    "entities": [
+      {
+        "start": 9,
+        "end": 12,
+        "value": "database administrator",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 9,
+        "end": 12,
+        "confidence_entity": 0.9927045702934265,
+        "value": "database administrator",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What do database administrators do?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 31,
+        "value": "database administrator",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 8,
+        "end": 31,
+        "confidence_entity": 0.999498724937439,
+        "value": "database administrator",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What are software engineers?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 27,
+        "value": "software engineer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 9,
+        "end": 27,
+        "confidence_entity": 0.996301531791687,
+        "value": "software engineer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tell me about network admins",
+    "entities": [
+      {
+        "start": 14,
+        "end": 28,
+        "value": "network administrator",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 14,
+        "end": 28,
+        "confidence_entity": 0.998994767665863,
+        "value": "network administrator",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What does a network admin do?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 25,
+        "value": "network administrator",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 12,
+        "end": 25,
+        "confidence_entity": 0.9994990825653076,
+        "value": "network administrator",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is it like to work as a network analyst?",
+    "entities": [
+      {
+        "start": 29,
+        "end": 44,
+        "value": "network administrator",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 29,
+        "end": 44,
+        "confidence_entity": 0.9994762539863586,
+        "value": "network administrator",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you tell me what network analysts do?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 37,
+        "value": "network administrator",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 21,
+        "end": 37,
+        "confidence_entity": 0.999603807926178,
+        "value": "network administrator",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what are network administrators",
+    "entities": [
+      {
+        "start": 9,
+        "end": 31,
+        "value": "network administrator",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 9,
+        "end": 31,
+        "confidence_entity": 0.9996035695075989,
+        "value": "network administrator",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what are game programmers",
+    "entities": [
+      {
+        "start": 9,
+        "end": 25,
+        "value": "video game developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 9,
+        "end": 25,
+        "confidence_entity": 0.9225351214408875,
+        "value": "video game developer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What does a game programmer do?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 27,
+        "value": "video game developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 12,
+        "end": 27,
+        "confidence_entity": 0.9951989054679871,
+        "value": "video game developer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is a game designer?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 23,
+        "value": "video game developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 10,
+        "end": 23,
+        "confidence_entity": 0.9986391663551331,
+        "value": "video game developer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Tell me about game designers.",
+    "entities": [
+      {
+        "start": 14,
+        "end": 28,
+        "value": "video game developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 14,
+        "end": 28,
+        "confidence_entity": 0.998970627784729,
+        "value": "video game developer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what are level designers",
+    "entities": [
+      {
+        "start": 9,
+        "end": 24,
+        "value": "video game developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 9,
+        "end": 24,
+        "confidence_entity": 0.9994925260543823,
+        "value": "video game developer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What does a level designer do?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 26,
+        "value": "video game developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 12,
+        "end": 26,
+        "confidence_entity": 0.9997789263725281,
+        "value": "video game developer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What are game developers?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 24,
+        "value": "video game developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 9,
+        "end": 24,
+        "confidence_entity": 0.9979811310768127,
+        "value": "video game developer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tell me about web developers",
+    "entities": [
+      {
+        "start": 14,
+        "end": 28,
+        "value": "web developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 14,
+        "end": 28,
+        "confidence_entity": 0.9995182752609253,
+        "value": "web developer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What's a front end developer?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 28,
+        "value": "web developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 9,
+        "end": 28,
+        "confidence_entity": 0.998684823513031,
+        "value": "web developer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what are front end developers",
+    "entities": [
+      {
+        "start": 9,
+        "end": 29,
+        "value": "web developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 9,
+        "end": 29,
+        "confidence_entity": 0.9982095956802368,
+        "value": "web developer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Tell me what a front end engineer does.",
+    "entities": [
+      {
+        "start": 15,
+        "end": 33,
+        "value": "web developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 15,
+        "end": 33,
+        "confidence_entity": 0.9974201917648315,
+        "value": "web developer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what do front end engineers do",
+    "entities": [
+      {
+        "start": 8,
+        "end": 27,
+        "value": "web developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 8,
+        "end": 27,
+        "confidence_entity": 0.997187077999115,
+        "value": "web developer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tell me about web designers",
+    "entities": [
+      {
+        "start": 14,
+        "end": 27,
+        "value": "web designer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 14,
+        "end": 27,
+        "confidence_entity": 0.9991881251335144,
+        "value": "web designer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what is a ui/ux designer",
+    "entities": [
+      {
+        "start": 10,
+        "end": 24,
+        "value": "web designer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 10,
+        "end": 24,
+        "confidence_entity": 0.9996227025985718,
+        "value": "web designer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What are ui/ux designers",
+    "entities": [
+      {
+        "start": 9,
+        "end": 24,
+        "value": "web designer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 9,
+        "end": 24,
+        "confidence_entity": 0.9993895292282104,
+        "value": "web designer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what is a ux designer",
+    "entities": [
+      {
+        "start": 10,
+        "end": 21,
+        "value": "web designer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 10,
+        "end": 21,
+        "confidence_entity": 0.9996123909950256,
+        "value": "web designer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What do ux designers do?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 20,
+        "value": "web designer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 8,
+        "end": 20,
+        "confidence_entity": 0.9991868138313293,
+        "value": "web designer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what are it architects",
+    "entities": [
+      {
+        "start": 9,
+        "end": 22,
+        "value": "it architect",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 9,
+        "end": 22,
+        "confidence_entity": 0.998640239238739,
+        "value": "it architect",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Tell me about systems analysts",
+    "entities": [
+      {
+        "start": 14,
+        "end": 30,
+        "value": "systems analyst",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 14,
+        "end": 30,
+        "confidence_entity": 0.9995558857917786,
+        "value": "systems analyst",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is a system analyst?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 24,
+        "value": "systems analyst",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 10,
+        "end": 24,
+        "confidence_entity": 0.9994540810585022,
+        "value": "systems analyst",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What are system analysts?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 24,
+        "value": "systems analyst",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 9,
+        "end": 24,
+        "confidence_entity": 0.9996957778930664,
+        "value": "systems analyst",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tell me about software developers",
+    "entities": [
+      {
+        "start": 14,
+        "end": 33,
+        "value": "software developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 14,
+        "end": 33,
+        "confidence_entity": 0.9991686344146729,
+        "value": "software developer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "who was the first computer programmer",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "job",
+        "start": 18,
+        "end": 37,
+        "value": "computer programmer",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "What do you know about nlp",
+    "entities": [
+      {
+        "start": 23,
+        "end": 26,
+        "value": "natural language processing",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic",
+        "start": 23,
+        "end": 26,
+        "confidence_entity": 0.9986233711242676,
+        "value": "natural language processing",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is ai",
+    "entities": [
+      {
+        "start": 8,
+        "end": 10,
+        "value": "artificial intelligence",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic",
+        "start": 8,
+        "end": 10,
+        "confidence_entity": 0.9952648878097534,
+        "value": "artificial intelligence",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what is discrete math",
+    "entities": [
+      {
+        "start": 8,
+        "end": 21,
+        "value": "discrete mathematics",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic",
+        "start": 8,
+        "end": 21,
+        "confidence_entity": 0.9992167949676514,
+        "value": "discrete mathematics",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what's an algorithm",
+    "entities": [
+      {
+        "start": 10,
+        "end": 19,
+        "value": "algorithms",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic",
+        "start": 10,
+        "end": 19,
+        "confidence_entity": 0.9995793700218201,
+        "value": "algorithms",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tell me about crypto",
+    "entities": [
+      {
+        "start": 14,
+        "end": 20,
+        "value": "cryptography",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic",
+        "start": 14,
+        "end": 20,
+        "confidence_entity": 0.9993952512741089,
+        "value": "cryptography",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is hid",
+    "entities": [
+      {
+        "start": 8,
+        "end": 11,
+        "value": "human-computer interaction",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic",
+        "start": 8,
+        "end": 11,
+        "confidence_entity": 0.998384952545166,
+        "value": "human-computer interaction",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "can you tell me about human computer interaction",
+    "entities": [
+      {
+        "start": 22,
+        "end": 48,
+        "value": "human-computer interaction",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic",
+        "start": 22,
+        "end": 48,
+        "confidence_entity": 0.9712812900543213,
+        "value": "human-computer interaction",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is computational biology",
+    "entities": [
+      {
+        "start": 8,
+        "end": 29,
+        "value": "bioinformatics and computational biology",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic",
+        "start": 8,
+        "end": 29,
+        "confidence_entity": 0.7207090258598328,
+        "value": "bioinformatics and computational biology",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what are bioinformatics",
+    "entities": [
+      {
+        "start": 9,
+        "end": 23,
+        "value": "bioinformatics and computational biology",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "topic",
+        "start": 9,
+        "end": 23,
+        "confidence_entity": 0.9329198002815247,
+        "value": "bioinformatics and computational biology",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

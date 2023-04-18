@@ -1,0 +1,10 @@
+[
+  {
+    "text": "Where did computer science come from?",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "csetymology",
+      "confidence": 0.8193404078483582
+    }
+  }
+]
