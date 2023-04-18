@@ -1,0 +1,10 @@
+[
+  {
+    "text": "what can you do",
+    "intent_response_key_target": "faq/help",
+    "intent_response_key_prediction": {
+      "name": "faq/purpose",
+      "confidence": 0.5811535716056824
+    }
+  }
+]

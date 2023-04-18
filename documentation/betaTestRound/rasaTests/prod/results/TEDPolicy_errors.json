@@ -1,0 +1,256 @@
+[
+  {
+    "text": "software engineer",
+    "entities": [
+      {
+        "start": 0,
+        "end": 17,
+        "value": "software engineer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "what kind of careers are there as a it architect",
+    "entities": [
+      {
+        "start": 36,
+        "end": 48,
+        "value": "it architect",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "game developer cs jobs",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "game developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can you tell me about concurrency",
+    "entities": [
+      {
+        "start": 22,
+        "end": 33,
+        "value": "concurrency",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can you tell me about artifical intelligence",
+    "entities": [
+      {
+        "start": 22,
+        "end": 44,
+        "value": "artifical intelligence",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can you tell me about Natural language processing",
+    "entities": [
+      {
+        "start": 22,
+        "end": 49,
+        "value": "Natural language processing",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What is networking",
+    "entities": [
+      {
+        "start": 8,
+        "end": 18,
+        "value": "networking",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What is Soft computing",
+    "entities": [
+      {
+        "text": "What is Soft computing",
+        "start": 8,
+        "end": 22,
+        "entity": "topic",
+        "value": "Soft computing"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What is computational complexity theory",
+    "entities": [
+      {
+        "start": 8,
+        "end": 39,
+        "value": "computational complexity theory",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What are algorithms",
+    "entities": [
+      {
+        "start": 9,
+        "end": 19,
+        "value": "algorithms",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What are Data Structures",
+    "entities": [
+      {
+        "start": 9,
+        "end": 24,
+        "value": "Data Structures",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What are programming language pragmatics",
+    "entities": [
+      {
+        "start": 9,
+        "end": 40,
+        "value": "programming language pragmatics",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What's Image Processing",
+    "entities": [
+      {
+        "start": 7,
+        "end": 23,
+        "value": "Image Processing",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "coding theory",
+    "entities": [
+      {
+        "start": 0,
+        "end": 13,
+        "value": "coding theory",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "software engineer job",
+    "entities": [
+      {
+        "start": 0,
+        "end": 17,
+        "value": "software engineer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "software developer",
+    "entities": [
+      {
+        "start": 0,
+        "end": 18,
+        "value": "software developer",
+        "entity": "job"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "tell me about COP 4620",
+    "entities": [
+      {
+        "start": 14,
+        "end": 22,
+        "value": "COP 4620",
+        "entity": "class_code"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "COP 4720",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "COP 4720",
+        "entity": "class_code"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What's CGS 4144",
+    "entities": [
+      {
+        "start": 7,
+        "end": 15,
+        "value": "CGS 4144",
+        "entity": "class_code"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Give me some information about PHY 2048",
+    "entities": [
+      {
+        "text": "Give me some information about PHY 2048",
+        "start": 31,
+        "end": 39,
+        "entity": "class_code",
+        "value": "PHY 2048"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Tell me about computational physics",
+    "entities": [
+      {
+        "start": 14,
+        "end": 35,
+        "value": "computational physics",
+        "entity": "topic"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

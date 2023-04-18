@@ -1,0 +1,109 @@
+version: "3.1"
+stories:
+- story: interest in programming 2, restart (./tests/test_computer_science.yml)
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_programming
+  - action: utter_cs_interest_programming
+  - intent: deny
+  - action: utter_cs_disengage
+  - user: |-
+      yes
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: affirm
+  - action: utter_cs_generic_prompt  # predicted: action_default_fallback after action_unlikely_intent
+- story: interest in programming 3, end early, final (./tests/test_computer_science.yml)
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - user: |-
+      I like writing programs
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: express_interest_in_programming
+  - action: utter_cs_interest_programming  # predicted: action_unlikely_intent
+  - intent: deny
+  - action: utter_cs_disengage  # predicted: utter_goodbye
+  - intent: deny
+  - action: utter_goodbye
+  - action: utter_greet
+  - action: action_restart
+- story: common cs careers 2 (./tests/test_stories.yml)
+  steps:
+  - intent: common_cscareers  # predicted: common_cscareers: what do CS majors [end](job) up doing?
+  - action: utter_common_cscareers
+  - intent: other_cscareers
+  - action: utter_other_cscareers
+- story: request topic 2-2 (./tests/test_stories.yml)
+  steps:
+  - intent: common_cstopics
+  - action: utter_common_cstopics
+  - intent: request_topics
+    entities:
+    - topic: Soft computing
+  - action: action_request_topics
+- story: courses 2 (./tests/test_stories.yml)
+  steps:
+  - intent: request_class_by_code
+    entities:
+    - class_code: PHY 2048
+    - class_code: PHY 2048
+  - action: action_request_class_by_code
+  - action: utter_prompt_for_more_classes
+- story: interest in gaming 2, restart (./tests/test_computer_science.yml)
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - user: |-
+      I want to make video games
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: express_interest_in_video_games
+  - action: utter_cs_interest_games  # predicted: action_unlikely_intent
+  - user: |-
+      not really
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: deny
+  - action: utter_cs_disengage  # predicted: action_unlikely_intent
+  - user: |-
+      sure
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: affirm
+  - action: utter_cs_generic_prompt  # predicted: action_default_fallback after action_unlikely_intent
+- story: interest in gaming 3, end early, final (./tests/test_computer_science.yml)
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - user: |-
+      I'm a gamer
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: express_interest_in_video_games
+  - action: utter_cs_interest_games  # predicted: action_unlikely_intent
+  - intent: deny
+  - action: utter_cs_disengage
+  - intent: deny
+  - action: utter_goodbye
+  - action: utter_greet
+  - action: action_restart
+- story: interest in hacking 1 (./tests/test_computer_science.yml)
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_hacking
+  - action: utter_cs_interest_hacking
+  - user: |-
+      yeah
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: affirm
+  - action: action_get_courses_for_computer_security  # predicted: action_unlikely_intent
+- story: interest in hacking 3, end early, final (./tests/test_computer_science.yml)
+  steps:
+  - intent: ask_about_computer_science
+  - action: utter_talk_about_computer_science
+  - intent: express_interest_in_hacking  # predicted: express_interest_in_hacking: I like [computer security](topic)
+  - action: utter_cs_interest_hacking
+  - intent: deny
+  - action: utter_cs_disengage
+  - intent: deny
+  - action: utter_goodbye
+  - action: utter_greet
+  - action: action_restart
