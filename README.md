@@ -7,13 +7,13 @@ A chatbot that is able to answer general questions from those thinking about maj
 <a href="https://trello.com/b/j05rzM21/agile-board" target="_blank">Voltaic Sparrow's Trello Board</a>
 
 ## To Run The Chatbot Server
-Make sure you have docker desktop downloaded, running, and configured to run linux containers
+- Make sure you have [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) downloaded, running, and configured to run linux containers
 
-Then, you can just go to the root of the project and run "docker-compose up"
+- Then, you can just go to the root of the project and run ```docker-compose up```
 
-It will take a little while to download the containers for the first time, and then a little more time for the node and rasa servers to start up.
+   It will take a little while to download the containers for the first time, and then a little more time for the node and rasa servers to start up.
 
-Eventually you can visit localhost:3000 to see the basic chatbot widget. Just click on the message icon to open the chat window and say "Hello".
+- Eventually you can visit http://localhost:3000 to see the basic chatbot widget. Just click on the message icon to open the chat window and say "Hello".
 
 ## To Train The Chatbot
 
